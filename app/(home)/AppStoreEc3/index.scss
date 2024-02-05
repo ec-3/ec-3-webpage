@@ -1,0 +1,62 @@
+@mixin app-store() {
+    .app-store {
+        padding-bottom: 20px;
+        background-color: $theme-dark_bg-regular;
+        .inner {
+            @include fixed-center();
+            max-width: 980px;
+
+            .image-text {
+                display: flex;
+                flex-direction: row;
+                .image-wrapper {
+                    position: relative;
+                    width: 400px;
+                    height: 461px;
+                    margin-right: 32px;
+                    font-size: 0;
+                    object-fit: fill;
+                    .phone {
+                        margin-left: -28px;
+                    }
+                    .phone-text {
+                        position: absolute;
+                        left: 90px;
+                        top: 410px;
+                        width: 180px;
+                        aspect-ratio: auto;
+                        border-radius: 6px;
+                        box-shadow: $theme-dark_color-relative -6px 1px 12px 1px;
+                    }
+                }
+                .card-wrapper {
+                    flex: 1;
+                    .card {
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 60px;
+                        .avatar {
+                            text-align: left;
+                            width: 116px;
+                        }
+                        .content {
+                            .title {
+                                margin-bottom: 14px;
+                                color: $theme-dark_color-primary-next;
+                                font-size: $size-hger;
+                                user-select: text;
+                            }
+                            .text {
+                                margin-bottom: 15px;
+                                color: $theme-dark_color-regular;
+                                font-size: $size-mder;
+                                line-height: 22px;
+                                user-select: text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

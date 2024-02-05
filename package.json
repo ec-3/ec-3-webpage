@@ -1,0 +1,27 @@
+{
+    "name": "ec3",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "pm2start": "pm2 start pnpm --name Ec3 -- start"
+    },
+    "dependencies": {
+        "@ant-design/icons": "^5.2.6",
+        "@ant-design/nextjs-registry": "^1.0.0",
+        "animate.css": "^4.1.1",
+        "antd": "^5.13.3",
+        "next": "13.4.19",
+        "react": "^18",
+        "react-dom": "^18"
+    },
+    "devDependencies": {
+        "sass": "^1.70.0"
+    },
+    "browserslist": [
+        "cover 99.5%"
+    ]
+}

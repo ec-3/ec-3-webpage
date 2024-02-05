@@ -1,0 +1,36 @@
+@font-face{
+    font-family: SourceSansPro-Regular;
+    src: url("../../public/font/SourceSansPro-Regular.ttf");
+}
+
+html, body {
+    line-height: 1;
+    font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    color: $color-text-regular;
+    background-color: #fff;
+}
+
+/** 隐藏IE浏览器自带的文本删除按钮和密码查看按钮 **/
+input::-ms-clear, input::-ms-reveal {
+    display: none;
+}
+
+input::-webkit-input-placeholder { color: $color-text-placeholder; }
+input::-moz-placeholder { color: $color-text-placeholder; }
+input:-moz-placeholder { color: $color-text-placeholder; }
+input:-ms-input-placeholder { color: $color-text-placeholder; }
+
+.size-tn { font-size: $size-tn; }
+.size-tner { font-size: $size-tner; }
+.size-md { font-size: $size-md; }
+.size-mder { font-size: $size-mder; }
+.size-lg { font-size: $size-lg; }
+.size-lger { font-size: $size-lger; }
+.size-hg { font-size: $size-hg; }
+.size-hger { font-size: $size-hger; }
+
+.ant-btn, .ant-input, .ant-dropdown .ant-dropdown-menu, .ant-carousel {
+    font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif !important;
+}
