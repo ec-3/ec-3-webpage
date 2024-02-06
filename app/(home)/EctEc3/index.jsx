@@ -25,7 +25,7 @@ const EctEc3 = ({className = 'ect'}) => {
                             <p className="text">Experience a greener and more sustainable approach with reduced computing power and electricity consumption.</p>
                             <p className="text">Unlock stability in distributed home energy storage mining by embracing the rewarding practice of holding and locking, seamlessly integrated without disruptions to the power grid.</p>
                             <p className="text stake-title">Mine and earn profits by staking your held tokens</p>
-                            <Button type="primary" href="http://www.baidu.com" target="_blank">STAKE</Button>
+                            <Button type="primary" href="https://stake.ec-cube.io/" target="_blank">STAKE</Button>
                         </div>
                         <div className="image"></div>
                     </div>

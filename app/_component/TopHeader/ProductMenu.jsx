@@ -14,7 +14,7 @@ const items = [
     {
         key: '2',
         label: (
-            <Link href="http://www.baidu.com" target="_blank">Staking</Link>
+            <Link href="https://stake.ec-cube.io/" target="_blank">Staking</Link>
         )
     },
 ];
