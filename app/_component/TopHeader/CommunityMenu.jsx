@@ -14,13 +14,13 @@ const items = [
     {
         key: '2',
         label: (
-            <Link href="http://www.baidu.com" target="_blank">X</Link>
+            <Link href="https://twitter.com/Ec3_DeEnergy" target="_blank">X</Link>
         )
     },
     {
         key: '3',
         label: (
-            <Link href="http://www.baidu.com" target="_blank">Telegram</Link>
+            <Link href="https://t.me/Ec3_DeEnergy" target="_blank">Telegram</Link>
         )
     },
 ];

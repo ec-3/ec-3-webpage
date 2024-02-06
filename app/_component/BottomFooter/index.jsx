@@ -31,10 +31,10 @@ const allLinks = [
     {
         title: 'Keep following',
         links: [
-            {name: 'X', href: 'https://www.baidu.com/'},
-            {name: 'Discord', href: 'https://www.baidu.com/'},
-            {name: 'Medium', href: 'https://www.baidu.com/'},
-            {name: 'Telegram', href: 'https://www.baidu.com/'},
+            {name: 'X', href: 'https://twitter.com/Ec3_DeEnergy'},
+            {name: 'Discord', href: 'https://discord.gg/kaA5A88Z8X'},
+            {name: 'Medium', href: 'https://medium.com/@ec3.deenergy'},
+            {name: 'Telegram', href: 'https://t.me/Ec3_DeEnergy'},
         ]
     }
 ];
