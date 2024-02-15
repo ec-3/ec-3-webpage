@@ -14,7 +14,7 @@ export default function Loading() {
             'alignItems': 'center',
             'justifyContent': 'center'
         }}>
-            <SpinLoading color='primary' style={{ '--size': '48px' }} />
+            <SpinLoading style={{ '--color': '#5aeb46', '--size': '48px' }} />
         </div>
     );
 }

@@ -32,7 +32,7 @@ export default function Home() {
                 'height': '100%',
                 'backgroundColor': '#060606'
             }}>
-                <SpinLoading color='primary' style={{ '--size': '48px' }} />
+                <SpinLoading style={{ '--color': '#5aeb46', '--size': '48px' }} />
             </main>
         );
     } else if (isMobile) {
