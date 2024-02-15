@@ -7,7 +7,7 @@ import TopHeader from '@/_component/TopHeader/pc';
 import BottomFooter from '@/_component/BottomFooter/pc.jsx';
 import 'animate.css';
 
-export default function HomeLayoutPC({children}) {
+export default async function HomeLayoutPC({children}) {
     return (
         <RootLayoutPC>
             <ConfigProvider theme={theme}>
