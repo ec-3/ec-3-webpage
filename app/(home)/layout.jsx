@@ -2,10 +2,10 @@
 import React from 'react';
 import HomeLayoutPC from './homeLayoutPC.jsx';
 import HomeLayoutMobile from './homeLayoutMobile.jsx';
-import {isMobileFunc} from '@/_utils/cientCheck.js'
+import useCientCheck from '@/_hooks/useCientCheck';
 
 export default function HomeLayout({children}) {
-    const isMobile = isMobileFunc();
+    const isMobile = useCientCheck();
     if (isMobile) {
         return (
             <HomeLayoutMobile>

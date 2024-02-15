@@ -13,13 +13,14 @@ import EctPC from './Ect/pc.jsx';
 import EctMobile from './Ect/mobile.jsx';
 import EcosystemPC from './Ecosystem/pc.jsx';
 import EcosystemMobile from './Ecosystem/mobile.jsx';
-import {isMobileFunc} from '@/_utils/cientCheck.js'
+import useCientCheck from '@/_hooks/useCientCheck';
+
 import './pagePC.scss';
 import './pageMobile.scss';
 import '@/_theme/theme-mobile-blue.scss';
 
 export default function Home() {
-    const isMobile = isMobileFunc();
+    const isMobile = useCientCheck();
     if (isMobile) {
         return (
             <main className={`main-mobile`}>
