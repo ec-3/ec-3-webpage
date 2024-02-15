@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import {SpinLoading} from 'antd-mobile';
 
 import Banner from './Banner';
 import CarouselPC from './Carousel/pc.jsx';
@@ -21,7 +22,20 @@ import '@/_theme/theme-mobile-blue.scss';
 
 export default function Home() {
     const isMobile = useCientCheck();
-    if (isMobile) {
+
+    if (isMobile == null) {
+        return (
+            <main style={{
+                'display': 'flex',
+                'alignItems': 'center',
+                'justifyContent': 'center',
+                'height': '100%',
+                'backgroundColor': '#060606'
+            }}>
+                <SpinLoading color='primary' style={{ '--size': '48px' }} />
+            </main>
+        );
+    } else if (isMobile) {
         return (
             <main className={`main-mobile`}>
                 <Banner className="banner"/>
@@ -29,8 +43,8 @@ export default function Home() {
                 <Innovative className="innovative-wrapper"/>
                 <MineMobile className="mine"/>
                 <AppStoreMobile className="app-store"/>
-                <EctMobile className="ect" />
-                <EcosystemMobile className="ecosystem-wrapper" />
+                <EctMobile className="ect"/>
+                <EcosystemMobile className="ecosystem-wrapper"/>
             </main>
         );
     } else {

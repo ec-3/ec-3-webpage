@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const useClientCheck = () => {
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(null);
 
     useEffect(() => {
         const result = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
