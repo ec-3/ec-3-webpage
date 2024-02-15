@@ -1,0 +1,65 @@
+@mixin banner() {
+    .banner {
+        position: relative;
+        padding-bottom: 36px;
+        max-width: 100%;
+        height: 392px;
+        overflow: hidden;
+        .inner {
+            position: relative;
+            padding: $size-md-mobile;
+            height: 100%;
+            font-size: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            video {
+                margin: 32px 0 0 0;
+                width: 100%;
+                object-fit: fill;
+                transform: scale(2.2);
+            }
+            .banner-mask {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                padding: $size-md-mobile;
+                width: 100%;
+                background-color: rgb(6, 6, 6, .75);
+                z-index: 1;
+                box-sizing: border-box;
+                .banner-content {
+                }
+                .main-title {
+                    margin-top: 42px;
+                    margin-right: auto;
+                    margin-left: auto;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 1.2;
+                    font-size: 36px;
+                    color: $theme-dark_color-primary-most;
+                    font-weight: 700;
+                }
+                .sub-title {
+                    margin-top: 58px;
+                    text-align: center;
+                    font-size: $size-mder-mobile;
+                    color: $theme-dark_color-relative;
+                    font-weight: 700;
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                }
+                .notes {
+                    margin-top: 32px;
+                    text-align: center;
+                    line-height: 1.3;
+                    font-size: $size-md-mobile;
+                    font-weight: 300;
+                    color: $theme-dark_color-regular;
+                }
+            }
+        }
+    }
+}

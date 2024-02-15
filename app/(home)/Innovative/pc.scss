@@ -1,0 +1,74 @@
+@mixin innovative() {
+    .innovative-wrapper {
+        height: 1000PX;
+        background-color: rgb(66, 69, 73);
+        background-image: url('/images/innovative/innovative-bg.svg');
+        background-position: 50% 50%;
+        background-size: auto 500PX;
+        .innovative {
+            height: 100%;
+            padding-top: 128PX;
+            background-color: rgba(10, 12, 9, 0.94);
+            box-sizing: border-box;
+            user-select: text;
+        }
+        .inner {
+            @include fixed-center();
+            height: 200PX;
+            .row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                column-gap: 100PX;
+                margin-left: 48PX;
+                margin-right: 48PX;
+                .item {
+                    width: 460PX;
+                    .avatar {
+                        margin-bottom: 8PX;
+                        text-align: center;
+                        user-select: none;
+                        img {
+                            width: 35PX;
+                            height: 35PX;
+                        }
+                    }
+                    .title {
+                        margin-bottom: 30PX;
+                        font-size: 24PX;
+                        text-align: center;
+                    }
+                    .text {
+                        opacity: 1;
+                        color: $theme-dark_color-regular;
+                        font-size: 19PX;
+                        line-height: 28PX;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .innovative-main__title {
+            margin-top: 100PX;
+            text-align: center;
+            font-size: 46PX;
+            color: $theme-dark_color-primary-next;
+            font-weight: 300;
+            strong {
+                font-size: 90PX;
+                font-family: SourceSansPro-Semibold;
+                text-shadow: $theme-dark_color-primary-next -3PX 0PX 11PX;
+                -webkit-text-stroke-width: 4PX;
+                text-transform: uppercase;
+                overflow-wrap: normal;
+            }
+        }
+        .innovative-sub__title {
+            margin-top: 60PX;
+            margin-bottom: 70PX;
+            text-align: center;
+            font-size: 24PX;
+            color: #919191;
+        }
+    }
+}

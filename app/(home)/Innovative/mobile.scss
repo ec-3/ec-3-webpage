@@ -1,0 +1,68 @@
+@mixin innovative() {
+    .innovative-wrapper {
+        background-color: rgb(66, 69, 73);
+        background-image: url('/images/innovative/innovative-bg.svg');
+        background-position: 50% 156px;
+        background-size: auto 60px;
+        .innovative {
+            padding: 40px $side-padding-mobile 24px $side-padding-mobile;
+            background-color: rgba(10, 12, 9, 0.96);
+            box-sizing: border-box;
+        }
+        .inner {
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .item {
+                    margin-bottom: 16px;
+                    width: 100%;
+                    .avatar {
+                        margin-bottom: 4px;
+                        text-align: center;
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                    .title {
+                        margin-bottom: 12px;
+                        text-align: center;
+                        font-size: $size-mder-mobile;
+                    }
+                    .text {
+                        line-height: $line-height;
+                        text-align: center;
+                        font-size: $size-md-mobile;
+                        color: $theme-dark_color-regular;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .innovative-main__title {
+            padding-top: 12px;
+            line-height: 1.16;
+            text-align: center;
+            font-size: 28px;
+            color: $theme-dark_color-primary-next;
+            font-weight: 300;
+            strong {
+                font-size: 60px;
+                font-family: SourceSansPro-Semibold;
+                text-shadow: $theme-dark_color-primary-next -3px 0 11px;
+                -webkit-text-stroke-width: 4px;
+                text-transform: uppercase;
+                overflow-wrap: normal;
+            }
+        }
+        .innovative-sub__title {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            line-height: $line-height;
+            text-align: center;
+            font-size: $size-lg-mobile;
+            color: #919191;
+        }
+    }
+}

@@ -2,7 +2,10 @@
     font-family: SourceSansPro-Regular;
     src: url("../../public/font/SourceSansPro-Regular.ttf");
 }
-
+@font-face{
+    font-family: SourceSansPro-Semibold;
+    src: url("../../public/font/SourceSansPro-Semibold.ttf");
+}
 html, body {
     line-height: 1;
     font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
@@ -22,15 +25,21 @@ input::-moz-placeholder { color: $color-text-placeholder; }
 input:-moz-placeholder { color: $color-text-placeholder; }
 input:-ms-input-placeholder { color: $color-text-placeholder; }
 
-.size-tn { font-size: $size-tn; }
-.size-tner { font-size: $size-tner; }
-.size-md { font-size: $size-md; }
-.size-mder { font-size: $size-mder; }
-.size-lg { font-size: $size-lg; }
-.size-lger { font-size: $size-lger; }
-.size-hg { font-size: $size-hg; }
-.size-hger { font-size: $size-hger; }
+.size-tn-pc { font-size: $size-tn-pc; }
+.size-tner-pc { font-size: $size-tner-pc; }
+.size-md-pc { font-size: $size-md-pc; }
+.size-mder-pc { font-size: $size-mder-pc; }
+.size-lg-pc { font-size: $size-lg-pc; }
+.size-lger-pc { font-size: $size-lger-pc; }
+.size-hg-pc { font-size: $size-hg-pc; }
+.size-hger-pc { font-size: $size-hger-pc; }
 
+/** PC端 **/
 .ant-btn, .ant-input, .ant-dropdown .ant-dropdown-menu, .ant-carousel {
     font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif !important;
 }
+/** 手机端 **/
+.adm-button {
+    font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif !important;
+}
+

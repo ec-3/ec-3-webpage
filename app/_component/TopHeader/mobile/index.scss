@@ -1,0 +1,77 @@
+.top-header.mobile {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $side-padding-mobile;
+    width: 100%;
+    height: $header-height-mobile;
+    color: $theme-dark_color-primary-most;
+    background-color: $theme-dark_bg-primary;
+    @include border-bottom-1px(rgba(255, 255, 255, .14));
+    z-index: 10;
+    box-sizing: border-box;
+    .hide {  display: none; }
+    .logo {
+        margin-right: $side-padding-mobile;
+        width: 34px;
+        height: 34px;
+    }
+    .scroll-wrapper {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        .content {
+            position: relative;
+            display: inline-block;
+            white-space: nowrap;
+        }
+    }
+    .adm-dropdown {
+        display: inline-block;
+        background-color: transparent;
+        vertical-align: middle;
+        &.adm-dropdown-open .adm-dropdown-nav {
+            border-bottom-width: 0;
+        }
+
+    }
+    .adm-dropdown-popup {
+        top: $header-height-mobile !important;
+        .adm-dropdown-popup-mask {
+            //background-color: rgba(7, 17, 27, .1) !important;
+        }
+    }
+    .adm-dropdown-item-highlight { color: $theme-dark_color-relative; }
+    .adm-dropdown-item-title-text .adm-dropdown-item-title-arrow { vertical-align: middle; }
+    .adm-dropdown-item-title-arrow { color: $color-text-secondary; }
+    .adm-popup-body { background-color: transparent; }
+    .adm-dropdown-item-content {
+        //background-color: rgba(7, 17, 27, .5);
+    }
+    .drop-down_menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $side-padding-mobile;
+        padding: $side-padding-mobile;
+        .drop-down_menu-item {
+            background-color: #f5f5f5;
+            display: inline-block;
+            padding: 8px 12px;
+            line-height: 1;
+            font-size: $size-md-mobile;
+            color: $color-text-primary;
+            border: 1px solid #f0f0f0;
+            border-radius: 4PX;
+            cursor: pointer;
+            text-decoration: none;
+            &:active, &:hover {
+                background-color: $theme-dark_color-relative !important;
+                border-color: #3dc431;
+            }
+        }
+    }
+}

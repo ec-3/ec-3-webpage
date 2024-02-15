@@ -1,0 +1,92 @@
+.bottom-footer.pc {
+    background-color: $theme-dark_bg-secondary;
+    .inner {
+        @include fixed-center();
+        padding: 40PX $side-padding-pc;
+        box-sizing: border-box;
+    }
+    .contact-us {
+        margin-bottom: 60PX;
+        .mail-form {
+            display: flex;
+            align-items: center;
+            .text {
+                margin-left: 22PX;
+                margin-right: 200PX;
+                font-size: 40PX;
+                color: $theme-dark_color-primary-most;
+                user-select: text;
+            }
+            .email-field {
+                display: inline-block;
+                margin-right: 48PX;
+                width: 240PX;
+                font-size: 0;
+                input {
+                    text-align: center;
+                    color: $theme-dark_color-regular;
+                    background-color: #212525;
+                    border-color: $theme-dark_color-secondary;
+                    transition: all .3s;
+                    &::-webkit-input-placeholder { color: $theme-dark_color-secondary; }
+                    &::-moz-placeholder { color: $theme-dark_color-secondary; }
+                    &:-moz-placeholder { color: $theme-dark_color-secondary; }
+                    &:-ms-input-placeholder { color: $color-text-placeholder; }
+                    &:active, &:focus, &:active {
+                        color: $color-text-primary;
+                        background-color: #fff;
+                        border-color: $theme-dark_color-relative;
+                        &::-webkit-input-placeholder { color: $color-text-placeholder; }
+                        &::-moz-placeholder { color: $color-text-placeholder; }
+                        &:-moz-placeholder { color: $color-text-placeholder; }
+                        &:-ms-input-placeholder { color: $color-text-placeholder; }
+                    }
+                }
+            }
+        }
+    }
+    .grid-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: $side-padding-pc;
+        margin-bottom: 28PX;
+        .grid-col {
+            .grid-col__title {
+                margin-bottom: 20PX;
+                font-size: $size-md-pc;
+                color: $theme-dark_color-primary-most;
+                font-weight: 700;
+                user-select: text;
+            }
+            .grid-col-content {
+                display: inline-flex;
+                flex-direction: column;
+                .grid-col-link {
+                    margin-bottom: 8PX;
+                    padding: 4PX 0;
+                    font-size: $size-tner-pc;
+                    color: $theme-dark_color-secondary;
+                    text-decoration: none;
+                    transition: all .3s;
+                    &:hover {
+                        font-size: $size-md-pc;
+                        color: $theme-dark_color-primary-most;
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        font-size: $size-tner-pc;
+        color: $theme-dark_color-secondary;
+        user-select: text;
+        .link {
+            color: $theme-dark_color-secondary;
+            text-decoration: none;
+            transition: color .3s;
+            &:hover {
+                color: $theme-dark_color-regular;
+            }
+        }
+    }
+}

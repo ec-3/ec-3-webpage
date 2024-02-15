@@ -1,26 +1,48 @@
 'use client'
-import React, {useState, useRef, useEffect} from 'react';
-import BannerEc3 from './BannerEc3';
-import CarouselEc3 from './CarouselEc3';
-import InnovativeEc3 from './InnovativeEc3';
-import MineEc3 from './MineEc3';
-import AppStoreEc3 from './AppStoreEc3';
-import EctEc3 from './EctEc3';
-import EcosystemEc3 from './EcosystemEc3';
+import React from 'react';
 
-import './page.scss';
+import Banner from './Banner';
+import CarouselPC from './Carousel/pc.jsx';
+import CarouselMobile from './Carousel/mobile.jsx';
+import Innovative from './Innovative';
+import MinePC from './Mine/pc.jsx';
+import MineMobile from './Mine/mobile.jsx';
+import AppStorePC from './AppStore/pc.jsx';
+import AppStoreMobile from './AppStore/mobile.jsx';
+import EctPC from './Ect/pc.jsx';
+import EctMobile from './Ect/mobile.jsx';
+import EcosystemPC from './Ecosystem/pc.jsx';
+import EcosystemMobile from './Ecosystem/mobile.jsx';
+import {isMobileFunc} from '@/_utils/cientCheck.js'
+import './pagePC.scss';
+import './pageMobile.scss';
+import '@/_theme/theme-mobile-blue.scss';
 
 export default function Home() {
-
-    return (
-        <main className={`main`}>
-            <BannerEc3 className="banner"/>
-            <CarouselEc3 className="carousel"/>
-            <InnovativeEc3 className="innovative-wrapper"/>
-            <MineEc3 className="mine"/>
-            <AppStoreEc3 className="app-store"/>
-            <EctEc3 className="ect" />
-            <EcosystemEc3 className="ecosystem-wrapper" />
-        </main>
-    );
+    const isMobile = isMobileFunc();
+    if (isMobile) {
+        return (
+            <main className={`main-mobile`}>
+                <Banner className="banner"/>
+                <CarouselMobile className="carousel"/>
+                <Innovative className="innovative-wrapper"/>
+                <MineMobile className="mine"/>
+                <AppStoreMobile className="app-store"/>
+                <EctMobile className="ect" />
+                <EcosystemMobile className="ecosystem-wrapper" />
+            </main>
+        );
+    } else {
+        return (
+            <main className={`main-pc`}>
+                <Banner className="banner"/>
+                <CarouselPC className="carousel"/>
+                <Innovative className="innovative-wrapper"/>
+                <MinePC className="mine"/>
+                <AppStorePC className="app-store"/>
+                <EctPC className="ect" />
+                <EcosystemPC className="ecosystem-wrapper" />
+            </main>
+        );
+    }
 }

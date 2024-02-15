@@ -1,0 +1,44 @@
+@mixin carousel() {
+    .carousel {
+        background-color: $theme-dark-bg-regular;
+        .carousel-item {
+            .inner-wrapper {
+                @include fixed-center();
+            }
+            .inner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 84PX;
+                margin-right: 84PX;
+                height: 240PX;
+                .carousel-logo {
+                    margin-right: 22PX;
+                    width: 300PX;
+                    height: 83.5PX;
+                    font-size: 0;
+                    background-image: url('/images/carousel/carousel-one.png');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 0.3;
+                    transition: opacity 0.3s;
+                    &:hover { opacity: 1; }
+                }
+                .carousel-content {
+                    display: flex;
+                    flex: 1;
+                    .quote-img {
+                        margin-right: 18PX;
+                    }
+                    .carousel-text {
+                        line-height: 1.7;
+                        font-size: $size-mder-pc;
+                        color: $theme-dark_color-primary-most;
+                        user-select: text;
+                    }
+                }
+            }
+
+        }
+    }
+}

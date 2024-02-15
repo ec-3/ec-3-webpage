@@ -1,16 +1,24 @@
+'use client'
 import React from 'react';
-import { ConfigProvider } from 'antd';
-import theme from '@/_theme/greenTheme.js';
-import TopHeader from '@/_component/TopHeader/index.jsx';
-import BottomFooter from '@/_component/BottomFooter/index.jsx';
-import 'animate.css';
+import HomeLayoutPC from './homeLayoutPC.jsx';
+import HomeLayoutMobile from './homeLayoutMobile.jsx';
+import {isMobileFunc} from '@/_utils/cientCheck.js'
 
 export default function HomeLayout({children}) {
-    return (
-        <ConfigProvider theme={theme}>
-            <TopHeader />
-            {children}
-            <BottomFooter />
-        </ConfigProvider>
-    );
-};
+    const isMobile = isMobileFunc();
+    if (isMobile) {
+        return (
+            <HomeLayoutMobile>
+                {children}
+            </HomeLayoutMobile>
+        );
+    } else {
+        return (
+            <HomeLayoutPC>
+                {children}
+            </HomeLayoutPC>
+        );
+    }
+}
+
+

@@ -1,0 +1,44 @@
+@mixin carousel() {
+    .carousel {
+        padding-bottom: 12px;
+        background-color: $theme-dark-bg-regular;
+        .carousel-item {
+            padding: 18px $side-padding-mobile 22px $size-mder-mobile;
+            box-sizing: border-box;
+            .carousel-logo {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+                width: 80%;
+                opacity: 0.3;
+                .logo-img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .carousel-content {
+                display: flex;
+                align-items: flex-start;
+                .quote-img {
+                    width: 16px;
+                    height: auto;
+                    margin-right: $side-padding-mobile;
+                    &.reverse {
+                        margin-right: 0;
+                        margin-left: $side-padding-mobile;
+                        transform: rotate(180deg);
+                    }
+                }
+                .carousel-text {
+                    line-height: $line-height;
+                    text-align: center;
+                    font-size: $size-md-mobile;
+                    color: $theme-dark_color-primary-next;
+                }
+            }
+        }
+        .adm-swiper-indicator { bottom: 0; }
+        .adm-page-indicator-dot-active { background: #0b520d; }
+    }
+}
