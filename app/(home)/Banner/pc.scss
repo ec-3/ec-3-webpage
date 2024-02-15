@@ -1,0 +1,65 @@
+@mixin banner() {
+    .banner {
+        position: relative;
+        padding-bottom: 64PX;
+        max-width: 100%;
+        overflow: hidden;
+        .inner {
+            @include fixed-center();
+            font-size: 0;
+            overflow: hidden;
+            video {
+                margin: 0;
+                width: $page-width !important;
+                height: $banner-video-height-pc !important;
+                object-fit: fill;
+                transform: scale(1.4);
+            }
+            .banner-mask {
+                position: absolute;
+                top: -140PX;
+                width: $page-width !important;
+                height: $banner-video-height-pc !important;
+                transform: scale(1.4);
+                background-color: rgb(6, 6, 6, .75);
+                z-index: 1;
+                .banner-content {
+                    @include fixed-center();
+                    transform: scale(0.7143);
+                    user-select: auto;
+                }
+                .main-title {
+                    margin-top: 242PX;
+                    margin-right: auto;
+                    margin-left: auto;
+                    width: 940PX;
+                    height: 270PX;
+                    text-align: center;
+                    font-size: 92PX;
+                    color: $theme-dark_color-primary-most;
+                    font-weight: 700;
+                    user-select: text;
+                }
+                .sub-title {
+                    margin-top: 92PX;
+                    text-align: center;
+                    font-size: 26PX;
+                    color: $theme-dark_color-relative;
+                    font-weight: 700;
+                    opacity: 1;
+                    transform: translate3d(0PX, 0PX, 0PX) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                    user-select: text;
+                }
+                .notes {
+                    margin-top: 72PX;
+                    text-align: center;
+                    font-size: 24PX;
+                    font-weight: 300;
+                    color: $theme-dark_color-regular;
+                    user-select: text;
+                }
+            }
+        }
+    }
+}

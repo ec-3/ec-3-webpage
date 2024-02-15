@@ -1,0 +1,27 @@
+@import "./Banner/mobile.scss";
+@import "./Carousel/mobile.scss";
+@import "./Innovative/mobile.scss";
+@import "./Mine/mobile.scss";
+@import "./AppStore/mobile.scss";
+@import "./Ect/mobile.scss";
+@import "./Ecosystem/mobile.scss";
+
+.main-mobile {
+    width: 100%;
+    margin-top: $header-height-mobile;
+    color: $theme-dark_color-primary-most;
+    background-color: $theme-dark_bg-primary;
+    @include banner();
+    @include carousel();
+    @include innovative();
+    @include mine();
+    @include app-store();
+    @include ect();
+    @include ecosystem();
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover, .ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
+    color: $color-text-regular !important;
+}

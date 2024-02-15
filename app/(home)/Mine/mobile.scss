@@ -1,0 +1,72 @@
+@mixin mine() {
+    .mine {
+        padding: 0 $side-padding-mobile;
+        background-color: $theme-dark_bg-regular;
+        .main-title {
+            padding-top: 32px;
+            padding-bottom: 20px;
+            line-height: 1.16;
+            text-align: center;
+            font-size: 28px;
+            color: $theme-dark_color-primary-next;
+            font-weight: 300;
+            strong {
+                line-height: 100%;
+                text-align: center;
+                font-size: 60px;
+                font-family: SourceSansPro-Semibold;
+                -webkit-text-stroke-width: 4px;
+                text-transform: uppercase;
+                text-shadow: $theme-dark_color-primary-next -3px 0px 11px;
+                overflow-wrap: normal;
+            }
+        }
+        .sub-title {
+            line-height: $line-height;
+            text-align: left;
+            font-size: $size-mder-mobile;
+            color: rgb(145, 145, 145);
+        }
+        .image-text {
+            display: flex;
+            flex-direction: column;
+            .card-wrapper {
+                margin-top: -80px;
+                .card {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 20px;
+                    .avatar {
+                        margin-right: $side-padding-mobile;
+                        text-align: left;
+                        font-size: 0;
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                    .content {
+                        .title {
+                            margin-bottom: 10px;
+                            color: $theme-dark_color-primary-next;
+                            font-size: $size-mder-mobile;
+                        }
+                        .text {
+                            line-height: $line-height;
+                            font-size: $size-md-mobile;
+                            color: $theme-dark_color-regular;
+                        }
+                    }
+                }
+            }
+            .image-wrapper {
+                margin-top: -100px;
+                font-size: 0;
+                img {
+                    width: 308px;
+                    height: 385px;
+                }
+            }
+        }
+    }
+}

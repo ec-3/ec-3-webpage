@@ -1,0 +1,62 @@
+@mixin app-store() {
+    .app-store {
+        padding-bottom: 20PX;
+        background-color: $theme-dark_bg-regular;
+        .inner {
+            @include fixed-center();
+            max-width: 980PX;
+
+            .image-text {
+                display: flex;
+                flex-direction: row;
+                .image-wrapper {
+                    position: relative;
+                    width: 400PX;
+                    height: 461PX;
+                    margin-right: 32PX;
+                    font-size: 0;
+                    object-fit: fill;
+                    .phone {
+                        margin-left: -28PX;
+                    }
+                    .phone-text {
+                        position: absolute;
+                        left: 90PX;
+                        top: 372PX;
+                        width: 180PX;
+                        aspect-ratio: auto;
+                        border-radius: 6PX;
+                        box-shadow: $theme-dark_color-relative -6PX 1PX 12PX 1PX;
+                    }
+                }
+                .card-wrapper {
+                    flex: 1;
+                    .card {
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 60PX;
+                        .avatar {
+                            text-align: left;
+                            width: 116PX;
+                        }
+                        .content {
+                            .title {
+                                margin-bottom: 14PX;
+                                color: $theme-dark_color-primary-next;
+                                font-size: $size-hger-pc;
+                                user-select: text;
+                            }
+                            .text {
+                                margin-bottom: 15PX;
+                                color: $theme-dark_color-regular;
+                                font-size: $size-mder-pc;
+                                line-height: 22PX;
+                                user-select: text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import "./Banner/pc.scss";
+@import "./Carousel/pc.scss";
+@import "./Innovative/pc.scss";
+@import "./Mine/pc.scss";
+@import "./AppStore/pc.scss";
+@import "./Ect/pc.scss";
+@import "./Ecosystem/pc.scss";
+
+.main-pc {
+    margin-top: $header-height-pc;
+    color: $theme-dark_color-primary-most;
+    background-color: $theme-dark_bg-primary;
+    @include banner();
+    @include carousel();
+    @include innovative();
+    @include mine();
+    @include app-store();
+    @include ect();
+    @include ecosystem();
+}
+
+.ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover, .ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
+    color: $color-text-regular !important;
+}

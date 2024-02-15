@@ -1,0 +1,85 @@
+@mixin ecosystem() {
+    .ecosystem-wrapper {
+        background-color: rgb(66, 69, 73);
+        background-image: url(/images/ecosystem/ecosystem-bg.svg);
+        background-position: 50% 50%;
+        background-size: 586PX;
+        .ecosystem {
+            padding-top: 40PX;
+            padding-bottom: 60PX;
+            background-color: rgba(10, 12, 9, 0.85);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+        }
+        .inner {
+            @include fixed-center();
+            .main-title {
+                margin-top: 60PX;
+                margin-bottom: 20PX;
+                text-align: center;
+                font-size: 90PX;
+                color: $theme-dark_color-primary-next;
+                -webkit-text-stroke-width: 4PX;
+                text-transform: uppercase;
+                text-shadow: $theme-dark_color-primary-next -3PX 0PX 11PX;
+                user-select: text;
+            }
+            .sub-title {
+                margin-bottom: 20PX;
+                text-align: center;
+                line-height: 23PX;
+                font-size: $size-tner-pc;
+                color: $theme-dark_color-primary-next;
+                user-select: text;
+            }
+            .btn-wrapper {
+                text-align: center;
+                .ant-btn-primary  {
+                    height: 41PX;
+                    min-width: 200PX;
+                    margin: 0 auto;
+                    span {
+                        font-size: $size-mder-pc;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .carousel-item {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                padding-top: 40PX;
+                padding-bottom: 40PX;
+                max-width: 860PX;
+                margin: 0 auto;
+                .carousel-logo {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 180PX;
+                    height: 227PX;
+                    margin-right: 22PX;
+                    font-size: 0;
+                    img {
+                        border-radius: 3PX;
+                    }
+                    .uhome-text {
+                        opacity: .3;
+                    }
+                }
+                .carousel-content {
+                    display: flex;
+                    flex: 1;
+                    .quote-img {
+                        margin-right: 18PX;
+                    }
+                    .carousel-text {
+                        line-height: 1.7;
+                        font-size: $size-mder-pc;
+                        color: $theme-dark_color-primary-most;
+                        user-select: text;
+                    }
+                }
+            }
+        }
+    }
+}

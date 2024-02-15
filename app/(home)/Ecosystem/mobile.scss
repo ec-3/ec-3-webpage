@@ -1,0 +1,90 @@
+@mixin ecosystem() {
+    .ecosystem-wrapper {
+        background-color: rgb(66, 69, 73);
+        background-image: url(/images/ecosystem/ecosystem-bg.svg);
+        background-position: 50% 50%;
+        background-size: auto 60px;
+        .ecosystem {
+            padding: 40px $side-padding-mobile;
+            background-color: rgba(10, 12, 9, 0.85);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+        }
+        .inner {
+            .main-title {
+                padding-bottom: 20px;
+                line-height: 100%;
+                text-align: center;
+                font-size: 60px;
+                color: $theme-dark-color-primary-most;
+                -webkit-text-stroke-width: 4px;
+                text-transform: uppercase;
+                text-shadow: $theme-dark_color-primary-next -3px 0 11px;
+            }
+            .sub-title {
+                margin-bottom: 20px;
+                line-height: $line-height;
+                text-align: left;
+                font-size: $size-mder-mobile;
+                color: $theme-dark_color-primary-next;
+            }
+            .btn-wrapper {
+                text-align: center;
+                .adm-button-success  {
+                    padding: 5px 25px;
+                    min-height: 40px;
+                    span {
+                        font-size: $size-mder-mobile;
+                        font-weight: 700;
+                        color: $color-text-regular;
+                    }
+                }
+            }
+            .carousel-item {
+                padding: 18px $side-padding-mobile 22px $size-mder-mobile;
+                box-sizing: border-box;
+                .carousel-logo {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 0;
+                    img {
+                        border-radius: 3px;
+                    }
+                    .uhome-img {
+                        width: 140px;
+                        height: auto;
+                    }
+                    .uhome-text {
+                        width: 140px;
+                        height: auto;
+                        opacity: .3;
+                    }
+                }
+                .carousel-content {
+                    display: flex;
+                    align-items: flex-start;
+                    margin-top: 20px;
+                    .quote-img {
+                        width: 16px;
+                        height: auto;
+                        margin-right: $side-padding-mobile;
+                        &.reverse {
+                            margin-right: 0;
+                            margin-left: $side-padding-mobile;
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .carousel-text {
+                        line-height: $line-height;
+                        text-align: center;
+                        font-size: $size-md-mobile;
+                        color: $theme-dark_color-primary-next;
+                    }
+                }
+            }
+            .adm-swiper-indicator { bottom: 0; }
+            .adm-page-indicator-dot-active { background: #0b520d; }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@mixin mine() {
+    .mine {
+        padding-top: 96PX;
+        padding-bottom: 20PX;
+        background-color: $theme-dark_bg-regular;
+        .inner {
+            @include fixed-center();
+            max-width: 1000PX;
+            .main-title {
+                margin: 10PX auto;
+                padding-top: 40PX;
+                padding-bottom: 20PX;
+                line-height: 39PX;
+                text-align: center;
+                font-size: 46PX;
+                color: $theme-dark_color-primary-next;
+                font-weight: 300;
+                user-select: text;
+                strong {
+                    margin-top: 60PX;
+                    margin-bottom: 20PX;
+                    line-height: 100%;
+                    text-align: center;
+                    font-size: 90PX;
+                    font-family: SourceSansPro-Semibold;
+                    -webkit-text-stroke-width: 4PX;
+                    text-transform: uppercase;
+                    text-shadow: $theme-dark_color-primary-next -3PX 0PX 11PX;
+                    overflow-wrap: normal;
+                }
+            }
+            .sub-title {
+                line-height: $line-height;
+                text-align: center;
+                font-size: $size-md-pc;
+                color: rgb(120, 120, 120);
+                user-select: text;
+            }
+            .image-text {
+                display: flex;
+                flex-direction: row;
+                .card-wrapper {
+                    .card {
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 60PX;
+                        .avatar {
+                            text-align: left;
+                            width: 116PX;
+                            img {
+                                width: 34PX;
+                                height: 34PX;
+                            }
+                        }
+                        .content {
+                            .title {
+                                margin-bottom: 14PX;
+                                color: $theme-dark_color-primary-next;
+                                font-size: $size-hger-pc;
+                                user-select: text;
+                            }
+                            .text {
+                                margin-bottom: 15PX;
+                                color: $theme-dark_color-regular;
+                                font-size: $size-mder-pc;
+                                line-height: 22PX;
+                                user-select: text;
+                            }
+                        }
+                    }
+                }
+                .image-wrapper {
+                    margin-left: 46PX;
+                    font-size: 0;
+                    img {
+                        width: 320PX;
+                        height: 400PX;
+                    }
+                }
+            }
+        }
+    }
+}
