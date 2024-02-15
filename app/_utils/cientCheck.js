@@ -1,3 +1,6 @@
 export function isMobileFunc() {
-    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (typeof window !== 'undefined') {
+        return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    }
+    return false;
 }
