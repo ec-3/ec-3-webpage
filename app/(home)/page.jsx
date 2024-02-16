@@ -39,7 +39,7 @@ export default function Home() {
     } else if (isMobile) {
         return (
             <main className={`main-mobile`}>
-                <BannerPC className="banner"/>
+                <BannerMobile className="banner"/>
                 <CarouselMobile className="carousel"/>
                 <Innovative className="innovative-wrapper"/>
                 <MineMobile className="mine"/>
@@ -51,7 +51,7 @@ export default function Home() {
     } else {
         return (
             <main className={`main-pc`}>
-                <BannerMobile className="banner"/>
+                <BannerPC className="banner"/>
                 <CarouselPC className="carousel"/>
                 <Innovative className="innovative-wrapper"/>
                 <MinePC className="mine"/>
