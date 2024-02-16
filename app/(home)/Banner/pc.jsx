@@ -1,9 +1,7 @@
 import React, {useRef} from 'react';
-import useCientCheck from '@/_hooks/useCientCheck';
 
 const Banner = ({className = 'banner'}) => {
     const videoRef = useRef(null);
-    const isMobile = useCientCheck();
 
     return (
         <div className={className}  onClick={() => videoRef.current.play()}>

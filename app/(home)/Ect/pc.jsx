@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {Button} from 'antd';
 import Image from 'next/image';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
@@ -49,10 +49,11 @@ const EctPC = ({className = 'ect'}) => {
                         <p className="card-desc">Through the straightforward process of charging and discharging in distributed energy storage devices, users effortlessly acquire Token markers, intricately linked with emission reduction credits.</p>
                     </div>
                     <div className="film-text">
-                        <iframe width="536" height="301" src="https://www.youtube.com/embed/nImzDJeBz5c?rel=0&controls=1&autoplay=0&mute=0;atart=0"
-                                title="Ec³ token machine" frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen></iframe>
+                        <div className="film">
+                            <video preload="auto" controls poster="/video/YouTuBe.jpg">
+                                <source src="/video/YouTuBe.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
                         <p className="desc">Committed to fostering a vibrant community, supporting sustainability, and continually prioritizing technical security, we aspire to shape a greener, more sustainable future.</p>
                         <Button type="primary" href="http://www.baidu.com" target="_blank">Read More</Button>
                     </div>

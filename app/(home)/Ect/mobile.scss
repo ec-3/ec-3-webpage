@@ -155,15 +155,13 @@
                 }
             }
             .film-text {
-                margin-top: 40px;
+                margin-top: 28px;
                 text-align: center;
-                iframe {
-                    margin: 0 auto;
+                .film {
                     width: 100%;
-                    height: auto;
-                    min-height: 260px;
-                    border-width: 0;
-                    box-sizing: border-box;
+                    video {
+                        width: 100%;
+                    }
                 }
                 .desc {
                     margin-top: 20px;

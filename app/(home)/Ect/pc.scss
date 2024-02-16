@@ -188,13 +188,23 @@
                 justify-content: flex-start;
                 align-items: center;
                 user-select: text;
+                .film {
+                    width: 536PX;
+                    height: 400PX;
+                    video {
+                        margin-top: -20PX;
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                    }
+                }
                 .desc {
-                    margin-top: 45PX;
+                    margin-top: -8PX;
                     line-height: 23PX;
                     font-size: 15PX;
                     color: #fff;
                 }
-                .ant-btn-primary { margin-top: 35PX; }
+                .ant-btn-primary { margin-top: 16PX; }
             }
         }
         .ant-btn-primary {

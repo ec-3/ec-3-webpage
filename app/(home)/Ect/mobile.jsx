@@ -52,10 +52,11 @@ const EctMobile = ({className = 'ect'}) => {
                         <p className="card-desc">As users earn profits by engaging in carbon trading, green energy loans, and other initiatives, the corresponding Tokens are systematically burned, ensuring the scarcity of ECT.</p>
                     </div>
                     <div className="film-text">
-                        <iframe src="https://www.youtube.com/embed/nImzDJeBz5c?rel=0&controls=1&autoplay=0&mute=0;atart=0"
-                                title="Ec³ token machine" frameBorder="0" scrolling="no"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen></iframe>
+                        <div className="film">
+                            <video preload="auto" controls poster="/video/YouTuBe.jpg">
+                                <source src="/video/YouTuBe.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
                         <p className="desc">Committed to fostering a vibrant community, supporting sustainability, and continually prioritizing technical security, we aspire to shape a greener, more sustainable future.</p>
                         <Button color='success' fill='solid' onClick={() => location.href='http://www.baidu.com'}>Read More</Button>
                     </div>
