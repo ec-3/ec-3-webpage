@@ -1,11 +1,15 @@
-const BannerEc3 = ({className = 'banner'}) => {
+import React, {useRef} from 'react';
+
+const Banner = ({className = 'banner'}) => {
+    const videoRef = useRef(null);
+
     return (
-        <div className={className}>
+        <div className={className}  onClick={() => videoRef.current.play()}>
             <div className="inner">
-                <video autoPlay muted preload="auto">
-                    <source src="/video/banner.mp4" type="video/mp4"/>
-                    <source src="/video/banner.webm" type="video/webm"/>
-                </video>
+                {/*<video autoPlay muted preload="auto" ref={videoRef}>*/}
+                {/*    <source src="/video/banner.mp4" type="video/mp4"/>*/}
+                {/*    <source src="/video/banner.webm" type="video/webm"/>*/}
+                {/*</video>*/}
                 <div className="banner-mask">
                     <div className="banner-content">
                         <h2 className="main-title">Decentralized Energy Network Coalesced by People</h2>
@@ -19,4 +23,4 @@ const BannerEc3 = ({className = 'banner'}) => {
 };
 
 
-export default BannerEc3;
+export default Banner;

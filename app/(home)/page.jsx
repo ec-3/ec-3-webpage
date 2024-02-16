@@ -2,7 +2,8 @@
 import React from 'react';
 import {SpinLoading} from 'antd-mobile';
 
-import Banner from './Banner';
+import BannerPC from './Banner/pc.jsx';
+import BannerMobile from './Banner/mobile.jsx';
 import CarouselPC from './Carousel/pc.jsx';
 import CarouselMobile from './Carousel/mobile.jsx';
 import Innovative from './Innovative';
@@ -38,7 +39,7 @@ export default function Home() {
     } else if (isMobile) {
         return (
             <main className={`main-mobile`}>
-                <Banner className="banner"/>
+                <BannerPC className="banner"/>
                 <CarouselMobile className="carousel"/>
                 <Innovative className="innovative-wrapper"/>
                 <MineMobile className="mine"/>
@@ -50,7 +51,7 @@ export default function Home() {
     } else {
         return (
             <main className={`main-pc`}>
-                <Banner className="banner"/>
+                <BannerMobile className="banner"/>
                 <CarouselPC className="carousel"/>
                 <Innovative className="innovative-wrapper"/>
                 <MinePC className="mine"/>
