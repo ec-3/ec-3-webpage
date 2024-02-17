@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button} from 'antd';
+import {Button, Popconfirm} from 'antd';
 import Image from 'next/image';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 
@@ -55,7 +55,17 @@ const EctPC = ({className = 'ect'}) => {
                             </video>
                         </div>
                         <p className="desc">Committed to fostering a vibrant community, supporting sustainability, and continually prioritizing technical security, we aspire to shape a greener, more sustainable future.</p>
-                        <Button type="primary" href="http://www.baidu.com" target="_blank">Read More</Button>
+                        <Popconfirm
+                            rootClassName="come-soon"
+                            title="Come Soon"
+                            description="This feature is currently under development and will be launched soon."
+                            okText="Cancel"
+                            okType="default"
+                        >
+                            <Button type="primary"
+                                    // href="http://www.baidu.com"
+                                    target="_blank">Read More</Button>
+                        </Popconfirm>
                     </div>
                     <div className="card">
                         <h2 className="card-title">ECT Burning for Scarcity</h2>

@@ -1,10 +1,11 @@
 'use client'
 import React, {useState, useRef, useEffect} from 'react';
 import Link from 'next/link';
-import {Button, Input} from 'antd';
+import {Button, Input, Popconfirm} from 'antd';
 import './pc.scss';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 import allLinks from "./allLinks.js";
+
 
 const BottomFooter = ({className = ''}) => {
     const [email, setEmail] = useState('');
@@ -27,21 +28,26 @@ const BottomFooter = ({className = ''}) => {
         <footer className={`bottom-footer ${className}`}>
             <div className="inner">
                 <div className="contact-us" ref={scrollRef}>
-                    <form className="mail-form" action={`mailto:${email}`} method="post" encType="text/plain">
-                        <label className="text animate__animated animate__slower" data-animate="animate__fadeInUp">Get in touch with us</label>
-                        <div className="animate__animated" data-animate="animate__fadeInRight">
-                            <div className="email-field">
-                                <Input type="email" id="from" name="from" required
-                                       ref={emailInputRef}
-                                       value={email}
-                                       onChange={e => setEmail(e.target.value)}
-                                       placeholder="Enter your email address" autoComplete="off"/>
-                            </div>
-                            <input type="hidden" id="subject" name="subject" value="Customer letters from Ec3 website"/>
-                            <input type="hidden" id="body" name="body" value="" />
-                            <Button htmlType="submit" type="primary">Send Email</Button>
-                        </div>
-                    </form>
+                    <div className="title">
+                        Get in touch with us
+                        <span>support@Ec-3.io</span>
+                    </div>
+                    <Button type="primary" href={`mailto:${allLinks['support@Ec-3.io']}`}>Send Email</Button>
+                    {/*<form className="mail-form" action={`mailto:${email}`} method="post" encType="text/plain">*/}
+                    {/*    <label className="text animate__animated animate__slower" data-animate="animate__fadeInUp">Get in touch with us</label>*/}
+                    {/*    <div className="animate__animated" data-animate="animate__fadeInRight">*/}
+                    {/*        <div className="email-field">*/}
+                    {/*            <Input type="email" id="from" name="from" required*/}
+                    {/*                   ref={emailInputRef}*/}
+                    {/*                   value={email}*/}
+                    {/*                   onChange={e => setEmail(e.target.value)}*/}
+                    {/*                   placeholder="Enter your email address" autoComplete="off"/>*/}
+                    {/*        </div>*/}
+                    {/*        <input type="hidden" id="subject" name="subject" value="Customer letters from Ec3 website"/>*/}
+                    {/*        <input type="hidden" id="body" name="body" value="" />*/}
+                    {/*        <Button htmlType="submit" type="primary">Send Email</Button>*/}
+                    {/*    </div>*/}
+                    {/*</form>*/}
                 </div>
                 <div className="grid-row">
                     {allLinks.map(({title, links}, key) => (
@@ -49,21 +55,38 @@ const BottomFooter = ({className = ''}) => {
                             <div className="grid-col__title">{title}</div>
                             <div className="grid-col-content">
                                 {links.map((link, index) => (
-                                    <Link
-                                        href={link.href}
-                                        target="_blank"
-                                        className="grid-col-link"
-                                        key={index}
-                                    >
-                                        {link.name}
-                                    </Link>
+                                    (['Download Ec³ App', 'Shopping Car', 'Developers', 'Mine', 'Tokenomic', 'FAQs', 'Product User Guide'].includes(link.name)) ?
+                                        <Popconfirm
+                                            rootClassName="come-soon"
+                                            title="Come Soon"
+                                            description="This feature is currently under development and will be launched soon."
+                                            okText="Cancel"
+                                            okType="default"
+                                            key={index}
+                                        >
+                                            <a
+                                                className="grid-col-link"
+                                            >
+                                                {link.name}
+                                            </a>
+                                        </Popconfirm>
+                                        :
+                                        <Link
+                                            href={link.href}
+                                            target="_blank"
+                                            className="grid-col-link"
+                                            key={index}
+                                        >
+                                            {link.name}
+                                        </Link>
+
                                 ))}
                             </div>
                         </div>
                     ))}
                 </div>
                 <p className="copyright">Copyright © Ec³- Images used for demonstration purpose only (
-                    <Link className="link" href="https://www.baidu.com/" target="_blank">Licenses</Link>
+                    <a className="link">Licenses</a>
                     )
                 </p>
             </div>

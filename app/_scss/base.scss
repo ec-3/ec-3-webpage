@@ -44,3 +44,15 @@ input:-ms-input-placeholder { color: $color-text-placeholder; }
     font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif !important;
 }
 
+
+.come-soon {
+    .ant-popconfirm-description {
+        width: 320PX;
+    }
+    .ant-popconfirm-buttons {
+        button:first-child {
+            display: none;
+        }
+    }
+}
+

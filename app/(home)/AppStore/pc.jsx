@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import {Popconfirm} from 'antd';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 
 const AppStorePC = ({className = 'app-store'}) => {
@@ -10,7 +11,15 @@ const AppStorePC = ({className = 'app-store'}) => {
                 <div className="image-text" ref={scrollRef}>
                     <div className="image-wrapper animate__animated" data-animate="animate__fadeInLeft">
                         <Image className="phone" width="400" height="461" src="/images/app-store/phone.png" alt="App Store" />
-                        <Image className="phone-text" width="180" height="54" src="/images/app-store/phone-text.png" alt="App Store" />
+                        <Popconfirm
+                            rootClassName="come-soon"
+                            title="Come Soon"
+                            description="This feature is currently under development and will be launched soon."
+                            okText="Cancel"
+                            okType="default"
+                        >
+                            <Image className="phone-text" width="180" height="54" src="/images/app-store/phone-text.png" alt="App Store" />
+                        </Popconfirm>
                     </div>
                     <div className="card-wrapper">
                         <div className="card">

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {Button, Carousel} from 'antd';
+import {Button, Carousel, Popconfirm} from 'antd';
 
 const EcosystemPC = ({className = 'ecosystem-wrapper'}) => {
     return (
@@ -9,7 +9,17 @@ const EcosystemPC = ({className = 'ecosystem-wrapper'}) => {
                     <h2 className="main-title">ECOSYSTEM</h2>
                     <h3 className="sub-title">Engage, earn, connect – shaping our shared energy future together.</h3>
                     <div className="btn-wrapper">
-                        <Button type="primary" href="http://www.baidu.com" target="_blank">Get Whitelisted</Button>
+                        <Popconfirm
+                            rootClassName="come-soon"
+                            title="Come Soon"
+                            description="This feature is currently under development and will be launched soon."
+                            okText="Cancel"
+                            okType="default"
+                        >
+                            <Button type="primary"
+                                    // href="http://www.baidu.com"
+                                    target="_blank">Get Whitelisted</Button>
+                        </Popconfirm>
                     </div>
                     <Carousel autoplay dots={false}>
                         <div className="carousel-item">
