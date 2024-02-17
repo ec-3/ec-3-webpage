@@ -10,8 +10,8 @@ const items = [
         key: '1',
         label: (
             <Popconfirm
-                rootClassName="come-soon"
-                title="Come Soon"
+                rootClassName="coming-soon pc"
+                title="Coming Soon"
                 description="This feature is currently under development and will be launched soon."
                 okText="Cancel"
                 okType="default"
@@ -24,8 +24,8 @@ const items = [
         key: '2',
         label: (
             <Popconfirm
-                rootClassName="come-soon"
-                title="Come Soon"
+                rootClassName="coming-soon pc"
+                title="Coming Soon"
                 description="This feature is currently under development and will be launched soon."
                 okText="Cancel"
                 okType="default"

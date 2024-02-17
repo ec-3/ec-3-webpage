@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Modal } from 'antd-mobile'
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 import phoneTextImg from '~/images/app-store/phone-text.png';
 import avatar1 from '~/images/app-store/avatar-1.svg';
@@ -11,35 +12,56 @@ const AppStoreMobile = ({className = 'app-store'}) => {
     return (
         <div className="app-store">
             <div className="main-title" ref={scrollRef}>
-                <Image className="phone-text animate__animated" src={phoneTextImg} data-animate="animate__flipInX" alt="App Store" />
+                <Image className="phone-text animate__animated" src={phoneTextImg} data-animate="animate__flipInX"
+                       alt="App Store"
+                       onClick={() => {
+                           Modal.show({
+                               title: 'Coming Soon',
+                               content: 'This feature is currently under development and will be launched soon.',
+                               closeOnAction: true,
+                               closeOnMaskClick: true,
+                               maskClassName: 'coming-soon__mask mobile',
+                               actions: [
+                                   {
+                                       key: 'confirm',
+                                       text: 'I Know',
+                                   },
+                               ],
+                           })
+                       }}
+                />
             </div>
             <div className="image-text">
                 <div className="card-wrapper">
                     <div className="card">
                         <div className="avatar">
-                            <Image src={avatar1} alt="Icon" />
+                            <Image src={avatar1} alt="Icon"/>
                         </div>
                         <div className="content">
                             <h3 className="title">Automated Energy Future</h3>
-                            <p className="text">Leveraging the access control module, achieve peak shaving and valley filling, enhancing energy utilization efficiency and shaping the future of energy automation.</p>
+                            <p className="text">Leveraging the access control module, achieve peak shaving and valley
+                                filling, enhancing energy utilization efficiency and shaping the future of energy
+                                automation.</p>
                         </div>
                     </div>
                     <div className="card">
                         <div className="avatar">
-                            <Image src={avatar2} alt="Icon" />
+                            <Image src={avatar2} alt="Icon"/>
                         </div>
                         <div className="content">
                             <h3 className="title">Payment Module with Distinct Advantages</h3>
-                            <p className="text">Inheriting the Capabilities of the Peaq Payment Module: Trustless and automated, it ensures the seamless flow of your earnings.</p>
+                            <p className="text">Inheriting the capabilities of the peaq payment module: Trustless and
+                                automated, it ensures the seamless flow of your earnings.</p>
                         </div>
                     </div>
                     <div className="card">
                         <div className="avatar">
-                            <Image src={avatar3} alt="Icon" />
+                            <Image src={avatar3} alt="Icon"/>
                         </div>
                         <div className="content">
                             <h3 className="title">Thrilling Real-time Token Rewards</h3>
-                            <p className="text">The app tracks token rewards for energy usage in real-time, connecting to your wallet for effortless control over your earnings.</p>
+                            <p className="text">The app tracks token rewards for energy usage in real-time, connecting
+                                to your wallet for effortless control over your earnings.</p>
                         </div>
                     </div>
                 </div>

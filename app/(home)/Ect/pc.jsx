@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Button, Popconfirm} from 'antd';
 import Image from 'next/image';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
+import {linkLocation} from '@/config.js';
 
 const EctPC = ({className = 'ect'}) => {
     const [checked, setChecked] = useState(3);
@@ -25,7 +26,7 @@ const EctPC = ({className = 'ect'}) => {
                             <p className="text">Experience a greener and more sustainable approach with reduced computing power and electricity consumption.</p>
                             <p className="text">Unlock stability in distributed home energy storage mining by embracing the rewarding practice of holding and locking, seamlessly integrated without disruptions to the power grid.</p>
                             <p className="text stake-title">Mine and earn profits by staking your held tokens</p>
-                            <Button type="primary" href="https://stake.ec-cube.io/" target="_blank">STAKE</Button>
+                            <Button type="primary" href={linkLocation['Staking']} target="_blank">STAKE</Button>
                         </div>
                         <div className="image"></div>
                     </div>
@@ -56,8 +57,8 @@ const EctPC = ({className = 'ect'}) => {
                         </div>
                         <p className="desc">Committed to fostering a vibrant community, supporting sustainability, and continually prioritizing technical security, we aspire to shape a greener, more sustainable future.</p>
                         <Popconfirm
-                            rootClassName="come-soon"
-                            title="Come Soon"
+                            rootClassName="coming-soon pc"
+                            title="Coming Soon"
                             description="This feature is currently under development and will be launched soon."
                             okText="Cancel"
                             okType="default"
@@ -69,7 +70,7 @@ const EctPC = ({className = 'ect'}) => {
                     </div>
                     <div className="card">
                         <h2 className="card-title">ECT Burning for Scarcity</h2>
-                        <p className="card-desc">As users earn profits by engaging in carbon trading, green energy loans, and other initiatives, the corresponding Tokens are systematically burned, ensuring the scarcity of ECT.</p>
+                        <p className="card-desc">As users earn profits by engaging in carbon trading, green energy loans, and other initiatives, the corresponding tokens are systematically burned, ensuring the scarcity of ECT.</p>
                     </div>
                 </div>
             </div>

@@ -31,7 +31,7 @@ const Innovative = ({className = 'innovative-wrapper'}) => {
                         <div className="item">
                             <div className="avatar"><Image src={avatar3} alt="Icon" /></div>
                             <h4 className="title">DID Technology</h4>
-                            <p className="text">tandardized DID technology enhances network scalability, interoperability, and reliability.</p>
+                            <p className="text">Standardized DID technology enhances network scalability, interoperability, and reliability.</p>
                         </div>
                         <div className="item">
                             <div className="avatar"><Image src={avatar4} alt="Icon" /></div>

@@ -1,8 +1,9 @@
 import {useState} from 'react';
-import { Button } from 'antd-mobile'
+import { Button, Modal } from 'antd-mobile'
 import Image from 'next/image';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 import stakeholderImg from '~/images/ect/stakeholder.jpg';
+import {linkLocation} from "@/config";
 
 const EctMobile = ({className = 'ect'}) => {
     const [checked, setChecked] = useState(3);
@@ -26,7 +27,7 @@ const EctMobile = ({className = 'ect'}) => {
                         <p className="text">Experience a greener and more sustainable approach with reduced computing power and electricity consumption.</p>
                         <p className="text">Unlock stability in distributed home energy storage mining by embracing the rewarding practice of holding and locking, seamlessly integrated without disruptions to the power grid.</p>
                         <p className="text stake-title">Mine and earn profits by staking your held tokens</p>
-                        <Button color='success' fill='solid' onClick={() => location.href='https://stake.ec-cube.io/'}>STAKE</Button>
+                        <Button color='success' fill='solid' onClick={() => location.href=linkLocation['Staking']}>STAKE</Button>
                     </div>
                 </div>
                 <div className={`tab-content tab-content__two ${checked===2?'show':'hide'}`}>
@@ -49,7 +50,7 @@ const EctMobile = ({className = 'ect'}) => {
                     </div>
                     <div className="card">
                         <h2 className="card-title">ECT Burning for Scarcity</h2>
-                        <p className="card-desc">As users earn profits by engaging in carbon trading, green energy loans, and other initiatives, the corresponding Tokens are systematically burned, ensuring the scarcity of ECT.</p>
+                        <p className="card-desc">As users earn profits by engaging in carbon trading, green energy loans, and other initiatives, the corresponding tokens are systematically burned, ensuring the scarcity of ECT.</p>
                     </div>
                     <div className="film-text">
                         <div className="film">
@@ -58,7 +59,22 @@ const EctMobile = ({className = 'ect'}) => {
                             </video>
                         </div>
                         <p className="desc">Committed to fostering a vibrant community, supporting sustainability, and continually prioritizing technical security, we aspire to shape a greener, more sustainable future.</p>
-                        <Button color='success' fill='solid' onClick={() => location.href='http://www.baidu.com'}>Read More</Button>
+                        <Button color='success' fill='solid'
+                                onClick={() => {
+                                    Modal.show({
+                                        title: 'Coming Soon',
+                                        content: 'This feature is currently under development and will be launched soon.',
+                                        closeOnAction: true,
+                                        closeOnMaskClick: true,
+                                        maskClassName: 'coming-soon__mask mobile',
+                                        actions: [
+                                            {
+                                                key: 'confirm',
+                                                text: 'I Know',
+                                            },
+                                        ],
+                                    })
+                                }}>Read More</Button>
                     </div>
                 </div>
             </div>

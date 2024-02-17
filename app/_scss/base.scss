@@ -45,7 +45,7 @@ input:-ms-input-placeholder { color: $color-text-placeholder; }
 }
 
 
-.come-soon {
+.coming-soon.pc {
     .ant-popconfirm-description {
         width: 320PX;
     }
@@ -55,4 +55,6 @@ input:-ms-input-placeholder { color: $color-text-placeholder; }
         }
     }
 }
-
+.coming-soon__mask.mobile {
+    background-color: rgba(0, 0, 0, 0) !important;
+}

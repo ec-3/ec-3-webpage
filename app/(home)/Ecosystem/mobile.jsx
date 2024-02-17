@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Swiper, Button } from 'antd-mobile'
+import { Swiper, Button, Modal } from 'antd-mobile'
 import uhomeImg from '~/images/ecosystem/uhome.png';
 import uhomeTextImg from '~/images/ecosystem/uhome-text.png';
 import quoteImg from '~/images/carousel/quote.svg';
@@ -12,7 +12,22 @@ const EcosystemMobile = ({className = 'ecosystem-wrapper'}) => {
                     <h2 className="main-title">ECOSYSTEM</h2>
                     <h3 className="sub-title">Engage, earn, connect – shaping our shared energy future together.</h3>
                     <div className="btn-wrapper">
-                        <Button color='success' fill='solid' onClick={() => location.href='https://www.baidu.com/'}>Get Whitelisted</Button>
+                        <Button color='success' fill='solid'
+                                onClick={() => {
+                                    Modal.show({
+                                        title: 'Coming Soon',
+                                        content: 'This feature is currently under development and will be launched soon.',
+                                        closeOnAction: true,
+                                        closeOnMaskClick: true,
+                                        maskClassName: 'coming-soon__mask mobile',
+                                        actions: [
+                                            {
+                                                key: 'confirm',
+                                                text: 'I Know',
+                                            },
+                                        ],
+                                    })
+                                }}>Get Whitelisted</Button>
                     </div>
                     <Swiper autoplay loop>
                         <Swiper.Item className="carousel-item">

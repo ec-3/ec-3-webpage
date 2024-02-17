@@ -12,8 +12,8 @@ const AppStorePC = ({className = 'app-store'}) => {
                     <div className="image-wrapper animate__animated" data-animate="animate__fadeInLeft">
                         <Image className="phone" width="400" height="461" src="/images/app-store/phone.png" alt="App Store" />
                         <Popconfirm
-                            rootClassName="come-soon"
-                            title="Come Soon"
+                            rootClassName="coming-soon pc"
+                            title="Coming Soon"
                             description="This feature is currently under development and will be launched soon."
                             okText="Cancel"
                             okType="default"
@@ -37,7 +37,7 @@ const AppStorePC = ({className = 'app-store'}) => {
                             </div>
                             <div className="content">
                                 <h3 className="title">Payment Module with Distinct Advantages</h3>
-                                <p className="text">Inheriting the Capabilities of the Peaq Payment Module: Trustless and automated, it ensures the seamless flow of your earnings.</p>
+                                <p className="text">Inheriting the capabilities of the peaq payment module: Trustless and automated, it ensures the seamless flow of your earnings.</p>
                             </div>
                         </div>
                         <div className="card">

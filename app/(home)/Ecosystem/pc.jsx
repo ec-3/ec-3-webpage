@@ -10,8 +10,8 @@ const EcosystemPC = ({className = 'ecosystem-wrapper'}) => {
                     <h3 className="sub-title">Engage, earn, connect – shaping our shared energy future together.</h3>
                     <div className="btn-wrapper">
                         <Popconfirm
-                            rootClassName="come-soon"
-                            title="Come Soon"
+                            rootClassName="coming-soon pc"
+                            title="Coming Soon"
                             description="This feature is currently under development and will be launched soon."
                             okText="Cancel"
                             okType="default"

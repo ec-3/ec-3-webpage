@@ -5,6 +5,7 @@ import {Button, Input, Popconfirm} from 'antd';
 import './pc.scss';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 import allLinks from "./allLinks.js";
+import {linkLocation} from '@/config.js'
 
 
 const BottomFooter = ({className = ''}) => {
@@ -32,7 +33,7 @@ const BottomFooter = ({className = ''}) => {
                         Get in touch with us
                         <span>support@Ec-3.io</span>
                     </div>
-                    <Button type="primary" href={`mailto:${allLinks['support@Ec-3.io']}`}>Send Email</Button>
+                    <Button type="primary" href={linkLocation['support@Ec-3.io']}>Send Email</Button>
                     {/*<form className="mail-form" action={`mailto:${email}`} method="post" encType="text/plain">*/}
                     {/*    <label className="text animate__animated animate__slower" data-animate="animate__fadeInUp">Get in touch with us</label>*/}
                     {/*    <div className="animate__animated" data-animate="animate__fadeInRight">*/}
@@ -57,18 +58,14 @@ const BottomFooter = ({className = ''}) => {
                                 {links.map((link, index) => (
                                     (['Download Ec³ App', 'Shopping Car', 'Developers', 'Mine', 'Tokenomic', 'FAQs', 'Product User Guide'].includes(link.name)) ?
                                         <Popconfirm
-                                            rootClassName="come-soon"
-                                            title="Come Soon"
+                                            rootClassName="coming-soon pc"
+                                            title="Coming Soon"
                                             description="This feature is currently under development and will be launched soon."
                                             okText="Cancel"
                                             okType="default"
                                             key={index}
                                         >
-                                            <a
-                                                className="grid-col-link"
-                                            >
-                                                {link.name}
-                                            </a>
+                                            <a className="grid-col-link">{link.name}</a>
                                         </Popconfirm>
                                         :
                                         <Link
@@ -76,9 +73,7 @@ const BottomFooter = ({className = ''}) => {
                                             target="_blank"
                                             className="grid-col-link"
                                             key={index}
-                                        >
-                                            {link.name}
-                                        </Link>
+                                        >{link.name}</Link>
 
                                 ))}
                             </div>

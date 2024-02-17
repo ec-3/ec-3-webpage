@@ -1,7 +1,7 @@
 'use client'
 import React, {useState, useRef, useEffect} from 'react';
 import Link from 'next/link';
-import {Button, Collapse} from 'antd-mobile';
+import {Button, Collapse, Modal} from 'antd-mobile';
 import './mobile.scss';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 import allLinks from "./allLinks.js";
@@ -48,20 +48,39 @@ const BottomFooter = ({className = ''}) => {
                     {allLinks.map(({title, links}, key) => (
                         <Collapse.Panel key={key} title={title}>
                             {links.map((link, index) => (
-                                <Link
-                                    className="link"
-                                    href={link.href}
-                                    target="_blank"
-                                    key={index}
-                                >
-                                    {link.name}
-                                </Link>
+                                (['Download Ec³ App', 'Shopping Car', 'Developers', 'Mine', 'Tokenomic', 'FAQs', 'Product User Guide'].includes(link.name)) ?
+                                    <a
+                                        className="link"
+                                        key={index}
+                                        onClick={() => {
+                                            Modal.show({
+                                                title: 'Coming Soon',
+                                                content: 'This feature is currently under development and will be launched soon.',
+                                                closeOnAction: true,
+                                                closeOnMaskClick: true,
+                                                maskClassName: 'coming-soon__mask mobile',
+                                                actions: [
+                                                    {
+                                                        key: 'confirm',
+                                                        text: 'I Know',
+                                                    },
+                                                ],
+                                            })
+                                        }}
+                                    >{link.name}</a>
+                                    :
+                                    <Link
+                                        href={link.href}
+                                        target="_blank"
+                                        className="link"
+                                        key={index}
+                                    >{link.name}</Link>
                             ))}
                         </Collapse.Panel>
                     ))}
                 </Collapse>
                 <p className="copyright">Copyright © Ec³- Images used for demonstration purpose only (
-                    <Link className="link" href="https://www.baidu.com/" target="_blank">Licenses</Link>
+                    <a className="link">Licenses</a>
                     )
                 </p>
             </div>

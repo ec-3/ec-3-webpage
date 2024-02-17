@@ -19,11 +19,49 @@
         width: 34px;
         height: 34px;
     }
-    .scroll-wrapper {
+    .wrapper {
         flex: 1;
         position: relative;
+        padding: 0 24px;
+        box-sizing: border-box;
         overflow: hidden;
-        white-space: nowrap;
+        font-size: 0;
+        .icon {
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            transform: translateY(-50%);
+            &.left-icon {
+                left: 0;
+                animation: .6s rainbow-l infinite;
+                @keyframes rainbow-l {
+                    from,to { transform: scale(.8), translateY(-50%); left: 0; }
+                    50% {
+                        transform: scale(1), translateY(-50%);
+                        left: 3px;
+                    }
+                }
+            }
+
+            &.right-icon {
+                right: 0;
+                animation: .6s rainbow-r infinite;
+                @keyframes rainbow-r {
+                    from,to { transform: scale(.8), translateY(-50%); right: 0; }
+                    50% {
+                        transform: scale(1), translateY(-50%);
+                        right: 3px;
+                    }
+                }
+            }
+        }
+
+    }
+    .scroll-wrapper {
+        position: relative;
+        overflow: hidden;
         .content {
             position: relative;
             display: inline-block;
