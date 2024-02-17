@@ -29,7 +29,7 @@ const BottomFooter = ({className = ''}) => {
         <footer className={`bottom-footer ${className}`}>
             <div className="inner">
                 <div className="contact-us" ref={scrollRef}>
-                    <div className="title">
+                    <div className="title animate__animated animate__slower" data-animate="animate__fadeInUp">
                         Get in touch with us
                         <span>support@Ec-3.io</span>
                     </div>
