@@ -38,8 +38,8 @@ const BottomFooter = ({className = ''}) => {
                                        onChange={e => setEmail(e.target.value)}
                                        placeholder="Enter your email address" autoComplete="off"/>
                             </div>
-                            <input type="hidden" id="subject" name="subject" value="Customer letters from Ec3 website"/>
-                            <input type="hidden" id="body" name="body" value="" />
+                            {/*<input type="hidden" id="subject" name="subject" value="Customer letters from Ec3 website"/>*/}
+                            {/*<input type="hidden" id="body" name="body" value="" />*/}
                             <Button type="submit" color="success" fill="solid">Send Email</Button>
                         </div>
                     </form>
