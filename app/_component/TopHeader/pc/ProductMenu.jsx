@@ -23,15 +23,7 @@ const items = [
     {
         key: '2',
         label: (
-            <Popconfirm
-                rootClassName="coming-soon pc"
-                title="Coming Soon"
-                description="This feature is currently under development and will be launched soon."
-                okText="Cancel"
-                okType="default"
-            >
-                <a>Staking</a>
-            </Popconfirm>
+            <a href={linkLocation['Staking']}>Staking</a>
         )
     },
 ];

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Popconfirm} from 'antd';
+import {Button} from 'antd';
 import Image from 'next/image';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 import {linkLocation} from '@/config.js';
@@ -56,17 +56,10 @@ const EctPC = ({className = 'ect'}) => {
                             </video>
                         </div>
                         <p className="desc">Committed to fostering a vibrant community, supporting sustainability, and continually prioritizing technical security, we aspire to shape a greener, more sustainable future.</p>
-                        <Popconfirm
-                            rootClassName="coming-soon pc"
-                            title="Coming Soon"
-                            description="This feature is currently under development and will be launched soon."
-                            okText="Cancel"
-                            okType="default"
-                        >
-                            <Button type="primary"
-                                    // href="http://www.baidu.com"
-                                    target="_blank">Read More</Button>
-                        </Popconfirm>
+                        <Button type="primary"
+                                href={linkLocation['Read More']}
+                                target="_blank">Read More</Button>
+
                     </div>
                     <div className="card">
                         <h2 className="card-title">ECT Burning for Scarcity</h2>

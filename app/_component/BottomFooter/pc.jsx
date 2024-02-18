@@ -56,7 +56,7 @@ const BottomFooter = ({className = ''}) => {
                             <div className="grid-col__title">{title}</div>
                             <div className="grid-col-content">
                                 {links.map((link, index) => (
-                                    (['Download Ec³ App', 'Shopping Car', 'Developers', 'Mine', 'Tokenomic', 'FAQs', 'Product User Guide'].includes(link.name)) ?
+                                    (['Download Ec³ App', 'Shopping Car'].includes(link.name)) ?
                                         <Popconfirm
                                             rootClassName="coming-soon pc"
                                             title="Coming Soon"

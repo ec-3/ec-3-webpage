@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Space, Popconfirm } from 'antd';
+import { Dropdown, Space } from 'antd';
 import Link from 'next/link';
 import {linkLocation} from '@/config.js';
 
@@ -9,15 +9,7 @@ const items = [
     {
         key: '1',
         label: (
-            <Popconfirm
-                rootClassName="coming-soon pc"
-                title="Coming Soon"
-                description="This feature is currently under development and will be launched soon."
-                okText="Cancel"
-                okType="default"
-            >
-                <a>Documents</a>
-            </Popconfirm>
+            <a href={linkLocation['Documents']} target="_blank">Documents</a>
         )
     },
 ];

@@ -1,5 +1,5 @@
 export const linkLocation = {
-    'Documents': 'https://www.baidu.com/',
+    'Documents': 'https://docs.ec-cube.io/',
     'Ec³ cube': 'https://www.baidu.com/',
     'Staking': 'https://stake.ec-cube.io/',
     'Discord': 'https://discord.gg/kaA5A88Z8X',
@@ -9,10 +9,12 @@ export const linkLocation = {
 
     'Download Ec³ App': 'https://www.baidu.com/',
     'Shopping Car': 'https://www.baidu.com/',
-    'Developers': 'https://www.baidu.com/',
-    'Mine': 'https://www.baidu.com/',
-    'Tokenomic': 'https://www.baidu.com/',
-    'FAQs': 'https://www.baidu.com/',
-    'Product User Guide': 'https://www.baidu.com/',
+    'Developers': 'https://docs.ec-cube.io/developer',
+    'Mine': 'https://docs.ec-cube.io/mine',
+    'Tokenomic': 'https://docs.ec-cube.io/tokenomic',
+    'FAQs': 'https://docs.ec-cube.io/faqs',
+    'Product User Guide': 'https://docs.ec-cube.io/product-user-guide',
     'Medium': 'https://medium.com/@ec3.deenergy',
+
+    'Read More': 'https://docs.ec-cube.io/ec-overview',
 }

@@ -50,7 +50,7 @@ const BottomFooter = ({className = ''}) => {
                     {allLinks.map(({title, links}, key) => (
                         <Collapse.Panel key={key} title={title}>
                             {links.map((link, index) => (
-                                (['Download Ec³ App', 'Shopping Car', 'Developers', 'Mine', 'Tokenomic', 'FAQs', 'Product User Guide'].includes(link.name)) ?
+                                (['Download Ec³ App', 'Shopping Car'].includes(link.name)) ?
                                     <a
                                         className="link"
                                         key={index}

@@ -89,7 +89,7 @@ const TopHeaderMobile = ({className = ''}) => {
                         <Dropdown ref={menuRef} closeOnClickAway={true} getContainer={() => headerRef.current}>
                             <Dropdown.Item key='developers' title='DEVELOPERS'>
                                 <div className="drop-down_menu">
-                                    <a className="drop-down_menu-item" onClick={commingSoonHandle}>Documents</a>
+                                    <a className="drop-down_menu-item" href={linkLocation['Documents']}>Documents</a>
                                 </div>
                             </Dropdown.Item>
                         </Dropdown>

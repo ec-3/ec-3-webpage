@@ -30,16 +30,16 @@
             position: absolute;
             top: 50%;
             display: inline-block;
-            width: 16px;
-            height: 16px;
-            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            transform: scaleX(1) translateY(-50%);
             &.left-icon {
                 left: 0;
-                animation: .6s rainbow-l infinite;
+                animation: .8s rainbow-l infinite;
                 @keyframes rainbow-l {
-                    from,to { transform: scale(.8), translateY(-50%); left: 0; }
+                    from,to { transform: scaleX(0.1) translateY(-50%); left: -3px; }
                     50% {
-                        transform: scale(1), translateY(-50%);
+                        transform: scaleX(1) translateY(-50%);
                         left: 3px;
                     }
                 }
@@ -47,11 +47,11 @@
 
             &.right-icon {
                 right: 0;
-                animation: .6s rainbow-r infinite;
+                animation: .8s rainbow-r infinite;
                 @keyframes rainbow-r {
-                    from,to { transform: scale(.8), translateY(-50%); right: 0; }
+                    from,to { transform: scaleX(0.1) translateY(-50%); right: -3px; }
                     50% {
-                        transform: scale(1), translateY(-50%);
+                        transform: scaleX(1) translateY(-50%);
                         right: 3px;
                     }
                 }
