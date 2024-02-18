@@ -101,9 +101,8 @@
     }
     .adm-button-success {
         padding: 4px 12px;
-        span {
-            font-size: $size-md-mobile;
-            color: #090909;;
-        }
+        font-size: $size-md-mobile;
+        color: #090909;
+        text-decoration: none;
     }
 }
