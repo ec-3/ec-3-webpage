@@ -54,7 +54,7 @@ const EctMobile = ({className = 'ect'}) => {
                     </div>
                     <div className="film-text">
                         <div className="film">
-                            <video preload="auto" controls poster="/video/YouTuBe.jpg">
+                            <video preload="auto" controls poster="/video/YouTuBe.png">
                                 <source src="/video/YouTuBe.mp4" type="video/mp4"/>
                             </video>
                         </div>
