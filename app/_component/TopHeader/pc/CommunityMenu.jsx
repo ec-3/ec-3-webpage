@@ -9,19 +9,19 @@ const items = [
     {
         key: '1',
         label: (
-            <Link href={linkLocation['Discord']} target="_blank">Discord</Link>
+            <Link prefetch href={linkLocation['Discord']} target="_blank">Discord</Link>
         )
     },
     {
         key: '2',
         label: (
-            <Link href={linkLocation['X']} target="_blank">X</Link>
+            <Link prefetch href={linkLocation['X']} target="_blank">X</Link>
         )
     },
     {
         key: '3',
         label: (
-            <Link href={linkLocation['Telegram']} target="_blank">Telegram</Link>
+            <Link prefetch href={linkLocation['Telegram']} target="_blank">Telegram</Link>
         )
     },
 ];

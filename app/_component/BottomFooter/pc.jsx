@@ -69,6 +69,7 @@ const BottomFooter = ({className = ''}) => {
                                         </Popconfirm>
                                         :
                                         <Link
+                                            prefetch
                                             href={link.href}
                                             target="_blank"
                                             className="grid-col-link"

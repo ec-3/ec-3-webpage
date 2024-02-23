@@ -63,6 +63,7 @@ const BottomFooter = ({className = ''}) => {
                                     >{link.name}</a>
                                     :
                                     <Link
+                                        prefetch
                                         href={link.href}
                                         target="_blank"
                                         className="link"

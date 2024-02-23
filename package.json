@@ -22,10 +22,16 @@
   },
   "devDependencies": {
     "amfe-flexible": "^2.2.1",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^9.4.0",
     "postcss-pxtorem": "^6.1.0",
     "sass": "^1.70.0"
   },
   "browserslist": [
-    "cover 99.5%"
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8",
+    "Android >= 4.0",
+    "iOS >= 8"
   ]
 }

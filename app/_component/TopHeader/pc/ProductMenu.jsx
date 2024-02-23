@@ -23,7 +23,7 @@ const items = [
     {
         key: '2',
         label: (
-            <a href={linkLocation['Staking']}>Staking</a>
+            <a href={linkLocation['Staking']} target="_blank">Staking</a>
         )
     },
 ];

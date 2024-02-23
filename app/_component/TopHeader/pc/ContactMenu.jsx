@@ -9,7 +9,7 @@ const items = [
     {
         key: '1',
         label: (
-            <Link href={linkLocation['support@Ec-3.io']} target="_blank">support@Ec-3.io</Link>
+            <Link prefetch href={linkLocation['support@Ec-3.io']} target="_blank">support@Ec-3.io</Link>
         )
     },
 ];
