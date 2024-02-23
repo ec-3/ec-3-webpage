@@ -62,7 +62,8 @@ const MinePC = ({className = 'mine'}) => {
                     <div className={`image-wrapper ${time > 0 ? 'pre-sale' : ''}`}>
                         <Image className="animate__animated" data-animate="animate__fadeInRight"
                                src={energyStorageImg} alt="Energy storage" />
-                        <Button type="primary"
+                        <Button
+                            // type="primary"
                             // href="http://www.baidu.com"
                                 target="_blank">Pre-Sale : <label>{formatTime}</label></Button>
                     </div>

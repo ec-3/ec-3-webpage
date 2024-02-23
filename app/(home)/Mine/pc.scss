@@ -81,13 +81,16 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        img { margin-top: -38PX; }
+                        img { margin-top: -44PX; }
                         button {
                             display: inline-block;
-                            height: 41PX;
+                            min-width: 288PX;
+                            height: 44PX;
                             margin-left: 56PX;
                             margin-top: -80PX;
                             margin-bottom: 80PX;
+                            color: $color-text-regular;
+                            background-color: #ddd;
                             span {
                                 font-size: $size-mder-pc;
                                 font-weight: 700;
@@ -95,9 +98,15 @@
                             label {
                                 margin-left: 12PX;
                                 font-size: $size-mder-pc;
-                                color: #6B5659;
+                                color: #5e1c1c;
                                 font-weight: 700;
                                 cursor: pointer;
+                            }
+                            &:active, &:hover {
+                                color: $color-text-regular;
+                                background-color: #ddd;
+                                span { color: $color-text-primary; }
+                                label { font-size: $size-lg-pc; }
                             }
                         }
                     }
