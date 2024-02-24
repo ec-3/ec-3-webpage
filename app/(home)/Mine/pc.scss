@@ -113,5 +113,117 @@
                 }
             }
         }
+
+    }
+    .pre-sale__dialog {
+        width: 790PX !important;
+        font-size: 0;
+        line-height: 1;
+        $border-radius: 18PX;
+        .ant-modal-content {
+            padding: 0;
+            height: 520PX !important;
+            background-color: transparent;
+            .ant-modal-close-icon {
+                color: $theme-dark_color-regular;
+            }
+            .ant-modal-body {
+                height: 100%;
+            }
+            .dialog-content {
+                position: relative;
+                height: 100%;
+                border-radius: $border-radius;
+                background-color: $theme-dark_bg-primary;
+                .bg {
+                    position: absolute;
+                    z-index: 0;
+                    filter: blur(10PX);
+                    &.bg-1 {
+                        top: 18PX;
+                        left: 32PX;
+                    }
+                    &.bg-2 {
+                        top: 12PX;
+                        right: 52PX;
+                    }
+                }
+            }
+            .dialog-inner {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                padding: 42PX 24PX;
+                background-color: rgba(171, 186, 224, .5);
+                border-radius: $border-radius;
+                z-index: 1;
+                .main-title {
+                    text-align: center;
+                    line-height: 1;
+                    font-size: 32PX;
+                    color: $theme-dark_color-primary-most;
+                    font-family: SourceSansPro-Semibold;
+                    font-weight: 700;
+                }
+                .sub-title {
+                    margin: 20PX auto 0 auto;
+                    text-align: center;
+                    line-height: $line-height;
+                    width: 400PX;
+                    font-size: $size-tner-pc;
+                    color: $theme-dark_color-primary-most;
+                }
+                .cube-img {
+                    display: block;
+                    margin: -46PX auto 0 auto;
+                }
+                .icon-wrapper {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: $side-padding-pc;
+                    margin: -48PX auto 0 auto;
+                    width: 400PX;
+                    .column {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        .icon {
+
+                        }
+                        .text {
+                            margin-top: 8PX;
+                            font-size: $size-tn-pc;
+                            color: $theme-dark_color-primary-most;
+                            &.text-1 { color: #52ff27; }
+                            &.text-2 { color: #90ebff; }
+                            &.text-3 { color: #d0bfff; }
+                        }
+                    }
+                }
+                .btn-group {
+                    margin-top: 46PX;
+                    text-align: center;
+                    .order-btn {
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 180PX;
+                        height: 48PX;
+                        border-bottom-right-radius: 24PX;
+                        span {
+                            font-size: $size-md-pc;
+                            font-weight: 700;
+                            letter-spacing: 1PX;
+                        }
+                        .arrow-icon {
+                            margin-left: 12PX;
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }

@@ -1,44 +1,28 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState} from 'react';
 import Image from 'next/image';
-import {Button} from 'antd';
+import {Button, Modal} from 'antd';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
+import useCountdown from '@/_hooks/useCountdown.js';
 import avatar1 from '~/images/mine/avatar-1.svg';
 import avatar2 from '~/images/mine/avatar-2.svg';
 import energyStorageImg from '~/images/mine/energy-storage.svg';
 
-const START_TIME = new Date('2024-03-01 00:00:00').getTime();
-const duration = parseInt((START_TIME - Date.now()) / 1000);
 const MinePC = ({className = 'mine'}) => {
-    // 倒计时：秒
-    const [time, setTime] = useState(duration);
+    // 预售对话框
+    const [preSaleDialogVisible, setPreSaleDialogVisible] = useState(false);
     const scrollRef = useScrollAnimate({imgHalfHeight: 200});
-
-    // 根据倒计时的秒，显示可视化的日期
-    const formatTime = useMemo(() => {
-        const days = (Math.floor(time / (60 * 60 * 24)) + '').padStart(2, '0');
-        const hours = (Math.floor((time % (60 * 60 * 24)) / (60 * 60)) + '').padStart(2, '0');
-        const minutes = (Math.floor((time % (60 * 60)) / 60) + '').padStart(2, '0');
-        const seconds = (time % 60 + '').padStart(2, '0');
-        return `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
-    }, [time]);
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setTime(curTime => curTime - 1);
-        }, 1000);
-
-        return () => clearInterval(intervalId);
-    }, []);
+    const [time, formatTime] = useCountdown();
 
     return (
-        <div className={className}>
+        <>
+        <div className={className} ref={scrollRef}>
             <div className="inner">
                 <h2 className="main-title"><strong>mine</strong> with distributed energy storage</h2>
                 <p className="sub-title">
                     Get our Ec³ 'Magic Cube' for an easy plug-and-play connection between your energy storage and solar panels.
                     Use green energy and earn ECT rewards too!
                 </p>
-                <div className="image-text" ref={scrollRef}>
+                <div className="image-text">
                     <div className="card-wrapper">
                         <div className="card">
                             <div className="avatar">
@@ -62,14 +46,60 @@ const MinePC = ({className = 'mine'}) => {
                     <div className={`image-wrapper ${time > 0 ? 'pre-sale' : ''}`}>
                         <Image className="animate__animated" data-animate="animate__fadeInRight"
                                src={energyStorageImg} alt="Energy storage" />
-                        <Button
-                            // type="primary"
-                            // href="http://www.baidu.com"
-                                target="_blank">Pre-Sale : <label>{formatTime}</label></Button>
+                        <Button onClick={() => setPreSaleDialogVisible(true)}>Pre-Sale : <label>{formatTime}</label></Button>
                     </div>
                 </div>
             </div>
         </div>
+        <Modal
+            className="pre-sale__dialog"
+            centered={true}
+            closable={true}
+            destroyOnClose={true}
+            footer={false}
+            maskClosable={true}
+            maskStyle={{'backgroundColor': 'rgba(255, 0, 0, 0)'}}
+            getContainer={() => scrollRef.current}
+            open={preSaleDialogVisible}
+            onOk={() => {}}
+            onCancel={() => setPreSaleDialogVisible(false)}
+        >
+            <div className="dialog-content">
+                <Image className="bg bg-1" src="/images/mine/pre-sale/bg-1.svg" width={163} height={184} alt="bg-1" />
+                <Image className="bg bg-2" src="/images/mine/pre-sale/bg-2.svg" width={86} height={120} alt="bg-2" />
+                <div className="dialog-inner">
+                    <h2 className="main-title">Ec³ Cube Pre-sale</h2>
+                    <h3 className="sub-title">
+                        Catch rays and crypto, all from the comfort of your home.
+                        The Ec³ Cube: Because your energy bill owes you one!
+                    </h3>
+                    <Image className="cube-img" src="/images/mine/pre-sale/cube-ec3.png" width={260} height={265} alt="cube-ec3" />
+                    <div className="icon-wrapper">
+                        <div className="column">
+                            <Image className="icon" src="/images/mine/pre-sale/icon-1.svg" width={30} height={30} alt="Ec³ APP" />
+                            <span className="text text-1">Ec³ APP</span>
+                        </div>
+                        <div className="column">
+                            <Image className="icon" src="/images/mine/pre-sale/icon-2.svg" width={30} height={30} alt="storage battery" />
+                            <span className="text text-2">storage battery</span>
+                        </div>
+                        <div className="column">
+                            <Image className="icon" src="/images/mine/pre-sale/icon-3.svg" width={30} height={30} alt="peaq network" />
+                            <span className="text text-3">peaq network</span>
+                        </div>
+                    </div>
+                    <div className="btn-group">
+                        <Button className="order-btn" type="primary"
+                                // href="/" target="_blank"
+                        >
+                            Order Now
+                            <Image className="arrow-icon" src="/images/mine/pre-sale/arrow.svg" width={8} height={8} alt="arrow" />
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        </Modal>
+        </>
     );
 };
 

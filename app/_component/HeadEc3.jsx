@@ -1,4 +1,4 @@
-export default function HeaderEc3({isMobile = false}) {
+export default function HeadEc3({isMobile = false}) {
     return (
         <head>
             {

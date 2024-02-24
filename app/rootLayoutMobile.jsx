@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { SafeArea } from 'antd-mobile'
 import 'antd-mobile/es/global';
 import "./_scss/index.scss";
-import HeaderEc3 from '@/_component/HeaderEc3';
+import HeadEc3 from '@/_component/HeadEc3';
 
 export default function RootLayoutMoble({children}) {
     useEffect(() => {
@@ -10,7 +10,7 @@ export default function RootLayoutMoble({children}) {
     }, []);
     return (
         <html lang="en">
-        <HeaderEc3 isMobile={true} />
+        <HeadEc3 isMobile={true} />
         <body>
             <div style={{ background: '#060606' }}>
                 <SafeArea position='top' />
