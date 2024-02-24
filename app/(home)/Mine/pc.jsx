@@ -93,7 +93,7 @@ const MinePC = ({className = 'mine'}) => {
                                 // href="/" target="_blank"
                         >
                             Order Now
-                            <Image className="arrow-icon" src="/images/mine/pre-sale/arrow.svg" width={8} height={8} alt="arrow" />
+                            <Image className="arrow-icon" src="/images/mine/pre-sale/arrow.svg" width={12} height={12} alt="arrow" />
                         </Button>
                     </div>
                 </div>
