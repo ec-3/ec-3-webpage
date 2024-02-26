@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import Image from 'next/image';
-import {Button, Modal} from 'antd';
+import {Button, Modal, Popconfirm} from 'antd';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 import useCountdown from '@/_hooks/useCountdown.js';
 import avatar1 from '~/images/mine/avatar-1.svg';
@@ -58,7 +58,7 @@ const MinePC = ({className = 'mine'}) => {
             destroyOnClose={true}
             footer={false}
             maskClosable={true}
-            maskStyle={{'backgroundColor': 'rgba(255, 0, 0, 0)'}}
+            maskStyle={{'backgroundColor': 'rgba(0, 0, 0, 0)'}}
             getContainer={() => scrollRef.current}
             open={preSaleDialogVisible}
             onOk={() => {}}
@@ -89,12 +89,18 @@ const MinePC = ({className = 'mine'}) => {
                         </div>
                     </div>
                     <div className="btn-group">
-                        <Button className="order-btn" type="primary"
-                                // href="/" target="_blank"
+                        <Popconfirm
+                            rootClassName="coming-soon pc"
+                            title="Coming Soon"
+                            description="This feature is currently under development and will be launched soon."
+                            okText="Cancel"
+                            okType="default"
                         >
-                            Order Now
-                            <Image className="arrow-icon" src="/images/mine/pre-sale/arrow.svg" width={12} height={12} alt="arrow" />
-                        </Button>
+                            <Button className="order-btn" type="primary"                        >
+                                Order Now
+                                <Image className="arrow-icon" src="/images/mine/pre-sale/arrow.svg" width={12} height={12} alt="arrow" />
+                            </Button>
+                        </Popconfirm>
                     </div>
                 </div>
             </div>
