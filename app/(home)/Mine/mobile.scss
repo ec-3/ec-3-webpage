@@ -110,7 +110,10 @@
             max-width: 88% !important;
         }
         .adm-center-popup-close {
+            @include extend-click();
+            position: absolute;
             color: $theme-dark_color-regular;
+
         }
         .adm-modal-body {
             padding-top: 0;

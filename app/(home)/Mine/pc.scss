@@ -124,10 +124,13 @@
             padding: 0;
             height: 520PX !important;
             background-color: transparent;
-            .ant-modal-close-icon {
-                color: $theme-dark_color-regular;
+            .ant-modal-close {
+                @include extend-click();
+                position: absolute;
+                .ant-modal-close-icon {
+                    color: $theme-dark_color-regular;
+                }
             }
-
             .ant-modal-body {
                 height: 100%;
             }
