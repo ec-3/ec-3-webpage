@@ -1,10 +1,9 @@
+import React, { useRef} from 'react';
 import Image from 'next/image';
-import { Button, Modal } from 'antd-mobile'
-import useScrollAnimate from '@/_hooks/useScrollAnimate.js';
+import { Button, Modal, Swiper, Image as ImageAntD, ImageViewer  } from 'antd-mobile'
 import useCountdown from '@/_hooks/useCountdown.js';
 import avatar1 from '~/images/mine/avatar-1.svg';
 import avatar2 from '~/images/mine/avatar-2.svg';
-import energyStorageImg from '~/images/mine/energy-storage.svg';
 
 const PreSaleDialog = () => {
     return (
@@ -17,7 +16,7 @@ const PreSaleDialog = () => {
                     Catch rays and crypto, all from the comfort of your home.
                     The Ec³ Cube: Because your energy bill owes you one!
                 </h3>
-                <Image className="cube-img" src="/images/mine/pre-sale/cube-ec3.png" width={120} height={122} alt="cube-ec3" />
+                <Image className="cube-img" src="/images/mine/cube-ec3.png" width={120} height={122} alt="cube-ec3" />
                 <div className="icon-wrapper">
                     <div className="column">
                         <Image className="icon" src="/images/mine/pre-sale/icon-1.svg" width={30} height={30} alt="Ec³ APP" />
@@ -59,28 +58,56 @@ const PreSaleDialog = () => {
     );
 };
 
+const CarouselImage = ({src}) => {
+    return (
+        <ImageAntD src="/images/mine/cube-ec3.png" alt="Cube Ec3" />
+    );
+};
+
 const MineMobile = ({className = 'mine'}) => {
-    const scrollRef = useScrollAnimate({imgHalfHeight: 200});
+    const wrapperRef = useRef(null);
     const [time, formatTime] = useCountdown();
 
     return (
         <>
-        <div className={className} ref={scrollRef}>
+        <div className={className} ref={wrapperRef}>
             <h2 className="main-title"><strong>mine</strong> with distributed energy storage</h2>
             <p className="sub-title">
-                Get our Ec³ 'Magic Cube' for an easy plug-and-play connection between your energy storage and solar panels.
-                Use green energy and earn ECT rewards too!
+                Ec³ (Energy Cube) is dedicated to creating a DePIN network based on distributed energy interaction, designed to collect data from all discharging devices.
             </p>
             <div className="image-text">
                 <div className={`image-wrapper ${time > 0 ? 'pre-sale' : ''}`}>
-                    <Image className="animate__animated" data-animate="animate__rubberBand" src={energyStorageImg} alt="Energy storage" />
+                    <Swiper className="carousel" autoplay loop>
+                        <Swiper.Item className="carousel-item" onClick={() => {
+                            ImageViewer.show({
+                                classNames: {
+                                    mask: 'image-view__mask',
+                                },
+                                image: '/images/mine/cube-ec3.png',
+                                getContainer: () => wrapperRef.current
+                            })
+                        }}>
+                            <ImageAntD src="/images/mine/cube-ec3.png" alt="Cube Ec3" />
+                        </Swiper.Item>
+                        <Swiper.Item className="carousel-item" onClick={() => {
+                            ImageViewer.show({
+                                classNames: {
+                                    mask: 'image-view__mask'
+                                },
+                                image: '/images/mine/cube-detail.png',
+                                getContainer: () => wrapperRef.current
+                            })
+                        }}>
+                            <ImageAntD src="/images/mine/cube-detail.png" alt="Cube Detail" />
+                        </Swiper.Item>
+                    </Swiper>
                     <Button onClick={() => {
                         Modal.show({
                             className: 'pre-sale__dialog',
                             content: <PreSaleDialog />,
                             closeOnMaskClick: true,
                             showCloseButton: true,
-                            getContainer: () => scrollRef.current,
+                            getContainer: () => wrapperRef.current,
                         })
                     }}>Pre-Sale : <label>{formatTime}</label></Button>
                 </div>
@@ -91,7 +118,7 @@ const MineMobile = ({className = 'mine'}) => {
                         </div>
                         <div className="content">
                             <h3 className="title">Blockchain Security Navigator</h3>
-                            <p className="text">Enabling charging and discharging to be recorded on the blockchain without human intervention, ensuring unparalleled protection of safety and privacy.</p>
+                            <p className="text">Enabling discharging to be recorded on the blockchain without human intervention, ensuring unparalleled protection of safety and privacy.</p>
                         </div>
                     </div>
                     <div className="card">

@@ -1,26 +1,23 @@
-import React, { useState} from 'react';
+import React, { useState, useRef} from 'react';
 import Image from 'next/image';
-import {Button, Modal, Popconfirm} from 'antd';
-import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
+import {Button, Modal, Carousel, Popconfirm, Image as ImageAntD} from 'antd';
 import useCountdown from '@/_hooks/useCountdown.js';
 import avatar1 from '~/images/mine/avatar-1.svg';
 import avatar2 from '~/images/mine/avatar-2.svg';
-import energyStorageImg from '~/images/mine/energy-storage.svg';
 
 const MinePC = ({className = 'mine'}) => {
+    const wrapperRef = useRef(null);
     // 预售对话框
     const [preSaleDialogVisible, setPreSaleDialogVisible] = useState(false);
-    const scrollRef = useScrollAnimate({imgHalfHeight: 200});
     const [time, formatTime] = useCountdown();
 
     return (
         <>
-        <div className={className} ref={scrollRef}>
+        <div className={className} ref={wrapperRef}>
             <div className="inner">
                 <h2 className="main-title"><strong>mine</strong> with distributed energy storage</h2>
                 <p className="sub-title">
-                    Get our Ec³ 'Magic Cube' for an easy plug-and-play connection between your energy storage and solar panels.
-                    Use green energy and earn ECT rewards too!
+                    Ec³ (Energy Cube) is dedicated to creating a DePIN network based on distributed energy interaction, designed to collect data from all discharging devices.
                 </p>
                 <div className="image-text">
                     <div className="card-wrapper">
@@ -30,7 +27,7 @@ const MinePC = ({className = 'mine'}) => {
                             </div>
                             <div className="content">
                                 <h3 className="title">Blockchain Security Navigator</h3>
-                                <p className="text">Enabling charging and discharging to be recorded on the blockchain without human intervention, ensuring unparalleled protection of safety and privacy.</p>
+                                <p className="text">Enabling discharging to be recorded on the blockchain without human intervention, ensuring unparalleled protection of safety and privacy.</p>
                             </div>
                         </div>
                         <div className="card">
@@ -44,8 +41,14 @@ const MinePC = ({className = 'mine'}) => {
                         </div>
                     </div>
                     <div className={`image-wrapper ${time > 0 ? 'pre-sale' : ''}`}>
-                        <Image className="animate__animated" data-animate="animate__fadeInRight"
-                               src={energyStorageImg} alt="Energy storage" />
+                        <Carousel className="carousel" autoplay dots={true}>
+                            <div className="carousel-item">
+                                <ImageAntD src="/images/mine/cube-ec3.png"/>
+                            </div>
+                            <div className="carousel-item">
+                                <ImageAntD src="/images/mine/cube-detail.png"/>
+                            </div>
+                        </Carousel>
                         <Button onClick={() => setPreSaleDialogVisible(true)}>Pre-Sale : <label>{formatTime}</label></Button>
                     </div>
                 </div>
@@ -59,7 +62,7 @@ const MinePC = ({className = 'mine'}) => {
             footer={false}
             maskClosable={true}
             maskStyle={{'backgroundColor': 'rgba(0, 0, 0, 0)'}}
-            getContainer={() => scrollRef.current}
+            getContainer={() => wrapperRef.current}
             open={preSaleDialogVisible}
             onOk={() => {}}
             onCancel={() => setPreSaleDialogVisible(false)}
@@ -73,7 +76,7 @@ const MinePC = ({className = 'mine'}) => {
                         Catch rays and crypto, all from the comfort of your home.
                         The Ec³ Cube: Because your energy bill owes you one!
                     </h3>
-                    <Image className="cube-img" src="/images/mine/pre-sale/cube-ec3.png" width={260} height={265} alt="cube-ec3" />
+                    <Image className="cube-img" src="/images/mine/cube-ec3.png" width={260} height={265} alt="cube-ec3" />
                     <div className="icon-wrapper">
                         <div className="column">
                             <Image className="icon" src="/images/mine/pre-sale/icon-1.svg" width={30} height={30} alt="Ec³ APP" />

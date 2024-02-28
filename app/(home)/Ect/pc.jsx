@@ -12,8 +12,7 @@ const EctPC = ({className = 'ect'}) => {
         <div className="ect" ref={scrollRef}>
             <div className="animate__animated animate__slow" data-animate="animate__bounce">
                 <h2 className="main-title"><strong>ECT</strong> Energy self-consumption Economy</h2>
-                <p className="sub-title">The Ec³ Token (ECT) is the native cryptocurrency of the Ec³ Network and is the
-                    only token that can be burned to create carbon credits and send device data.</p>
+                <p className="sub-title">The Ec³ Token (ECT) is the native cryptocurrency of the Ec³ Network and is the only token that can be burned to create credits and send device data.</p>
                 <div className="tab-group">
                     <Button className={checked == 1 ? 'checked' : ''} onClick={() => setChecked(1)}>PoS</Button>
                     <Button className={checked == 2 ? 'checked' : ''} onClick={() => setChecked(2)}>Stakeholder</Button>
@@ -24,7 +23,7 @@ const EctPC = ({className = 'ect'}) => {
                         <div>
                             <h1 className="title">Proof-of-stake</h1>
                             <p className="text">Experience a greener and more sustainable approach with reduced computing power and electricity consumption.</p>
-                            <p className="text">Unlock stability in distributed home energy storage mining by embracing the rewarding practice of holding and locking, seamlessly integrated without disruptions to the power grid.</p>
+                            <p className="text">Unlock stability in distributed energy storage mining by embracing the rewarding practice of holding and locking, seamlessly integrated without disruptions to the power grid.</p>
                             <p className="text stake-title">Mine and earn profits by staking your held tokens</p>
                             <Button type="primary" href={linkLocation['Staking']} target="_blank">STAKE</Button>
                         </div>
@@ -63,7 +62,7 @@ const EctPC = ({className = 'ect'}) => {
                     </div>
                     <div className="card">
                         <h2 className="card-title">ECT Burning for Scarcity</h2>
-                        <p className="card-desc">As users earn profits by engaging in carbon trading, green energy loans, and other initiatives, the corresponding tokens are systematically burned, ensuring the scarcity of ECT.</p>
+                        <p className="card-desc">When users engage with the real world and gain profits or save costs through participating in demand response programs, virtual power plant projects, green energy financing, and other initiatives, the increased profits and reduced costs can serve as the basis for Ec³ to buy back ECT and generate points for token destruction, thereby ensuring the scarcity of ECT.</p>
                     </div>
                 </div>
             </div>

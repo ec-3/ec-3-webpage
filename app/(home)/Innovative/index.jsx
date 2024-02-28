@@ -12,31 +12,31 @@ const Innovative = ({className = 'innovative-wrapper'}) => {
                     <div className="row">
                         <div className="item">
                             <div className="avatar"><Image src={avatar1} alt="Icon" /></div>
-                            <h4 className="title">Low-Carbon Lifestyle</h4>
-                            <p className="text">The emission reduction actions marked by tokens are linked to emission reduction credits.</p>
+                            <h4 className="title">Self-consumption</h4>
+                            <p className="text">Shift from subsidy-driven growth to consumer focus on maximizing self-consumption.</p>
                         </div>
                         <div className="item">
                             <div className="avatar"><Image src={avatar2} alt="Icon" /></div>
-                            <h4 className="title">Stable Grid</h4>
-                            <p className="text">Distributed storage network boosts grid stability, ensuring a more reliable energy supply.</p>
+                            <h4 className="title">No longer flows one way</h4>
+                            <p className="text">Distributed energy storage now includes not just home systems but also microgrids with electric vehicles.</p>
                         </div>
                     </div>
                 </div>
                 <h2 className="innovative-main__title">
                     <strong>Innovative</strong> distributed energy storage
                 </h2>
-                <h3 className="innovative-sub__title">Perfect fusion of residential distributed storage devices and mining machines</h3>
+                <h3 className="innovative-sub__title">Imagine energy tokenization and low-carbon mining solutions coming together with enhanced incentives like a perfectly brewed coffee blend, energizing the crypto world with a sustainable buzz!</h3>
                 <div className="inner">
                     <div className="row">
                         <div className="item">
                             <div className="avatar"><Image src={avatar3} alt="Icon" /></div>
-                            <h4 className="title">DID Technology</h4>
-                            <p className="text">Standardized DID technology enhances network scalability, interoperability, and reliability.</p>
+                            <h4 className="title">Tokenized energy</h4>
+                            <p className="text">Blockchain-based distributed storage tokenizes energy, improving flexibility and programmability in energy trading and distribution.</p>
                         </div>
                         <div className="item">
                             <div className="avatar"><Image src={avatar4} alt="Icon" /></div>
-                            <h4 className="title">Incentives</h4>
-                            <p className="text">Tokens earned during discharge offer hope amid reduced subsidies, countering market expectations decline.</p>
+                            <h4 className="title">DePIN welcomes all</h4>
+                            <p className="text">Leveraging the peaq network, we provide a pathway for small-scale energy producers and consumers to enter the energy market.</p>
                         </div>
                     </div>
                 </div>

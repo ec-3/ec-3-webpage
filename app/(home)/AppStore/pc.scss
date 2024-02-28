@@ -38,9 +38,10 @@
                         margin-top: 60PX;
                         .avatar {
                             text-align: left;
-                            width: 116PX;
+                            width: 51PX;
                         }
                         .content {
+                            flex: 1;
                             .title {
                                 margin-bottom: 14PX;
                                 color: $theme-dark_color-primary-next;

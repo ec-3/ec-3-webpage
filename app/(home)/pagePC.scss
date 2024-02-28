@@ -22,3 +22,7 @@
 .ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover, .ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
     color: $color-text-regular !important;
 }
+
+.ant-image-preview-mask {
+    background-color: rgba(12, 14, 12, .98) !important;
+}

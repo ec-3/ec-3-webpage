@@ -5,7 +5,6 @@
         background-color: $theme-dark_bg-regular;
         .inner {
             @include fixed-center();
-            max-width: 1000PX;
             .main-title {
                 margin: 10PX auto;
                 padding-top: 40PX;
@@ -31,7 +30,7 @@
             }
             .sub-title {
                 line-height: $line-height;
-                text-align: center;
+                text-align: left;
                 font-size: $size-md-pc;
                 color: rgb(120, 120, 120);
                 user-select: text;
@@ -70,25 +69,45 @@
                     }
                 }
                 .image-wrapper {
-                    margin-left: 46PX;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20PX;
+                    margin-left: $side-padding-pc;
                     font-size: 0;
-                    img {
-                        width: 320PX;
-                        height: 400PX;
+                    $carousel-width: 460PX;
+                    $carousel-height: 212PX;
+                    .carousel {
+                        width: $carousel-width;
+                        height: $carousel-height;
                     }
-                    button { display: none; }
+                    .carousel-item {
+                        width: $carousel-width;
+                        height: $carousel-height;
+                        font-size: 0;
+                        .ant-image {
+                            width: $carousel-width;
+                            height: $carousel-height;
+                        }
+                        .ant-image-img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                    .slick-dots-bottom {
+                        bottom: -16PX;
+                    }
+                    .ant-btn { display: none; }
                     &.pre-sale {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        img { margin-top: -44PX; }
-                        button {
+                        justify-content: center;
+                        .ant-btn {
                             display: inline-block;
                             min-width: 288PX;
                             height: 44PX;
-                            margin-left: 56PX;
-                            margin-top: -80PX;
-                            margin-bottom: 80PX;
+                            margin-top: 44PX;
                             color: $color-text-regular;
                             background-color: #ddd;
                             span {

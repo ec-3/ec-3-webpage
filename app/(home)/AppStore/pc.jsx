@@ -27,8 +27,8 @@ const AppStorePC = ({className = 'app-store'}) => {
                                 <Image width="34" height="34" src="/images/app-store/avatar-1.svg" alt="Icon" />
                             </div>
                             <div className="content">
-                                <h3 className="title">Automated Energy Future</h3>
-                                <p className="text">Leveraging the access control module, achieve peak shaving and valley filling, enhancing energy utilization efficiency and shaping the future of energy automation.</p>
+                                <h3 className="title">AI Agent in the Ec³ APP</h3>
+                                <p className="text">Offering personalized energy management advice based on daily habits and energy consumption patterns.</p>
                             </div>
                         </div>
                         <div className="card">
@@ -36,8 +36,8 @@ const AppStorePC = ({className = 'app-store'}) => {
                                 <Image width="34" height="34" src="/images/app-store/avatar-2.svg" alt="Icon" />
                             </div>
                             <div className="content">
-                                <h3 className="title">Payment Module with Distinct Advantages</h3>
-                                <p className="text">Inheriting the capabilities of the peaq payment module: Trustless and automated, it ensures the seamless flow of your earnings.</p>
+                                <h3 className="title">Plug-and-play</h3>
+                                <p className="text">Connect the Ec³ Energy Cube to your device, launch the Ec³ APP, sync your wallet, and instantly, Bluetooth ensures smooth blockchain data integration.</p>
                             </div>
                         </div>
                         <div className="card">
