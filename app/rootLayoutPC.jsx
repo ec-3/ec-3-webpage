@@ -3,6 +3,8 @@ import { ConfigProvider } from 'antd';
 import theme from '@/_theme/blueTheme.js';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import "./_scss/index.scss";
+import HeadEc3 from '@/_component/HeadEc3';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayoutPC({children}) {
     return (
@@ -16,7 +18,7 @@ export default function RootLayoutPC({children}) {
             <title>Ec³</title>
         </head>
         <ConfigProvider theme={theme}>
-            <body><AntdRegistry>{children}</AntdRegistry></body>
+            <body><AntdRegistry>{children}<Analytics /></AntdRegistry></body>
         </ConfigProvider>
         </html>
     );
