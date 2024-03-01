@@ -27,9 +27,9 @@
         .sub-title {
             margin: 40PX auto 60PX;
             width: 900PX;
-            line-height: 26PX;
+            line-height: $line-height;
             text-align: center;
-            font-size: 18PX;
+            font-size: 24PX;
             color: rgb(145, 145, 145);
             user-select: text;
         }

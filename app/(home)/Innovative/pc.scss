@@ -67,7 +67,8 @@
             margin-top: 60PX;
             margin-bottom: 70PX;
             @include fixed-center();
-            text-align: left;
+            text-align: center;
+            line-height: $line-height;
             font-size: 24PX;
             color: #919191;
         }
