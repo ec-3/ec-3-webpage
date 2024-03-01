@@ -3,6 +3,7 @@ import { SafeArea } from 'antd-mobile'
 import 'antd-mobile/es/global';
 import "./_scss/index.scss";
 import HeadEc3 from '@/_component/HeadEc3';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayoutMoble({children}) {
     useEffect(() => {
@@ -19,6 +20,7 @@ export default function RootLayoutMoble({children}) {
             <div style={{ background: '#181a1d' }}>
                 <SafeArea position='bottom' />
             </div>
+            <Analytics />
         </body>
         </html>
     );
