@@ -16,7 +16,7 @@
             }
         }
         .image-text {
-            background-image: url("/images/app-store/phone.png");
+            background-image: url("/images/home/app-store/phone.png");
             background-repeat: no-repeat;
             background-position: 50% 50%;
             .card-wrapper {
@@ -29,9 +29,10 @@
                         margin-right: $side-padding-mobile;
                         text-align: left;
                         font-size: 0;
-                        img {
-                            width: 24px;
-                            height: 24px;
+                        .icon {
+                            font-size: 24px;
+                            color: $theme-dark_color-relative;
+                            font-weight: 700;
                         }
                     }
                     .content {

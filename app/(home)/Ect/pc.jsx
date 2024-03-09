@@ -33,7 +33,7 @@ const EctPC = ({className = 'ect'}) => {
                 <div className={`tab-content tab-content__two ${checked===2?'show':'hide'}`}>
                     <div className="image-text">
                         <div className="image-wrapper">
-                            <Image width={357} height={223} src="/images/ect/stakeholder.jpg" alt="Stakeholder" />
+                            <Image width={357} height={223} src="/images/home/ect/stakeholder.jpg" alt="Stakeholder" />
                             <div className="text">Global decarbonization requires awakening the stakeholders hidden beneath the iceberg.</div>
                         </div>
                         <div className="description">

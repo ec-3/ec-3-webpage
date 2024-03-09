@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Swiper } from 'antd-mobile'
-import carouselOneImg from '~/images/carousel/carousel-one.png';
-import quoteImg from '~/images/carousel/quote.svg';
+import carouselOneImg from '~/images/home/carousel/carousel-one.png';
 
 const CarouselMobile = ({className = 'carousel'}) => {
     return (
@@ -9,22 +8,24 @@ const CarouselMobile = ({className = 'carousel'}) => {
             <Swiper autoplay loop>
                 <Swiper.Item className="carousel-item">
                     <div className="carousel-logo">
-                        <Image className="logo-img" src={carouselOneImg} alt="" priority></Image>
+                        <Image className="logo-img" src="/images/home/carousel/carousel-one.png" width={300} height={83}
+                               alt="" priority></Image>
                     </div>
                     <div className="carousel-content">
-                        <Image className="quote-img" src={quoteImg} alt="quote" />
+                        <i className="icon icon-quotation"></i>
                         <p className="carousel-text">Ec³ is a gateway for everyone to participate in carbon reduction, offering an opportunity for individuals to gain profits through carbon neutrality, undoubtedly expanding the development space of distributed energy storage.</p>
-                        <Image className="quote-img reverse" src={quoteImg} alt="quote" />
+                        <i className="icon icon-quotation reverse"></i>
                     </div>
                 </Swiper.Item>
                 <Swiper.Item className="carousel-item">
                     <div className="carousel-logo">
-                        <Image className="logo-img" src={carouselOneImg} alt="" priority></Image>
+                        <Image className="logo-img" src="/images/home/carousel/carousel-one.png" width={300} height={83}
+                               alt="" priority></Image>
                     </div>
                     <div className="carousel-content">
-                        <Image className="quote-img" src={quoteImg} alt="quote" priority />
+                        <i className="icon icon-quotation"></i>
                         <p className="carousel-text">Ec³ is a gateway for everyone to participate in carbon reduction, offering an opportunity for individuals to gain profits through carbon neutrality, undoubtedly expanding the development space of distributed energy storage.</p>
-                        <Image className="quote-img reverse" src={quoteImg} alt="quote" />
+                        <i className="icon icon-quotation reverse"></i>
                     </div>
                 </Swiper.Item>
             </Swiper>

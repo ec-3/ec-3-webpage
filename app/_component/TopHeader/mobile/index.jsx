@@ -4,11 +4,8 @@ import Image from 'next/image';
 import {Dropdown, DropdownRef, Modal} from 'antd-mobile'
 import BScroll from '@better-scroll/core'
 import logo from '~/images/logo.png';
-import more from '~/images/more.svg';
 import './index.scss';
 import {linkLocation} from '@/config.js';
-import arrowLeftIcon from '~/icon/arrow-left.svg';
-import arrowRightIcon from '~/icon/arrow-right.svg';
 
 let scroll = null;
 const TopHeaderMobile = ({className = ''}) => {
@@ -76,10 +73,10 @@ const TopHeaderMobile = ({className = ''}) => {
                     isSlide && (
                         <>
                             {
-                                (scrollX > 0) && <Image src={arrowLeftIcon} className="icon left-icon" alt="" />
+                                (scrollX > 0) && <i className="icon icon-arrow-left"></i>
                             }
                             {
-                                (scrollX < contentClientWidth - scrollClientWidth) && <Image src={arrowRightIcon} className="icon right-icon" alt="" />
+                                (scrollX < contentClientWidth - scrollClientWidth) && <i className="icon icon-arrow-right"></i>
                             }
                         </>
                     )

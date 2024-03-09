@@ -1,7 +1,7 @@
 @mixin ecosystem() {
     .ecosystem-wrapper {
         background-color: rgb(66, 69, 73);
-        background-image: url(/images/ecosystem/ecosystem-bg.svg);
+        background-image: url(/images/home/ecosystem/ecosystem-bg.svg);
         background-position: 50% 50%;
         background-size: 586PX;
         .ecosystem {
@@ -69,8 +69,11 @@
                 .carousel-content {
                     display: flex;
                     flex: 1;
-                    .quote-img {
+                    .icon-quotation {
+                        margin-top: -8PX;
                         margin-right: 18PX;
+                        font-size: 40PX;
+                        color: $theme-dark_color-relative;
                     }
                     .carousel-text {
                         line-height: 1.7;

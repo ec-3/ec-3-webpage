@@ -39,6 +39,11 @@
                         .avatar {
                             text-align: left;
                             width: 51PX;
+                            .icon {
+                                font-size: 35PX;
+                                color: $theme-dark_color-relative;
+                                font-weight: 700;
+                            }
                         }
                         .content {
                             flex: 1;

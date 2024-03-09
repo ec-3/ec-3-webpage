@@ -40,9 +40,10 @@
                         margin-right: $side-padding-mobile;
                         text-align: left;
                         font-size: 0;
-                        img {
-                            width: 24px;
-                            height: 24px;
+                        .icon {
+                            font-size: 24px;
+                            color: $theme-dark_color-relative;
+                            font-weight: 700;
                         }
                     }
                     .content {
@@ -194,27 +195,26 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 8px;
-                margin: -28px auto 0 auto;
+                margin: -22px auto 0 auto;
                 .column {
                     display: flex;
                     align-items: center;
                     flex-direction: column;
-                    .icon {
-                        width: 20px;
-                        height: 20px;
-                    }
+                    line-height: 1;
+                    font-size: 0;
+                    color: $theme-dark_color-primary-most;
+                    &.column-color__green { color: #52ff27; }
+                    &.column-color__cyan { color: #90ebff; }
+                    &.column-color__purple { color: #d0bfff; }
+                    .icon { font-size: 20px; }
                     .text {
                         margin-top: 8px;
                         font-size: $size-tn-mobile;
-                        color: $theme-dark_color-primary-most;
-                        &.text-1 { color: #52ff27; }
-                        &.text-2 { color: #90ebff; }
-                        &.text-3 { color: #d0bfff; }
                     }
                 }
             }
             .btn-group {
-                margin-top: 46px;
+                margin-top: 40px;
                 text-align: center;
                 .order-btn {
                     display: inline-flex;
@@ -229,10 +229,10 @@
                         font-weight: 700;
                         letter-spacing: 1px;
                     }
-                    .arrow-icon {
-                        margin-left: 12px;
-                        width: 12px !important;
-                        height: 12px !important;
+                    .icon {
+                        margin-left: 10px;
+                        font-size: $size-tner-mobile;
+                        font-weight: 700;
                     }
                 }
             }

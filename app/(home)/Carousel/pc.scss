@@ -17,7 +17,7 @@
                     width: 300PX;
                     height: 83.5PX;
                     font-size: 0;
-                    background-image: url('/images/carousel/carousel-one.png');
+                    background-image: url('/images/home/carousel/carousel-one.png');
                     background-size: cover;
                     background-repeat: no-repeat;
                     opacity: 0.3;
@@ -27,8 +27,11 @@
                 .carousel-content {
                     display: flex;
                     flex: 1;
-                    .quote-img {
+                    .icon-quotation {
+                        margin-top: -8PX;
                         margin-right: 18PX;
+                        font-size: 40PX;
+                        color: $theme-dark_color-relative;
                     }
                     .carousel-text {
                         line-height: 1.7;

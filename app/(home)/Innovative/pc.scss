@@ -2,7 +2,7 @@
     .innovative-wrapper {
         height: 1000PX;
         background-color: rgb(66, 69, 73);
-        background-image: url('/images/innovative/innovative-bg.svg');
+        background-image: url('/images/home/innovative/innovative-bg.svg');
         background-position: 50% 50%;
         background-size: auto 500PX;
         .innovative {
@@ -28,9 +28,11 @@
                         margin-bottom: 8PX;
                         text-align: center;
                         user-select: none;
-                        img {
-                            width: 35PX;
-                            height: 35PX;
+                        .icon {
+                            font-size: 35PX;
+                            color: $theme-dark_color-relative;
+                            font-weight: 700;
+                            &.icon-earth { font-weight: normal; }
                         }
                     }
                     .title {

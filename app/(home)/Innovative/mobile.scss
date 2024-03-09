@@ -1,7 +1,7 @@
 @mixin innovative() {
     .innovative-wrapper {
         background-color: rgb(66, 69, 73);
-        background-image: url('/images/innovative/innovative-bg.svg');
+        background-image: url('/images/home/innovative/innovative-bg.svg');
         background-position: 50% 156px;
         background-size: auto 60px;
         .innovative {
@@ -20,9 +20,11 @@
                     .avatar {
                         margin-bottom: 4px;
                         text-align: center;
-                        img {
-                            width: 24px;
-                            height: 24px;
+                        .icon {
+                            font-size: 24px;
+                            color: $theme-dark_color-relative;
+                            font-weight: 700;
+                            &.icon-earth { font-weight: normal; }
                         }
                     }
                     .title {

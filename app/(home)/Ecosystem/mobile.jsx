@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import { Swiper, Button, Modal } from 'antd-mobile'
-import uhomeImg from '~/images/ecosystem/uhome.png';
-import uhomeTextImg from '~/images/ecosystem/uhome-text.png';
-import quoteImg from '~/images/carousel/quote.svg';
+import uhomeImg from '~/images/home/ecosystem/uhome.png';
+import uhomeTextImg from '~/images/home/ecosystem/uhome-text.png';
 
 const EcosystemMobile = ({className = 'ecosystem-wrapper'}) => {
     return (
@@ -36,9 +35,9 @@ const EcosystemMobile = ({className = 'ecosystem-wrapper'}) => {
                                 <Image className="uhome-text" src={uhomeTextImg} alt="UHome" />
                             </div>
                             <div className="carousel-content">
-                                <Image className="quote-img" src={quoteImg}alt="quote" />
+                                <i className="icon icon-quotation"></i>
                                 <p className="carousel-text">Uhome focuses on manufacturing lithium-ion batteries for residential and small-scale energy storage systems, offering adaptable solutions for independent micro-grids by integrating energy storage and management systems.</p>
-                                <Image className="quote-img reverse" src={quoteImg} alt="quote" />
+                                <i className="icon icon-quotation reverse"></i>
                             </div>
                         </Swiper.Item>
                         <Swiper.Item className="carousel-item">
@@ -47,9 +46,9 @@ const EcosystemMobile = ({className = 'ecosystem-wrapper'}) => {
                                 <Image className="uhome-text" src={uhomeTextImg} alt="UHome" />
                             </div>
                             <div className="carousel-content">
-                                <Image className="quote-img" src={quoteImg} alt="quote" />
+                                <i className="icon icon-quotation"></i>
                                 <p className="carousel-text">Uhome focuses on manufacturing lithium-ion batteries for residential and small-scale energy storage systems, offering adaptable solutions for independent micro-grids by integrating energy storage and management systems.</p>
-                                <Image className="quote-img reverse" src={quoteImg} alt="quote" />
+                                <i className="icon icon-quotation reverse"></i>
                             </div>
                         </Swiper.Item>
                     </Swiper>

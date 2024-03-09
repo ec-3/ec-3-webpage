@@ -2,7 +2,7 @@ import {useState} from 'react';
 import { Button } from 'antd-mobile'
 import Image from 'next/image';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
-import stakeholderImg from '~/images/ect/stakeholder.jpg';
+import stakeholderImg from '~/images/home/ect/stakeholder.jpg';
 import {linkLocation} from '@/config';
 
 const EctMobile = ({className = 'ect'}) => {

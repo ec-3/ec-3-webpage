@@ -3,7 +3,7 @@
         padding-bottom: 12px;
         background-color: $theme-dark-bg-regular;
         .carousel-item {
-            padding: 18px $side-padding-mobile 22px $size-mder-mobile;
+            padding: 18px $side-padding-mobile 22px $side-padding-mobile;
             box-sizing: border-box;
             .carousel-logo {
                 margin-left: auto;
@@ -20,10 +20,10 @@
             .carousel-content {
                 display: flex;
                 align-items: flex-start;
-                .quote-img {
-                    width: 16px;
-                    height: auto;
+                .icon-quotation {
                     margin-right: $side-padding-mobile;
+                    font-size: $size-md-mobile;
+                    color: $theme-dark_color-relative;
                     &.reverse {
                         margin-right: 0;
                         margin-left: $side-padding-mobile;

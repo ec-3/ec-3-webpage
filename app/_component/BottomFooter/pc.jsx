@@ -34,21 +34,6 @@ const BottomFooter = ({className = ''}) => {
                         <span>support@Ec-3.io</span>
                     </div>
                     <Button type="primary" href={linkLocation['support@Ec-3.io']}>Send Email</Button>
-                    {/*<form className="mail-form" action={`mailto:${email}`} method="post" encType="text/plain">*/}
-                    {/*    <label className="text animate__animated animate__slower" data-animate="animate__fadeInUp">Get in touch with us</label>*/}
-                    {/*    <div className="animate__animated" data-animate="animate__fadeInRight">*/}
-                    {/*        <div className="email-field">*/}
-                    {/*            <Input type="email" id="from" name="from" required*/}
-                    {/*                   ref={emailInputRef}*/}
-                    {/*                   value={email}*/}
-                    {/*                   onChange={e => setEmail(e.target.value)}*/}
-                    {/*                   placeholder="Enter your email address" autoComplete="off"/>*/}
-                    {/*        </div>*/}
-                    {/*        <input type="hidden" id="subject" name="subject" value="Customer letters from Ec3 website"/>*/}
-                    {/*        <input type="hidden" id="body" name="body" value="" />*/}
-                    {/*        <Button htmlType="submit" type="primary">Send Email</Button>*/}
-                    {/*    </div>*/}
-                    {/*</form>*/}
                 </div>
                 <div className="grid-row">
                     {allLinks.map(({title, links}, key) => (
@@ -56,7 +41,7 @@ const BottomFooter = ({className = ''}) => {
                             <div className="grid-col__title">{title}</div>
                             <div className="grid-col-content">
                                 {links.map((link, index) => (
-                                    (['Download Ec³ App', 'Shopping Car'].includes(link.name)) ?
+                                    (['Download Ec³ App'].includes(link.name)) ?
                                         <Popconfirm
                                             rootClassName="coming-soon pc"
                                             title="Coming Soon"

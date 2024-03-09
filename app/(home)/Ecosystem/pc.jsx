@@ -24,21 +24,21 @@ const EcosystemPC = ({className = 'ecosystem-wrapper'}) => {
                     <Carousel autoplay dots={false}>
                         <div className="carousel-item">
                             <div className="carousel-logo">
-                                <Image className="uhome-img" width={160} height={186} src="/images/ecosystem/uhome.png" alt="UHome" />
-                                <Image className="uhome-text" width={160} height={40} src="/images/ecosystem/uhome-text.png" alt="UHome" />
+                                <Image className="uhome-img" width={160} height={186} src="/images/home/ecosystem/uhome.png" alt="UHome" />
+                                <Image className="uhome-text" width={160} height={40} src="/images/home/ecosystem/uhome-text.png" alt="UHome" />
                             </div>
                             <div className="carousel-content">
-                                <Image className="quote-img" width={40} height={36} src="/images/carousel/quote.svg" alt="quote" />
+                                <i className="icon icon-quotation"></i>
                                 <p className="carousel-text">Uhome focuses on manufacturing lithium-ion batteries for residential and small-scale energy storage systems, offering adaptable solutions for independent micro-grids by integrating energy storage and management systems.</p>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <div className="carousel-logo">
-                                <Image className="uhome-img" width={160} height={186} src="/images/ecosystem/uhome.png" alt="UHome" />
-                                <Image className="uhome-text" width={160} height={40} src="/images/ecosystem/uhome-text.png" alt="UHome" />
+                                <Image className="uhome-img" width={160} height={186} src="/images/home/ecosystem/uhome.png" alt="UHome" />
+                                <Image className="uhome-text" width={160} height={40} src="/images/home/ecosystem/uhome-text.png" alt="UHome" />
                             </div>
                             <div className="carousel-content">
-                                <Image className="quote-img" width={40} height={36} src="/images/carousel/quote.svg" alt="quote" />
+                                <i className="icon icon-quotation"></i>
                                 <p className="carousel-text">Uhome focuses on manufacturing lithium-ion batteries for residential and small-scale energy storage systems, offering adaptable solutions for independent micro-grids by integrating energy storage and management systems.</p>
                             </div>
                         </div>

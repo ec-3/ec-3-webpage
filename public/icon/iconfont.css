@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "icon"; /* Project id 4455133 */
+  src: url('iconfont.woff2?t=1710005021431') format('woff2'),
+       url('iconfont.woff?t=1710005021431') format('woff'),
+       url('iconfont.ttf?t=1710005021431') format('truetype'),
+       url('iconfont.svg?t=1710005021431#icon') format('svg');
+}
+
+.icon {
+  font-family: "icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-app:before {
+  content: "\e643";
+}
+
+.icon-network:before {
+  content: "\e70b";
+}
+
+.icon-quotation:before {
+  content: "\e61d";
+}
+
+.icon-arrow-left:before {
+  content: "\e713";
+}
+
+.icon-arrow-right:before {
+  content: "\e714";
+}
+
+.icon-token:before {
+  content: "\e701";
+}
+
+.icon-energy:before {
+  content: "\e693";
+}
+
+.icon-verificat:before {
+  content: "\e63a";
+}
+
+.icon-security:before {
+  content: "\e605";
+}
+
+.icon-calculate:before {
+  content: "\e870";
+}
+
+.icon-person:before {
+  content: "\e830";
+}
+
+.icon-earth:before {
+  content: "\e60a";
+}
+
+.icon-tree:before {
+  content: "\e91e";
+}
+
+.icon-cart:before {
+  content: "\e6b9";
+}
+
+.icon-ios:before {
+  content: "\e64b";
+}
+
+.icon-android:before {
+  content: "\ea09";
+}
+
+.icon-api:before {
+  content: "\e71c";
+}
+
+.icon-bluetoothon:before {
+  content: "\e697";
+}
+
+.icon-ur-arrow:before {
+  content: "\e847";
+}
+
+.icon-link:before {
+  content: "\e676";
+}
+

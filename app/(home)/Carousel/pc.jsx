@@ -10,7 +10,7 @@ const CarouselPC = ({className = 'carousel'}) => {
                         <div className="inner">
                             <div className="carousel-logo"></div>
                             <div className="carousel-content">
-                                <Image className="quote-img" width={40} height={36} src="/images/carousel/quote.svg" alt="quote" />
+                                <i className="icon icon-quotation"></i>
                                 <p className="carousel-text">Ec³ is a gateway for everyone to participate in carbon reduction, offering an opportunity for individuals to gain profits through carbon neutrality, undoubtedly expanding the development space of distributed energy storage.</p>
                             </div>
                         </div>
@@ -21,7 +21,7 @@ const CarouselPC = ({className = 'carousel'}) => {
                         <div className="inner">
                             <div className="carousel-logo"></div>
                             <div className="carousel-content">
-                                <Image className="quote-img" width={40} height={36} src="/images/carousel/quote.svg" alt="quote" />
+                                <i className="icon icon-quotation"></i>
                                 <p className="carousel-text">Ec³ is a gateway for everyone to participate in carbon reduction, offering an opportunity for individuals to gain profits through carbon neutrality, undoubtedly expanding the development space of distributed energy storage.</p>
                             </div>
                         </div>

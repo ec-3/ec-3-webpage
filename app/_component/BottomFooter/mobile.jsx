@@ -11,6 +11,19 @@ const BottomFooter = ({className = ''}) => {
     const [emailBody, setEmailBody] = useState('');
     const scrollRef = useScrollAnimate({offset: 200});
 
+    const modalMsg = function (linkName) {
+        if (linkName === 'Shopping Car') {
+            return {
+                title: 'Tip',
+                content: 'Please open it on your computer.',
+            };
+        }
+        return {
+            title: 'Coming Soon',
+            content: 'This feature is currently under development and will be launched soon.',
+        };
+    };
+
     const hrefLink = useMemo(() => {
         const subject = encodeURIComponent('Customer letters from Ec3 website');
         const body = encodeURIComponent(emailBody);
@@ -47,8 +60,8 @@ const BottomFooter = ({className = ''}) => {
                                         key={index}
                                         onClick={() => {
                                             Modal.show({
-                                                title: 'Coming Soon',
-                                                content: 'This feature is currently under development and will be launched soon.',
+                                                title: modalMsg(link.name).title,
+                                                content: modalMsg(link.name).content,
                                                 closeOnAction: true,
                                                 closeOnMaskClick: true,
                                                 maskClassName: 'coming-soon__mask mobile',

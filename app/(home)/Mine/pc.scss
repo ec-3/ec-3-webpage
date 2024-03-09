@@ -46,9 +46,10 @@
                         .avatar {
                             text-align: left;
                             width: 116PX;
-                            img {
-                                width: 34PX;
-                                height: 34PX;
+                            .icon {
+                                font-size: 35PX;
+                                color: $theme-dark_color-relative;
+                                font-weight: 700;
                             }
                         }
                         .content {
@@ -206,22 +207,22 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     gap: $side-padding-pc;
-                    margin: -48PX auto 0 auto;
+                    margin: -40PX auto 0 auto;
                     width: 400PX;
                     .column {
                         display: flex;
                         align-items: center;
                         flex-direction: column;
-                        .icon {
-
-                        }
+                        line-height: 1;
+                        font-size: 0;
+                        color: $theme-dark_color-primary-most;
+                        &.column-color__green { color: #52ff27; }
+                        &.column-color__cyan { color: #90ebff; }
+                        &.column-color__purple { color: #d0bfff; }
+                        .icon { font-size: 26PX; }
                         .text {
-                            margin-top: 8PX;
+                            margin-top: 12PX;
                             font-size: $size-tn-pc;
-                            color: $theme-dark_color-primary-most;
-                            &.text-1 { color: #52ff27; }
-                            &.text-2 { color: #90ebff; }
-                            &.text-3 { color: #d0bfff; }
                         }
                     }
                 }
@@ -240,8 +241,10 @@
                             font-weight: 700;
                             letter-spacing: 1PX;
                         }
-                        .arrow-icon {
-                            margin-left: 12PX;
+                        .icon {
+                            margin-left: 10PX;
+                            font-size: $size-tner-pc;
+                            font-weight: 700;
                         }
                     }
                 }

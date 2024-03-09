@@ -1,7 +1,7 @@
 @mixin ecosystem() {
     .ecosystem-wrapper {
         background-color: rgb(66, 69, 73);
-        background-image: url(/images/ecosystem/ecosystem-bg.svg);
+        background-image: url(/images/home/ecosystem/ecosystem-bg.svg);
         background-position: 50% 50%;
         background-size: auto 60px;
         .ecosystem {
@@ -40,7 +40,7 @@
                 }
             }
             .carousel-item {
-                padding: 18px $side-padding-mobile 22px $size-mder-mobile;
+                padding: 18px $side-padding-mobile 22px $side-padding-mobile;
                 box-sizing: border-box;
                 .carousel-logo {
                     display: flex;
@@ -65,10 +65,10 @@
                     display: flex;
                     align-items: flex-start;
                     margin-top: 20px;
-                    .quote-img {
-                        width: 16px;
-                        height: auto;
+                    .icon-quotation {
                         margin-right: $side-padding-mobile;
+                        font-size: $size-md-mobile;
+                        color: $theme-dark_color-relative;
                         &.reverse {
                             margin-right: 0;
                             margin-left: $side-padding-mobile;

@@ -1,0 +1,149 @@
+{
+  "id": "4455133",
+  "name": "ec3",
+  "font_family": "icon",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1305489",
+      "name": "app",
+      "font_class": "app",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "9974441",
+      "name": "network",
+      "font_class": "network",
+      "unicode": "e70b",
+      "unicode_decimal": 59147
+    },
+    {
+      "icon_id": "11895884",
+      "name": "quotation",
+      "font_class": "quotation",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "16810346",
+      "name": "arrow-left",
+      "font_class": "arrow-left",
+      "unicode": "e713",
+      "unicode_decimal": 59155
+    },
+    {
+      "icon_id": "16810350",
+      "name": "arrow-right",
+      "font_class": "arrow-right",
+      "unicode": "e714",
+      "unicode_decimal": 59156
+    },
+    {
+      "icon_id": "29371879",
+      "name": "token",
+      "font_class": "token",
+      "unicode": "e701",
+      "unicode_decimal": 59137
+    },
+    {
+      "icon_id": "24724502",
+      "name": "energy",
+      "font_class": "energy",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "3645655",
+      "name": "verificat",
+      "font_class": "verificat",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "12875277",
+      "name": "security",
+      "font_class": "security",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "9626881",
+      "name": "calculate",
+      "font_class": "calculate",
+      "unicode": "e870",
+      "unicode_decimal": 59504
+    },
+    {
+      "icon_id": "17718449",
+      "name": "person",
+      "font_class": "person",
+      "unicode": "e830",
+      "unicode_decimal": 59440
+    },
+    {
+      "icon_id": "705660",
+      "name": "earth",
+      "font_class": "earth",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "39374830",
+      "name": "tree",
+      "font_class": "tree",
+      "unicode": "e91e",
+      "unicode_decimal": 59678
+    },
+    {
+      "icon_id": "33517",
+      "name": "cart",
+      "font_class": "cart",
+      "unicode": "e6b9",
+      "unicode_decimal": 59065
+    },
+    {
+      "icon_id": "2325952",
+      "name": "ios",
+      "font_class": "ios",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "11983529",
+      "name": "android",
+      "font_class": "android",
+      "unicode": "ea09",
+      "unicode_decimal": 59913
+    },
+    {
+      "icon_id": "7239643",
+      "name": "api",
+      "font_class": "api",
+      "unicode": "e71c",
+      "unicode_decimal": 59164
+    },
+    {
+      "icon_id": "8106210",
+      "name": "bluetoothon",
+      "font_class": "bluetoothon",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "34453074",
+      "name": "ur-arrow",
+      "font_class": "ur-arrow",
+      "unicode": "e847",
+      "unicode_decimal": 59463
+    },
+    {
+      "icon_id": "15838493",
+      "name": "link",
+      "font_class": "link",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    }
+  ]
+}

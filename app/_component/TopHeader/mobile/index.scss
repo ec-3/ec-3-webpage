@@ -30,10 +30,10 @@
             position: absolute;
             top: 50%;
             display: inline-block;
-            width: 24px;
-            height: 24px;
+            font-size: $size-mder-mobile;
+            color: $theme-dark_color-secondary;
             transform: scaleX(1) translateY(-50%);
-            &.left-icon {
+            &.icon-arrow-left {
                 left: 0;
                 animation: .8s rainbow-l infinite;
                 @keyframes rainbow-l {
@@ -45,7 +45,7 @@
                 }
             }
 
-            &.right-icon {
+            &.icon-arrow-right {
                 right: 0;
                 animation: .8s rainbow-r infinite;
                 @keyframes rainbow-r {
