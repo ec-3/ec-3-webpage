@@ -14,8 +14,8 @@
     "@better-scroll/core": "^2.5.1",
     "@vercel/analytics": "^1.2.2",
     "animate.css": "^4.1.1",
-    "antd": "^5.13.3",
-    "antd-mobile": "^5.34.0",
+    "antd": "5.13.3",
+    "antd-mobile": "5.34.0",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0"
