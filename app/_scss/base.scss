@@ -9,7 +9,7 @@
 html, body {
     height: 100%;
     line-height: 1;
-    font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+    font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif !important;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     color: $color-text-regular;
