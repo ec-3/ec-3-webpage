@@ -2,7 +2,7 @@ export default function HeadEc3({isMobile = false}) {
     return (
         <head>
             {
-                isMobile ? <meta name="viewport" key="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+                isMobile ? <meta name="viewport" key="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no" />
                          : <meta name="viewport" key="viewport" content="width=device-width, initial-scale=1" />
             }
             <meta name="Keywords" content="Ec³,ec³,ec3,Ec3,Distributed energy network,Distributed Energy Storage,Web3,Carbon neutralization,Low-Carbon Lifestyle,Stable Grid,DID Technology,Blockchain" />
