@@ -1,0 +1,8 @@
+@import "./Banner/index.scss";
+
+.main {
+    margin-top: $header-height-pc;
+    color: $theme-dark_color-primary-most;
+    background-color: $theme-dark_bg-primary;
+    @include banner();
+}

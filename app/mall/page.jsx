@@ -1,8 +1,12 @@
 'use client'
 import React from 'react';
+import Banner from './Banner';
+import './page.scss';
 
 export default function mall() {
     return (
-        <div style={{"font-size": '30px'}}>mall test page</div>
+        <main className="main">
+            <Banner className="banner" />
+        </main>
     )
 }

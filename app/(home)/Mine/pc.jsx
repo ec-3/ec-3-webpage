@@ -86,7 +86,7 @@ const MinePC = ({className = 'mine'}) => {
                         </div>
                     </div>
                     <div className="btn-group">
-                        <Button className="order-btn" type="primary" href="/mall" target="_blank">
+                        <Button className="order-btn" type="primary" href="/mall">
                             Order Now
                             <i className="icon icon-ur-arrow"></i>
                         </Button>

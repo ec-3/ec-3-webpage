@@ -4,12 +4,14 @@ import Link from 'next/link';
 import {Button, Collapse, Modal} from 'antd-mobile';
 import './mobile.scss';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
-import allLinks from "./allLinks.js";
+import allLinksFunc from "./allLinks.js";
 import {linkLocation} from "@/config";
 
-const BottomFooter = ({className = ''}) => {
+const BottomFooter = ({className = '', isHomePage = true}) => {
     const [emailBody, setEmailBody] = useState('');
     const scrollRef = useScrollAnimate({offset: 200});
+
+    const allLinks = allLinksFunc(isHomePage);
 
     const modalMsg = function (linkName) {
         if (linkName === 'Shopping Car') {
@@ -78,7 +80,7 @@ const BottomFooter = ({className = ''}) => {
                                     <Link
                                         prefetch
                                         href={link.href}
-                                        target="_blank"
+                                        target={link.target}
                                         className="link"
                                         key={index}
                                     >{link.name}</Link>

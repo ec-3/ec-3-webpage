@@ -1,29 +1,17 @@
 'use client'
-import React, {useState, useRef, useEffect} from 'react';
+import React from 'react';
 import Link from 'next/link';
 import {Button, Input, Popconfirm} from 'antd';
-import './pc.scss';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
-import allLinks from "./allLinks.js";
+import allLinksFunc from "./allLinks.js";
 import {linkLocation} from '@/config.js'
 
+import './pc.scss';
 
-const BottomFooter = ({className = ''}) => {
-    const [email, setEmail] = useState('');
-    const emailInputRef = useRef(null);
+const BottomFooter = ({className = '', isHomePage = true}) => {
     const scrollRef = useScrollAnimate({offset: 200});
 
-    useEffect(() => {
-        if (emailInputRef.current) {
-            if (email.trim() === '') {
-                emailInputRef.current.input.setCustomValidity('Enter your email address .');
-            } else if (!(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email))) {
-                emailInputRef.current.input.setCustomValidity('The email address is illegal .');
-            } else {
-                emailInputRef.current.input.setCustomValidity('');
-            }
-        }
-    }, [email]);
+    const allLinks = allLinksFunc(isHomePage);
 
     return (
         <footer className={`bottom-footer ${className}`}>
@@ -56,7 +44,7 @@ const BottomFooter = ({className = ''}) => {
                                         <Link
                                             prefetch
                                             href={link.href}
-                                            target="_blank"
+                                            target={link.target}
                                             className="grid-col-link"
                                             key={index}
                                         >{link.name}</Link>

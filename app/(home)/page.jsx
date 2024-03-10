@@ -19,7 +19,6 @@ import useCientCheck from '@/_hooks/useCientCheck';
 
 import './pagePC.scss';
 import './pageMobile.scss';
-import '@/_theme/theme-mobile-blue.scss';
 
 export default function Home() {
     const isMobile = useCientCheck();

@@ -8,7 +8,6 @@ export const linkLocation = {
     'support@Ec-3.io': 'mailto:support@Ec-3.io',
 
     'Download Ec³ App': 'https://www.baidu.com/',
-    'Shopping Car': '/mall',
     'Developers': 'https://docs.ec-cube.io/developer',
     'Mine': 'https://docs.ec-cube.io/mine',
     'Tokenomic': 'https://docs.ec-cube.io/tokenomic',

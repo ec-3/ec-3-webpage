@@ -103,6 +103,7 @@
             color: $theme-dark_color-secondary;
             text-decoration: none;
             transition: color .3s;
+            cursor: pointer;
             &:hover {
                 color: $theme-dark_color-regular;
             }
