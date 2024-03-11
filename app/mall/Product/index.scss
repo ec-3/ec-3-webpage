@@ -1,0 +1,45 @@
+@mixin product() {
+    .product {
+        padding-top: 80PX;
+        .fixed-center { @include fixed-center(); }
+        .title-group {
+            display: grid;
+            grid-template-columns: .76fr 1fr;
+            .remark {
+                line-height: $line-height;
+                font-size: $size-tner-pc;
+                color: $theme-dark_color-regular;
+                user-select: text;
+            }
+            .main-title {
+                line-height: 1.25;
+                font-size: 26PX;
+                color: $theme-dark_color-regular;
+                user-select: text;
+                strong { color: $theme-dark_color-primary-most; }
+            }
+        }
+        .btn-group {
+            margin-top: 46PX;
+            text-align: center;
+        }
+        .img-group {
+            display: grid;
+            grid-template-columns: .5fr 1fr .5fr;
+            gap: 12PX;
+            margin-top: 60PX;
+            .img-wrapper {
+                display: flex;
+                align-items: center;
+                height: 410PX;
+                border-radius: 13PX;
+                overflow: hidden;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

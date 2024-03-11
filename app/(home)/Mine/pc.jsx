@@ -11,7 +11,7 @@ const MinePC = ({className = 'mine'}) => {
 
     return (
         <>
-        <div className={className} ref={wrapperRef}>
+        <section className={className} ref={wrapperRef}>
             <div className="inner">
                 <h2 className="main-title"><strong>mine</strong> with distributed energy storage</h2>
                 <p className="sub-title">
@@ -47,7 +47,7 @@ const MinePC = ({className = 'mine'}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <Modal
             className="pre-sale__dialog"
             centered={true}

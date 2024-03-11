@@ -6,7 +6,7 @@ const AppStoreMobile = ({className = 'app-store'}) => {
     const scrollRef = useScrollAnimate({imgHalfHeight: 27});
 
     return (
-        <div className="app-store">
+        <section className="app-store">
             <div className="main-title" ref={scrollRef}>
                 <Image className="phone-text animate__animated" src="/images/home/app-store/phone-text.png" width="180" height="54"
                        data-animate="animate__flipInX"
@@ -54,7 +54,7 @@ const AppStoreMobile = ({className = 'app-store'}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

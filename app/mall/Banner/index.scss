@@ -1,12 +1,12 @@
 @mixin banner() {
     .banner {
         position: relative;
+        width: 100%;
         height: 658PX;
         font-size: 0;
-        background-color: #1b1b1b;
+        background-color: $theme-dark_bg-secondary;
         .fixed-center {
             @include fixed-center();
-
             position: absolute;
             top: 0;
             bottom: 0;
@@ -17,52 +17,42 @@
             background-position: 50% 0;
             background-size: 100%;
             background-repeat: no-repeat;
-            background-attachment: fixed;
             z-index: 1;
-
-            .inner {
-                position: absolute;
-                top: 0;
-                left: -20px;
-                right: -20px;
-                bottom: 0;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0 32px;
-                background-image: linear-gradient(to right, #1b1b1b, rgba(27, 27, 27, .9), rgba(27, 27, 27, 0), rgba(27, 27, 27, .9), #1b1b1b);
-            }
+        }
+        .inner {
+            position: absolute;
+            top: 0;
+            left: -20PX;
+            right: -20PX;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 32PX;
+            background-image: linear-gradient(to right, $theme-dark_bg-secondary, rgba(27, 27, 27, .9), rgba(27, 27, 27, 0), rgba(27, 27, 27, .9), #1b1b1b);
         }
         .title-group {}
         .sub-title {
-            width: 292px;
+            width: 286PX;
             line-height: 1.2;
-            font-size: 32px;
-            color: #9d9d9d;
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
+            font-size: 35PX;
+            color: $theme-dark_color-regular;
             user-select: text;
         }
-        .btn { margin-top: 46px; }
+        .btn { margin-top: 46PX; }
         .main-title {
-            margin-top: 94px;
-            width: 436px;
-            font-size: 108px;
+            margin-top: 76PX;
+            width: 436PX;
+            font-size: 118PX;
             color: #fff;
             font-weight: 700;
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
+            font-family: SourceSansPro-Semibold;
             user-select: text;
         }
         .remark {
-            font-size: 14px;
-            color: #9d9d9d;
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
+            font-size: $size-tner-pc;
+            color: $theme-dark_color-regular;
             user-select: text;
         }
     }

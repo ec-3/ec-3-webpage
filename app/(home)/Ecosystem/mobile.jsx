@@ -5,7 +5,7 @@ import uhomeTextImg from '~/images/home/ecosystem/uhome-text.png';
 
 const EcosystemMobile = ({className = 'ecosystem-wrapper'}) => {
     return (
-        <div className={className}>
+        <section className={className}>
             <div className="ecosystem">
                 <div className="inner">
                     <h2 className="main-title">ECOSYSTEM</h2>
@@ -54,7 +54,7 @@ const EcosystemMobile = ({className = 'ecosystem-wrapper'}) => {
                     </Swiper>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

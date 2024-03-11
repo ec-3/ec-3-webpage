@@ -3,7 +3,7 @@ import {Carousel} from 'antd';
 
 const CarouselPC = ({className = 'carousel'}) => {
     return (
-        <div className={className}>
+        <section className={className}>
             <Carousel autoplay dots={false}>
                 <div className="carousel-item">
                     <div className="inner-wrapper">
@@ -28,7 +28,7 @@ const CarouselPC = ({className = 'carousel'}) => {
                     </div>
                 </div>
             </Carousel>
-        </div>
+        </section>
     );
 };
 

@@ -68,7 +68,7 @@ const MineMobile = ({className = 'mine'}) => {
 
     return (
         <>
-        <div className={className} ref={wrapperRef}>
+        <section className={className} ref={wrapperRef}>
             <h2 className="main-title"><strong>mine</strong> with distributed energy storage</h2>
             <p className="sub-title">
                 Ec³ (Energy Cube) is dedicated to creating a DePIN network based on distributed energy interaction, designed to collect data from all discharging devices.
@@ -126,7 +126,7 @@ const MineMobile = ({className = 'mine'}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         </>
     );
 };

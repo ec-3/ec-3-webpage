@@ -4,7 +4,7 @@ import carouselOneImg from '~/images/home/carousel/carousel-one.png';
 
 const CarouselMobile = ({className = 'carousel'}) => {
     return (
-        <div className={className}>
+        <section className={className}>
             <Swiper autoplay loop>
                 <Swiper.Item className="carousel-item">
                     <div className="carousel-logo">
@@ -29,7 +29,7 @@ const CarouselMobile = ({className = 'carousel'}) => {
                     </div>
                 </Swiper.Item>
             </Swiper>
-        </div>
+        </section>
     );
 };
 

@@ -10,7 +10,7 @@ const EctMobile = ({className = 'ect'}) => {
     const scrollRef = useScrollAnimate({imgHalfHeight: 112});
 
     return (
-        <div className="ect" ref={scrollRef}>
+        <section className="ect" ref={scrollRef}>
             <div>
                 <h2 className="main-title animate__animated animate__slow" data-animate="animate__bounce"><strong>ECT</strong> Energy self-consumption Economy</h2>
                 <p className="sub-title">The Ec³ Token (ECT) is the native cryptocurrency of the Ec³ Network and is the only token that can be burned to create credits and send device data.</p>
@@ -63,7 +63,7 @@ const EctMobile = ({className = 'ect'}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

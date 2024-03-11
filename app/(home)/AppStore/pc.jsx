@@ -6,7 +6,7 @@ const AppStorePC = ({className = 'app-store'}) => {
     const scrollRef = useScrollAnimate({imgHalfHeight: 230});
 
     return (
-        <div className="app-store">
+        <section className="app-store">
             <div className="inner">
                 <div className="image-text" ref={scrollRef}>
                     <div className="image-wrapper animate__animated" data-animate="animate__fadeInLeft">
@@ -46,7 +46,7 @@ const AppStorePC = ({className = 'app-store'}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

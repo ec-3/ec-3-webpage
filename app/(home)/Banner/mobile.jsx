@@ -4,7 +4,7 @@ const Banner = ({className = 'banner'}) => {
     // const videoRef = useRef(null);
 
     return (
-        <div className={className}>
+        <section className={className}>
             <div className="inner">
                 {/*<video autoPlay muted preload="auto" ref={videoRef}>*/}
                 {/*    <source src="/video/banner.mp4" type="video/mp4"/>*/}
@@ -18,7 +18,7 @@ const Banner = ({className = 'banner'}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

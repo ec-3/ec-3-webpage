@@ -1,0 +1,46 @@
+@mixin install-guide() {
+    .install-guide {
+        padding: 80PX 0;
+        .fixed-center { @include fixed-center(); }
+        .main-title {
+            margin: 0 auto;
+            width: 868PX;
+            line-height: 1.28;
+            text-align: center;
+            font-size: 40PX;
+            color: $theme-dark_color-regular;
+            user-select: text;
+        }
+        strong { color: $theme-dark_color-primary-most; }
+        .card-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 86PX;
+            margin-top: 60PX;
+            color: #fff;
+        }
+        .card {}
+        .card-title {
+            display: flex;
+            align-items: center;
+            .text {
+                font-size: 27PX;
+                user-select: text;
+            }
+            .icon {
+                padding: 0 14PX;
+                font-size: 30PX;
+            }
+        }
+        .card-desc {
+            margin-top: 24PX;
+            line-height: 1.26;
+            font-size: $size-md-pc;
+            user-select: text;
+        }
+        .btn-group {
+            margin-top: 60PX;
+            text-align: center;
+        }
+    }
+}

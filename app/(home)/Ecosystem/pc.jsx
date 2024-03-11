@@ -3,7 +3,7 @@ import {Button, Carousel, Popconfirm} from 'antd';
 
 const EcosystemPC = ({className = 'ecosystem-wrapper'}) => {
     return (
-        <div className={className}>
+        <section className={className}>
             <div className="ecosystem">
                 <div className="inner">
                     <h2 className="main-title">ECOSYSTEM</h2>
@@ -45,7 +45,7 @@ const EcosystemPC = ({className = 'ecosystem-wrapper'}) => {
                     </Carousel>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

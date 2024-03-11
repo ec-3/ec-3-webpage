@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Innovative = ({className = 'innovative-wrapper'}) => {
     return (
-        <div className={className}>
+        <section className={className}>
             <div className="innovative">
                 <div className="inner">
                     <div className="row">
@@ -38,7 +38,7 @@ const Innovative = ({className = 'innovative-wrapper'}) => {
                 </div>
             </div>
 
-        </div>
+        </section>
     );
 };
 

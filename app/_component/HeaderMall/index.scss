@@ -5,8 +5,8 @@
     width: 100%;
     height: $header-height-pc;
     color: $theme-dark_color-primary-most;
-    background-color: $theme-dark_bg-primary;
-    @include border-bottom-1px(rgba(255, 255, 255, .14));
+    background-color: $theme-dark_bg-secondary;
+    @include border-bottom-1px(rgba(255, 255, 255, .08));
     transition: all 0.3s ease;
     z-index: 10;
     .hide { display: none; }

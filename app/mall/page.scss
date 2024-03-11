@@ -1,8 +1,43 @@
 @import "./Banner/index.scss";
+@import "./Product/index.scss";
+@import "./InstallGuide/index.scss";
+@import "./DownloadApp/index.scss";
 
 .main {
     margin-top: $header-height-pc;
     color: $theme-dark_color-primary-most;
-    background-color: $theme-dark_bg-primary;
+    background-color: $theme-dark_bg-secondary;
     @include banner();
+    @include product();
+    @include install-guide();
+    @include download-app();
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 10PX 23PX;
+        line-height: 1;
+        font-size: $size-lg-pc;
+        border-radius: 20PX;
+        border-width: 0;
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+
+        &.btn-white {
+            color: $color-text-regular;
+            background-color: #fff;
+            border: 1px solid #fff;
+            transition: all .2s;
+
+            &:hover {
+                color: $color-text-primary;
+                border-color: $theme-dark_color-relative;
+            }
+        }
+
+        .icon {
+            margin-left: 12PX;
+            font-size: 22PX;
+        }
+    }
 }
