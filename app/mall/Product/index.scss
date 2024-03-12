@@ -23,31 +23,29 @@
             margin-top: 46PX;
             text-align: center;
         }
-        .img-group {
-            display: grid;
-            grid-template-columns: .5fr 1fr .5fr;
-            gap: 12PX;
-            margin-top: 60PX;
-            .img-wrapper {
-                display: flex;
-                align-items: center;
-                height: 410PX;
-                font-size: 0;
-                .img-box {
-                    &.fixed-height {
-                        width: 100%;
-                        height: 252PX;
-                    }
+        .swiper { margin-top: 60PX; }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 410PX;
+            cursor: pointer;
+            .img-box {
+                width: 100%;
+                height: 252PX;
+                border-radius: 14PX;
+                transition: all .3s;
+                overflow: hidden;
+                img {
                     width: 100%;
                     height: 100%;
-                    border-radius: 13PX;
-                    overflow: hidden;
+                    max-width: 380PX;
                 }
             }
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
+            &.swiper-slide-active, &.swiper-slide-duplicate-active {
+                .img-box {
+                    height: 100%;
+                }
             }
         }
     }

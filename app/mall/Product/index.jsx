@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 const Product = function ({className = 'product'}) {
     return (
@@ -13,23 +16,49 @@ const Product = function ({className = 'product'}) {
                 <div className="btn-group">
                     <a className="btn btn-white">PRE ORDER</a>
                 </div>
-                <div className="img-group">
-                    <div className="img-wrapper">
-                        <div className="img-box fixed-height">
+                <Swiper
+                    modules={[Autoplay]}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: true,
+                        pauseOnMouseEnter: true,
+                    }}
+                    loop={true}
+                    spaceBetween={18}
+                    slidesPerView={3}
+                    centeredSlides={true}
+                >
+                    <SwiperSlide>
+                        <div className="img-box">
                             <Image src="/images/mall/product/product-1.png" width={100} height={100} alt="product-1"/>
                         </div>
-                    </div>
-                    <div className="img-wrapper">
+                    </SwiperSlide>
+                    <SwiperSlide>
                         <div className="img-box">
-                            <Image src="/images/mall/product/product-2.png" width={300} height={200} alt="product-2"/>
+                            <Image src="/images/mall/product/product-2.png" width={100} height={100} alt="product-2"/>
                         </div>
-                    </div>
-                    <div className="img-wrapper">
-                        <div className="img-box fixed-height">
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="img-box">
                             <Image src="/images/mall/product/product-3.png" width={100} height={100} alt="product-3"/>
                         </div>
-                    </div>
-                </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="img-box">
+                            <Image src="/images/mall/product/product-1.png" width={100} height={100} alt="product-1"/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="img-box">
+                            <Image src="/images/mall/product/product-2.png" width={100} height={100} alt="product-2"/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="img-box">
+                            <Image src="/images/mall/product/product-3.png" width={100} height={100} alt="product-3"/>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
             </div>
         </section>
     );
