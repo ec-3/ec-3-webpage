@@ -7,11 +7,11 @@ const DownloadApp = function ({className = 'download-app'}) {
         <section className={className}>
             <div className="fixed-center">
                 <div className="img-column">
-                    <div className="img-row img-row__right-top img-row__offset">
-                        <Image src="/images/mall/download-app/product-4.png" width={368} height={186} alt="product-4"/>
+                    <div className="img-row img-row__left">
+                        <Image src="/images/mall/download-app/product-4.png" width={100} height={100} alt="product-4"/>
                     </div>
                     <div className="img-row img-row__left">
-                        <Image src="/images/mall/download-app/product-5.png" width={278} height={382} alt="product-5"/>
+                        <Image src="/images/mall/download-app/product-5.png" width={100} height={100} alt="product-5"/>
                     </div>
                 </div>
                 <div className="image-text">
@@ -43,10 +43,10 @@ const DownloadApp = function ({className = 'download-app'}) {
                 </div>
                 <div className="img-column">
                     <div className="img-row img-row__right">
-                        <Image src="/images/mall/download-app/product-6.png" width={228} height={212} alt="product-6"/>
+                        <Image src="/images/mall/download-app/product-6.png" width={100} height={100} alt="product-6"/>
                     </div>
-                    <div className="img-row img-row__right">
-                        <Image src="/images/mall/download-app/product-7.png" width={295} height={231} alt="product-7"/>
+                    <div className="img-row img-row__right scale">
+                        <Image src="/images/mall/download-app/product-7.png" width={100} height={100} alt="product-7"/>
                     </div>
                 </div>
             </div>
