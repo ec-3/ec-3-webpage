@@ -6,27 +6,38 @@ const AppStoreMobile = ({className = 'app-store'}) => {
     const scrollRef = useScrollAnimate({imgHalfHeight: 27});
 
     return (
-        <section className="app-store">
-            <div className="main-title" ref={scrollRef}>
-                <Image className="phone-text animate__animated" src="/images/home/app-store/phone-text.png" width="180" height="54"
-                       data-animate="animate__flipInX"
-                       alt="App Store"
-                       onClick={() => {
-                           Modal.show({
-                               title: 'Coming Soon',
-                               content: 'This feature is currently under development and will be launched soon.',
-                               closeOnAction: true,
-                               closeOnMaskClick: true,
-                               maskClassName: 'coming-soon__mask mobile',
-                               actions: [
-                                   {
-                                       key: 'confirm',
-                                       text: 'I Know',
-                                   },
-                               ],
-                           })
-                       }}
-                />
+        <section className="app-store" ref={scrollRef}>
+            <div className="link-group animate__animated" data-animate="animate__flipInX">
+                <a className="link" onClick={() => {
+                    Modal.show({
+                        title: 'Coming Soon',
+                        content: 'This feature is currently under development and will be launched soon.',
+                        closeOnAction: true,
+                        closeOnMaskClick: true,
+                        maskClassName: 'coming-soon__mask mobile',
+                        actions: [
+                            {
+                                key: 'confirm',
+                                text: 'I Know',
+                            },
+                        ],
+                    })
+                }}><i className="icon icon-ios"></i>ios</a>
+                <a className="link" onClick={() => {
+                    Modal.show({
+                        title: 'Coming Soon',
+                        content: 'This feature is currently under development and will be launched soon.',
+                        closeOnAction: true,
+                        closeOnMaskClick: true,
+                        maskClassName: 'coming-soon__mask mobile',
+                        actions: [
+                            {
+                                key: 'confirm',
+                                text: 'I Know',
+                            },
+                        ],
+                    })
+                }}><i className="icon icon-android"></i>Android</a>
             </div>
             <div className="image-text">
                 <div className="card-wrapper">

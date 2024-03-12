@@ -186,16 +186,16 @@
             }
             .cube-img {
                 display: block;
-                margin: -32px auto 0 auto;
-                width: 180px !important;
-                height: 181px !important;
+                margin: 8px auto 0 auto;
+                width: 236px;
+                height: auto;
                 filter: blur(1);
             }
             .icon-wrapper {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 8px;
-                margin: -22px auto 0 auto;
+                margin: 4px auto 0 auto;
                 .column {
                     display: flex;
                     align-items: center;

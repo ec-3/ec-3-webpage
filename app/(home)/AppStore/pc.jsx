@@ -10,16 +10,27 @@ const AppStorePC = ({className = 'app-store'}) => {
             <div className="inner">
                 <div className="image-text" ref={scrollRef}>
                     <div className="image-wrapper animate__animated" data-animate="animate__fadeInLeft">
-                        <Image className="phone" width="400" height="461" src="/images/home/app-store/phone.png" alt="App Store" />
-                        <Popconfirm
-                            rootClassName="coming-soon pc"
-                            title="Coming Soon"
-                            description="This feature is currently under development and will be launched soon."
-                            okText="Cancel"
-                            okType="default"
-                        >
-                            <Image className="phone-text" width="180" height="54" src="/images/home/app-store/phone-text.png" alt="App Store" />
-                        </Popconfirm>
+                        <Image className="phone" width="300" height="219" src="/images/home/app-store/phone-ec3.png" alt="App Store" />
+                        <div className="link-group">
+                            <Popconfirm
+                                rootClassName="coming-soon pc"
+                                title="Coming Soon"
+                                description="This feature is currently under development and will be launched soon."
+                                okText="Cancel"
+                                okType="default"
+                            >
+                                <a className="link"><i className="icon icon-ios"></i>ios</a>
+                            </Popconfirm>
+                            <Popconfirm
+                                rootClassName="coming-soon pc"
+                                title="Coming Soon"
+                                description="This feature is currently under development and will be launched soon."
+                                okText="Cancel"
+                                okType="default"
+                            >
+                                <a className="link"><i className="icon icon-android"></i>Android</a>
+                            </Popconfirm>
+                        </div>
                     </div>
                     <div className="card-wrapper">
                         <div className="card">

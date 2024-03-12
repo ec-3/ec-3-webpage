@@ -81,7 +81,7 @@ const MineMobile = ({className = 'mine'}) => {
                                 classNames: {
                                     mask: 'image-view__mask',
                                 },
-                                image: '/images/home/mine/cube-ec3.png',
+                                image: '/images/home/mine/cube-ec3.jpg',
                                 getContainer: () => wrapperRef.current
                             })
                         }}>

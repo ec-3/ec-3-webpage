@@ -201,13 +201,15 @@
                 }
                 .cube-img {
                     display: block;
-                    margin: -46PX auto 0 auto;
+                    margin: 8PX auto 0 auto;
+                    width: 380PX;
+                    height: auto;
                 }
                 .icon-wrapper {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     gap: $side-padding-pc;
-                    margin: -40PX auto 0 auto;
+                    margin: 4PX auto 0 auto;
                     width: 400PX;
                     .column {
                         display: flex;
