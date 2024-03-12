@@ -1,3 +1,5 @@
+import {Popconfirm} from 'antd';
+
 const InstallGuide = function ({className = 'install-guide'}) {
     return (
         <section className={className}>
@@ -34,7 +36,15 @@ const InstallGuide = function ({className = 'install-guide'}) {
                     </div>
                 </div>
                 <div className="btn-group">
-                    <a className="btn btn-white">Installation Guide<i className="icon icon-ur-arrow"></i></a>
+                    <Popconfirm
+                        rootClassName="coming-soon pc"
+                        title="Coming Soon"
+                        description="This feature is currently under development and will be launched soon."
+                        okText="Cancel"
+                        okType="default"
+                    >
+                        <a className="btn btn-white">Installation Guide<i className="icon icon-ur-arrow"></i></a>
+                    </Popconfirm>
                 </div>
             </div>
         </section>

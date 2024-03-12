@@ -34,13 +34,8 @@
             .btn-wrapper {
                 text-align: center;
                 .ant-btn-primary  {
-                    height: 41PX;
                     min-width: 200PX;
                     margin: 0 auto;
-                    span {
-                        font-size: $size-mder-pc;
-                        font-weight: 700;
-                    }
                 }
             }
             .carousel-item {

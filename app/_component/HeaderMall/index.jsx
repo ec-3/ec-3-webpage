@@ -8,7 +8,7 @@ import {linkLocation} from '@/config.js'
 import './index.scss';
 import logo from '~/images/logo.png';
 
-const TopHeaderMall = ({className = ''}) => {
+const HeaderMall = ({className = ''}) => {
     return (
         <header className={`header-mall ${className}`}>
             <h1 className="hide">Ec³</h1>
@@ -46,4 +46,4 @@ const TopHeaderMall = ({className = ''}) => {
     );
 
 };
-export default TopHeaderMall;
+export default HeaderMall;

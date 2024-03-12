@@ -7,7 +7,7 @@ import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 import allLinksFunc from "./allLinks.js";
 import {linkLocation} from "@/config";
 
-const BottomFooter = ({className = '', isHomePage = true}) => {
+const FooterHomeMobile = ({className = '', isHomePage = true}) => {
     const [emailBody, setEmailBody] = useState('');
     const scrollRef = useScrollAnimate({offset: 200});
 
@@ -33,7 +33,7 @@ const BottomFooter = ({className = '', isHomePage = true}) => {
     }, [emailBody]);
 
     return (
-        <footer className={`bottom-footer ${className}`}>
+        <footer className={`footer-home ${className}`}>
             <div className="inner">
                 <div className="contact-us" ref={scrollRef}>
                     <div className="mail-form">
@@ -97,4 +97,4 @@ const BottomFooter = ({className = '', isHomePage = true}) => {
     );
 };
 
-export default BottomFooter;
+export default FooterHomeMobile;

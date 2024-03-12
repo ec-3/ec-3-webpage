@@ -22,22 +22,37 @@
         text-decoration: none;
         outline: none;
         cursor: pointer;
-
         &.btn-white {
             color: $color-text-regular;
             background-color: #fff;
             border: 1px solid #fff;
             transition: all .2s;
-
             &:hover {
                 color: $color-text-primary;
                 border-color: $theme-dark_color-relative;
+                box-shadow: #fff -1PX 2PX 15PX 0PX;
             }
         }
-
         .icon {
             margin-left: 12PX;
             font-size: 22PX;
         }
     }
+}
+
+.ant-btn-primary  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 41PX;
+    text-decoration: none;
+    span {
+        line-height: 1;
+        font-size: $size-mder-pc;
+        font-weight: 700;
+    }
+}
+.ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover, .ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
+    color: $color-text-primary !important;
+    box-shadow: $theme-dark-color-relative -1PX 2PX 15PX 0PX;
 }

@@ -15,13 +15,19 @@ const Product = function ({className = 'product'}) {
                 </div>
                 <div className="img-group">
                     <div className="img-wrapper">
-                        <Image src="/images/mall/product/product-1.png" width={100} height={100} alt="product-1"/>
+                        <div className="img-box fixed-height">
+                            <Image src="/images/mall/product/product-1.png" width={100} height={100} alt="product-1"/>
+                        </div>
                     </div>
                     <div className="img-wrapper">
-                        <Image src="/images/mall/product/product-2.png" width={300} height={200} alt="product-2"/>
+                        <div className="img-box">
+                            <Image src="/images/mall/product/product-2.png" width={300} height={200} alt="product-2"/>
+                        </div>
                     </div>
                     <div className="img-wrapper">
-                        <Image src="/images/mall/product/product-3.png" width={100} height={100} alt="product-3"/>
+                        <div className="img-box fixed-height">
+                            <Image src="/images/mall/product/product-3.png" width={100} height={100} alt="product-3"/>
+                        </div>
                     </div>
                 </div>
             </div>

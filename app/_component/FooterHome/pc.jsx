@@ -8,13 +8,13 @@ import {linkLocation} from '@/config.js'
 
 import './pc.scss';
 
-const BottomFooter = ({className = '', isHomePage = true}) => {
+const FooterHomePC = ({className = '', isHomePage = true, isMallPage = false}) => {
     const scrollRef = useScrollAnimate({offset: 200});
 
     const allLinks = allLinksFunc(isHomePage);
 
     return (
-        <footer className={`bottom-footer ${className}`}>
+        <footer className={`footer-home ${className} ${isMallPage && 'light-bg'}`}>
             <div className="inner">
                 <div className="contact-us" ref={scrollRef}>
                     <div className="title animate__animated animate__slower" data-animate="animate__fadeInUp">
@@ -63,4 +63,4 @@ const BottomFooter = ({className = '', isHomePage = true}) => {
     );
 };
 
-export default BottomFooter;
+export default FooterHomePC;

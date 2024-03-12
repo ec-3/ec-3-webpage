@@ -8,7 +8,7 @@ import './index.scss';
 import {linkLocation} from '@/config.js';
 
 let scroll = null;
-const TopHeaderMobile = ({className = ''}) => {
+const HeaderHomeMobile = ({className = ''}) => {
     const scrollWrapperRef = useRef(null);
     const contentRef = useRef(null);
     const headerRef = useRef(null);
@@ -63,7 +63,7 @@ const TopHeaderMobile = ({className = ''}) => {
     };
 
     return (
-        <header className={`top-header ${className}`} ref={headerRef}>
+        <header className={`header-home ${className}`} ref={headerRef}>
             <h1 className="hide">Ec³</h1>
             <Link href="/" className="logo-link">
                 <Image className="logo" alt="logo" src={logo} priority/>
@@ -121,4 +121,4 @@ const TopHeaderMobile = ({className = ''}) => {
     );
 };
 
-export default TopHeaderMobile;
+export default HeaderHomeMobile;

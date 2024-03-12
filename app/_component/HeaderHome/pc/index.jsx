@@ -8,9 +8,9 @@ import ContactMenu from './ContactMenu.jsx'
 import logo from '~/images/logo.png';
 import './index.scss';
 
-const TopHeaderPC = ({className = ''}) => {
+const HeaderHomePC = ({className = ''}) => {
     return (
-        <header className={`top-header ${className}`}>
+        <header className={`header-home ${className}`}>
             <h1 className="hide">Ec³</h1>
             <div className="inner">
                 <Link href="/" className="logo-link">
@@ -27,4 +27,4 @@ const TopHeaderPC = ({className = ''}) => {
     );
 };
 
-export default TopHeaderPC;
+export default HeaderHomePC;

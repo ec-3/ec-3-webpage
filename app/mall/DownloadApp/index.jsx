@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {Popconfirm} from 'antd';
 
 const DownloadApp = function ({className = 'download-app'}) {
     return (
@@ -20,8 +21,24 @@ const DownloadApp = function ({className = 'download-app'}) {
                         <Image src="/images/mall/download-app/phone-ec3.png" width={320} height={230} alt="phone ec3"/>
                     </div>
                     <div className="link-group">
-                        <a className="link"><i className="icon icon-ios"></i>ios</a>
-                        <a className="link"><i className="icon icon-android"></i>Android</a>
+                        <Popconfirm
+                            rootClassName="coming-soon pc"
+                            title="Coming Soon"
+                            description="This feature is currently under development and will be launched soon."
+                            okText="Cancel"
+                            okType="default"
+                        >
+                            <a className="link"><i className="icon icon-ios"></i>ios</a>
+                        </Popconfirm>
+                        <Popconfirm
+                            rootClassName="coming-soon pc"
+                            title="Coming Soon"
+                            description="This feature is currently under development and will be launched soon."
+                            okText="Cancel"
+                            okType="default"
+                        >
+                            <a className="link"><i className="icon icon-android"></i>Android</a>
+                        </Popconfirm>
                     </div>
                 </div>
                 <div className="img-column">

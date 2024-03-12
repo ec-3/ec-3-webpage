@@ -13,7 +13,7 @@ export default function HomeLayout({children}) {
             <ConfigProvider theme={theme}>
                 <HeaderMall className="pc" />
                 {children}
-                <FooterHome className="pc" isHomePage={false} />
+                <FooterHome className="pc" isHomePage={false} isMallPage={true} />
             </ConfigProvider>
         </RootLayoutPC>
     );
