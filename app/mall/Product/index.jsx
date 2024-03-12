@@ -20,7 +20,7 @@ const Product = function ({className = 'product'}) {
                     modules={[Autoplay]}
                     autoplay={{
                         delay: 2000,
-                        disableOnInteraction: true,
+                        disableOnInteraction: false,
                         pauseOnMouseEnter: true,
                     }}
                     loop={true}
