@@ -46,7 +46,7 @@ const MinePC = ({className = 'mine'}) => {
                                 disableOnInteraction: false,
                                 pauseOnMouseEnter: true,
                             }}
-                            pagination={{ clickable: true, el: '.aaa', }}
+                            pagination={{ clickable: true, el: '.swiper-pagination', }}
                             loop={true}
                             speed={800}
                         >
