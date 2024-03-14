@@ -1,33 +1,46 @@
 import Image from 'next/image';
-import {Carousel} from 'antd';
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 const CarouselPC = ({className = 'carousel'}) => {
     return (
         <section className={className}>
-            <Carousel autoplay dots={false}>
-                <div className="carousel-item">
-                    <div className="inner-wrapper">
-                        <div className="inner">
-                            <div className="carousel-logo"></div>
-                            <div className="carousel-content">
-                                <i className="icon icon-quotation"></i>
-                                <p className="carousel-text">Ec³ is a gateway for everyone to participate in carbon reduction, offering an opportunity for individuals to gain profits through carbon neutrality, undoubtedly expanding the development space of distributed energy storage.</p>
+            <div className="fixed-center">
+                <Swiper
+                    modules={[Autoplay]}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    }}
+                    loop={true}
+                    speed={1000}
+                >
+                    <SwiperSlide>
+                        <div className="carousel-item">
+                            <div className="inner">
+                                <div className="carousel-logo"></div>
+                                <div className="carousel-content">
+                                    <i className="icon icon-quotation"></i>
+                                    <p className="carousel-text">Ec³ is a gateway for everyone to participate in carbon reduction, offering an opportunity for individuals to gain profits through carbon neutrality, undoubtedly expanding the development space of distributed energy storage.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="carousel-item">
-                    <div className="inner-wrapper">
-                        <div className="inner">
-                            <div className="carousel-logo"></div>
-                            <div className="carousel-content">
-                                <i className="icon icon-quotation"></i>
-                                <p className="carousel-text">Ec³ is a gateway for everyone to participate in carbon reduction, offering an opportunity for individuals to gain profits through carbon neutrality, undoubtedly expanding the development space of distributed energy storage.</p>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="carousel-item">
+                            <div className="inner">
+                                <div className="carousel-logo"></div>
+                                <div className="carousel-content">
+                                    <i className="icon icon-quotation"></i>
+                                    <p className="carousel-text">Ec³ is a gateway for everyone to participate in carbon reduction, offering an opportunity for individuals to gain profits through carbon neutrality, undoubtedly expanding the development space of distributed energy storage.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </Carousel>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
         </section>
     );
 };

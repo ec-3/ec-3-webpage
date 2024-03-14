@@ -39,6 +39,7 @@
                 display: flex;
                 flex-direction: row;
                 .card-wrapper {
+                    flex: 1;
                     .card {
                         display: flex;
                         flex-direction: row;
@@ -74,14 +75,15 @@
                     align-items: center;
                     margin-top: 20PX;
                     margin-left: $side-padding-pc;
+                    width: 460PX;
                     font-size: 0;
                     $carousel-width: 460PX;
                     $carousel-height: 212PX;
-                    .carousel {
+                    .swiper {
                         width: $carousel-width;
                         height: $carousel-height;
                     }
-                    .carousel-item {
+                    .swiper-slide {
                         width: $carousel-width;
                         height: $carousel-height;
                         font-size: 0;
@@ -95,8 +97,19 @@
                             object-fit: contain;
                         }
                     }
-                    .slick-dots-bottom {
-                        bottom: -16PX;
+                    .swiper-pagination {
+                        position: static;
+                        margin-top: 12PX;
+                    }
+                    .swiper-pagination-bullet {
+                        margin: 0 6PX;
+                        width: 8PX;
+                        height: 8PX;
+                        background: $theme-dark_color-primary-most;
+                        cursor: pointer;
+                    }
+                    .swiper-pagination-bullet-active {
+                        background: $theme-dark_color-primary-most;
                     }
                     .ant-btn { display: none; }
                     &.pre-sale {
@@ -108,7 +121,7 @@
                             display: inline-block;
                             min-width: 288PX;
                             height: 44PX;
-                            margin-top: 44PX;
+                            margin-top: 20PX;
                             color: $color-text-regular;
                             background-color: #ddd;
                             span {

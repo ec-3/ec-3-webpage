@@ -42,10 +42,11 @@
                 display: flex !important;
                 align-items: center;
                 justify-content: center;
+                margin: 0 auto;
                 padding-top: 40PX;
                 padding-bottom: 40PX;
                 max-width: 860PX;
-                margin: 0 auto;
+                cursor: pointer;
                 .carousel-logo {
                     display: flex;
                     flex-direction: column;

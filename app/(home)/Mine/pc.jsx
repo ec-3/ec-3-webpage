@@ -1,7 +1,11 @@
 import React, { useState, useRef} from 'react';
 import Image from 'next/image';
-import {Button, Modal, Carousel, Image as ImageAntD} from 'antd';
+import {Button, Modal, Image as ImageAntD} from 'antd';
+import { Autoplay, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import useCountdown from '@/_hooks/useCountdown.js';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const MinePC = ({className = 'mine'}) => {
     const wrapperRef = useRef(null);
@@ -35,14 +39,28 @@ const MinePC = ({className = 'mine'}) => {
                         </div>
                     </div>
                     <div className={`image-wrapper ${time > 0 ? 'pre-sale' : ''}`}>
-                        <Carousel className="carousel" autoplay dots={true}>
-                            <div className="carousel-item">
+                        <Swiper
+                            modules={[Autoplay, Pagination]}
+                            autoplay={{
+                                delay: 2000,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: true,
+                            }}
+                            pagination={{ clickable: true, el: '.aaa', }}
+                            loop={true}
+                            speed={800}
+                        >
+                            <SwiperSlide>
                                 <ImageAntD src="/images/home/mine/cube-ec3.png"/>
-                            </div>
-                            <div className="carousel-item">
+                            </SwiperSlide>
+                            <SwiperSlide>
                                 <ImageAntD src="/images/home/mine/cube-detail.png"/>
-                            </div>
-                        </Carousel>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ImageAntD src="/images/home/mine/cube-detail.png"/>
+                            </SwiperSlide>
+                        </Swiper>
+                        <div className="swiper-pagination"></div>
                         <Button onClick={() => setPreSaleDialogVisible(true)}>Pre-Sale : <label>{formatTime}</label></Button>
                     </div>
                 </div>

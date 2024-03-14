@@ -1,10 +1,11 @@
 @mixin carousel() {
     .carousel {
         background-color: $theme-dark-bg-regular;
+        .fixed-center {
+            @include fixed-center();
+        }
         .carousel-item {
-            .inner-wrapper {
-                @include fixed-center();
-            }
+            cursor: pointer;
             .inner {
                 display: flex;
                 align-items: center;

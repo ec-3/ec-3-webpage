@@ -16,49 +16,23 @@ const Product = function ({className = 'product'}) {
                 <div className="btn-group">
                     <a className="btn btn-white">PRE ORDER</a>
                 </div>
-                <Swiper
-                    modules={[Autoplay]}
-                    autoplay={{
-                        delay: 2000,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    }}
-                    loop={true}
-                    spaceBetween={18}
-                    slidesPerView={3}
-                    centeredSlides={true}
-                >
-                    <SwiperSlide>
-                        <div className="img-box">
+                <div className="img-group">
+                    <div className="img-wrapper">
+                        <div className="img-box fixed-height">
                             <Image src="/images/mall/product/product-1.png" width={100} height={100} alt="product-1"/>
                         </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
+                    </div>
+                    <div className="img-wrapper">
                         <div className="img-box">
-                            <Image src="/images/mall/product/product-2.png" width={100} height={100} alt="product-2"/>
+                            <Image src="/images/mall/product/product-2.png" width={300} height={200} alt="product-2"/>
                         </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="img-box">
+                    </div>
+                    <div className="img-wrapper">
+                        <div className="img-box fixed-height">
                             <Image src="/images/mall/product/product-3.png" width={100} height={100} alt="product-3"/>
                         </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="img-box">
-                            <Image src="/images/mall/product/product-1.png" width={100} height={100} alt="product-1"/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="img-box">
-                            <Image src="/images/mall/product/product-2.png" width={100} height={100} alt="product-2"/>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="img-box">
-                            <Image src="/images/mall/product/product-3.png" width={100} height={100} alt="product-3"/>
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
+                    </div>
+                </div>
             </div>
         </section>
     );
