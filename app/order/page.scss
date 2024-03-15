@@ -109,9 +109,6 @@
                     &:hover {
                         background-color: rgba(207, 40, 40, .9);
                     }
-                    //color: #fff;
-                    //background: #1f6fff;
-                    //box-shadow: 0 2px 0 rgba(5, 130, 255, 0.08);
                 }
             }
         }
@@ -119,7 +116,7 @@
 
 }
 
-:where(.css-dev-only-do-not-override-aniffj).ant-form-item .ant-form-item-label > label {
+.ant-form-item .ant-form-item-label > label {
     font-size: $size-md-pc !important;
     color: $color-text-primary !important;
     font-family: SourceSansPro-Semibold;
