@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import Link from 'next/link';
 import {Button, Input, Popconfirm} from 'antd';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
 import allLinksFunc from "./allLinks.js";
@@ -41,13 +40,12 @@ const FooterHomePC = ({className = '', isHomePage = true, isMallPage = false}) =
                                             <a className="grid-col-link">{link.name}</a>
                                         </Popconfirm>
                                         :
-                                        <Link
-                                            prefetch
+                                        <a
                                             href={link.href}
                                             target={link.target}
                                             className="grid-col-link"
                                             key={index}
-                                        >{link.name}</Link>
+                                        >{link.name}</a>
 
                                 ))}
                             </div>

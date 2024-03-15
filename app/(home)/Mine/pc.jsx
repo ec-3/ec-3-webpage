@@ -56,9 +56,6 @@ const MinePC = ({className = 'mine'}) => {
                             <SwiperSlide>
                                 <ImageAntD src="/images/home/mine/cube-detail.png"/>
                             </SwiperSlide>
-                            <SwiperSlide>
-                                <ImageAntD src="/images/home/mine/cube-detail.png"/>
-                            </SwiperSlide>
                         </Swiper>
                         <div className="swiper-pagination"></div>
                         <Button onClick={() => setPreSaleDialogVisible(true)}>Pre-Sale : <label>{formatTime}</label></Button>

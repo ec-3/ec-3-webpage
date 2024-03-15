@@ -2,14 +2,13 @@
 import React from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
-import Link from 'next/link';
 import {linkLocation} from '@/config.js';
 
 const items = [
     {
         key: '1',
         label: (
-            <Link prefetch href={linkLocation['support@Ec-3.io']} target="_blank">support@Ec-3.io</Link>
+            <a prefetch href={linkLocation['support@Ec-3.io']} target="_blank">support@Ec-3.io</a>
         )
     },
 ];

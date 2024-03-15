@@ -14,7 +14,7 @@ const HeaderMall = ({className = ''}) => {
             <h1 className="hide">Ec³</h1>
             <div className="inner">
                 <div className="menu">
-                    <Link className="menu-item" href="/">HOME</Link>
+                    <Link className="menu-item" href="/" prefetch shallow>HOME</Link>
                     <Popconfirm
                         rootClassName="coming-soon pc"
                         title="Coming Soon"
@@ -24,7 +24,7 @@ const HeaderMall = ({className = ''}) => {
                     >
                         <a className="menu-item">PRODUCT</a>
                     </Popconfirm>
-                    <Link className="menu-item" href={linkLocation['Staking']} target="_blank">STAKING</Link>
+                    <a className="menu-item" href={linkLocation['Staking']} target="_blank">STAKING</a>
                 </div>
                 <Link href="/" className="logo-link">
                     <Image alt="logo" height={40} src={logo} priority  />
@@ -39,7 +39,7 @@ const HeaderMall = ({className = ''}) => {
                     >
                         <a className="menu-item">APP</a>
                     </Popconfirm>
-                    <Link className="menu-item" href={linkLocation['support@Ec-3.io']} target="_blank">SUPPORT</Link>
+                    <a className="menu-item" href={linkLocation['support@Ec-3.io']} target="_blank">SUPPORT</a>
                 </div>
             </div>
         </header>

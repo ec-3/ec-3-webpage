@@ -94,16 +94,16 @@ const HeaderHomeMobile = ({className = ''}) => {
                             <Dropdown.Item key='product' title='PRODUCT'>
                                 <div className="drop-down_menu">
                                     <a className="drop-down_menu-item" onClick={commingSoonHandle}>Ec³ cube</a>
-                                    <a className="drop-down_menu-item" href={linkLocation['Staking']} target="_blank">Staking</a>
+                                    <a className="drop-down_menu-item" href={linkLocation['Staking']}>Staking</a>
                                 </div>
                             </Dropdown.Item>
                         </Dropdown>
                         <Dropdown ref={menuRef} closeOnClickAway={true} getContainer={() => headerRef.current}>
                             <Dropdown.Item key='community' title='COMMUNITY'>
                                 <div className="drop-down_menu">
-                                    <a className="drop-down_menu-item" href={linkLocation['Discord']} target="_blank">Discord</a>
-                                    <a className="drop-down_menu-item" href={linkLocation['X']} target="_blank">X</a>
-                                    <a className="drop-down_menu-item" href={linkLocation['Telegram']} target="_blank">Telegram</a>
+                                    <a className="drop-down_menu-item" href={linkLocation['Discord']}>Discord</a>
+                                    <a className="drop-down_menu-item" href={linkLocation['X']}>X</a>
+                                    <a className="drop-down_menu-item" href={linkLocation['Telegram']}>Telegram</a>
                                 </div>
                             </Dropdown.Item>
                         </Dropdown>

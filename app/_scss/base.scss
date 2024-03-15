@@ -36,7 +36,8 @@ input:-ms-input-placeholder { color: $color-text-placeholder; }
 .size-hger-pc { font-size: $size-hger-pc; }
 
 /** PC端 **/
-.ant-btn, .ant-input, .ant-dropdown .ant-dropdown-menu, .ant-carousel, [class^="ant-modal"] {
+.ant-btn, .ant-input, .ant-dropdown .ant-dropdown-menu, .ant-carousel, [class^="ant-modal"], .ant-form, .ant-col,
+[class^="ant-radio"] {
     font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif !important;
 }
 /** 手机端 **/

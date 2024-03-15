@@ -2,26 +2,25 @@
 import React from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
-import Link from 'next/link';
 import {linkLocation} from '@/config.js';
 
 const items = [
     {
         key: '1',
         label: (
-            <Link prefetch href={linkLocation['Discord']} target="_blank">Discord</Link>
+            <a href={linkLocation['Discord']} target="_blank">Discord</a>
         )
     },
     {
         key: '2',
         label: (
-            <Link prefetch href={linkLocation['X']} target="_blank">X</Link>
+            <a href={linkLocation['X']} target="_blank">X</a>
         )
     },
     {
         key: '3',
         label: (
-            <Link prefetch href={linkLocation['Telegram']} target="_blank">Telegram</Link>
+            <a href={linkLocation['Telegram']} target="_blank">Telegram</a>
         )
     },
 ];

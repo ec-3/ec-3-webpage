@@ -2,7 +2,6 @@
 import React from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space, Popconfirm } from 'antd';
-import Link from 'next/link';
 import {linkLocation} from '@/config.js';
 
 const items = [

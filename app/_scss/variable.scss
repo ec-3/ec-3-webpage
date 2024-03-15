@@ -38,6 +38,9 @@ $line-height: 1.42857143;
 $side-padding-pc: 12PX;
 $side-padding-mobile: 10px;
 
+// form 表单边框颜色
+$border-color__input: #d9d9d9;
+
 // 黑色主题
 $theme-dark_bg-primary: #060606;
 $theme-dark_bg-regular: #0c0e0c;
@@ -49,8 +52,13 @@ $theme-dark_color-secondary: #6d7077;
 $theme-dark_color-relative: #5aeb46;
 $theme-dark_color-relative_deep: #2f9c72;
 
+// 绿色主题
+$theme-green-primary: #5aeb46;
+$theme-green-reqular: #86f772;
+$theme-green-secondary: #b0ff9e;
+$theme-green-placeholder: #d3ffc7;
+
 // 蓝色主题
-$theme-blue_bg-primary: #1f6fff;
-$theme-blue_color-primary: #ffffff;
+$theme-blue-primary: #1f6fff;
 
 

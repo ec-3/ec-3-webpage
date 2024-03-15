@@ -22,11 +22,27 @@
                 color: $theme-dark_color-secondary;
             }
         }
-        .ant-btn {
+        .ant-btn-primary  {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-left: 132PX;
+            height: 41PX;
+            text-decoration: none;
+            color: #090909;
+            background-color: $theme-dark_color-relative;
+            &:hover {
+                background-color: rgba(90, 235, 70, .95);
+            }
             span {
+                line-height: 1;
+                font-size: $size-mder-pc;
                 font-weight: normal;
             }
+        }
+        .ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover, .ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
+            color: $color-text-primary !important;
+            box-shadow: $theme-dark-color-relative -1PX 2PX 15PX 0PX;
         }
     }
     .grid-row {

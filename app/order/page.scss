@@ -1,0 +1,126 @@
+
+.main {
+    margin-top: $header-height-pc;
+    color: $color-text-regular;
+    background-color: $theme-dark_color-primary-most;
+    .title-group {
+        position: relative;
+        @include fixed-center();
+        padding: 48PX $side-padding-pc;
+        .ret-breadcrumb {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            .link {
+                @include extend-click();
+                text-decoration: none;
+                color: $color-text-placeholder;
+                transition: all .2s;
+                &:hover {
+                    color: #9499a6;
+                }
+                .icon {
+                    font-size: 42PX;
+                    cursor: pointer;
+                }
+            }
+        }
+        .title {
+            text-align: center;
+            font-size: 26PX;
+            color: $color-text-primary;
+            font-weight: 700;
+            font-family: SourceSansPro-Semibold;
+        }
+    }
+    .form-wrapper {
+        @include fixed-center();
+        display: grid;
+        grid-template-columns: 1fr .7fr;
+        gap: 48PX;
+        margin-bottom: 48PX;
+        .form-main {
+            .inline {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16PX;
+            }
+        }
+        .form-other {
+            .summary {
+                border: 1px solid $border-color__input;
+                border-radius: 8PX;
+                $padding-vertical: 16PX;
+                $padding-horizontal: 18PX;
+                .summary-item {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: $padding-vertical $padding-horizontal;
+                    @include border-bottom-1px($border-color__input);
+                    .summary-item__label, .summary-item__value {
+                        line-height: 1;
+                        font-size: $size-mder-pc;
+                        color: $color-text-regular;
+                        font-family: SourceSansPro-Semibold;
+                    }
+                    &.weight {
+                        .summary-item__label, .summary-item__value {
+                            font-size: $size-hg-pc;
+                            color: $color-text-primary;
+                            font-weight: 700;
+                        }
+                    }
+                }
+                .freight {
+                    @include border-bottom-1px($border-color__input);
+                    .freight-title {
+                        padding: $padding-vertical $padding-horizontal $padding-vertical/2 $padding-horizontal;
+                        line-height: 1;
+                        font-size: $size-mder-pc;
+                        color: $color-text-regular;
+                        font-family: SourceSansPro-Semibold;
+                    }
+                    .ant-radio-group {
+                        padding: $padding-vertical/2 $padding-horizontal $padding-vertical $padding-horizontal;
+                        span {
+                            line-height: 1;
+                            font-size: $size-md-pc;
+                            color: $color-text-regular;
+                        }
+                    }
+                }
+            }
+            .btn-group {
+                margin-top: 48PX;
+                padding: 0 18PX;
+                .ant-btn-primary.ant-btn-dangerous {
+                    height: 52PX;
+                    background-color: #cf2828;
+                    .ant-btn-icon {
+                        margin-right: 12PX;
+                        .icon { font-size: $size-hger-pc; }
+                    }
+                    span {
+                        font-size: $size-hger-pc;
+                        font-family: SourceSansPro-Semibold;
+                    }
+                    &:hover {
+                        background-color: rgba(207, 40, 40, .9);
+                    }
+                    //color: #fff;
+                    //background: #1f6fff;
+                    //box-shadow: 0 2px 0 rgba(5, 130, 255, 0.08);
+                }
+            }
+        }
+    }
+
+}
+
+:where(.css-dev-only-do-not-override-aniffj).ant-form-item .ant-form-item-label > label {
+    font-size: $size-md-pc !important;
+    color: $color-text-primary !important;
+    font-family: SourceSansPro-Semibold;
+}

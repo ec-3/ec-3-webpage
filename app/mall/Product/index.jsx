@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -14,7 +15,7 @@ const Product = function ({className = 'product'}) {
                         empowering you to be a catalyst for energy transformation.</strong></h2>
                 </hgroup>
                 <div className="btn-group">
-                    <a className="btn btn-white">PRE ORDER</a>
+                    <Link className="btn btn-white" href="/order" prefetch shallow>PRE ORDER</Link>
                 </div>
                 <div className="img-group">
                     <div className="img-wrapper">

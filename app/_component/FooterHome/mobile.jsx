@@ -1,6 +1,5 @@
 'use client'
 import React, {useState, useRef, useMemo} from 'react';
-import Link from 'next/link';
 import {Button, Collapse, Modal} from 'antd-mobile';
 import './mobile.scss';
 import useScrollAnimate from '@/_hooks/useScrollAnimate.js'
@@ -77,13 +76,12 @@ const FooterHomeMobile = ({className = '', isHomePage = true}) => {
                                         }}
                                     >{link.name}</a>
                                     :
-                                    <Link
-                                        prefetch
+                                    <a
                                         href={link.href}
                                         target={link.target}
                                         className="link"
                                         key={index}
-                                    >{link.name}</Link>
+                                    >{link.name}</a>
                             ))}
                         </Collapse.Panel>
                     ))}
