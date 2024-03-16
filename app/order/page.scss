@@ -3,6 +3,7 @@
     margin-top: $header-height-pc;
     color: $color-text-regular;
     background-color: $theme-dark_color-primary-most;
+    user-select: text;
     .title-group {
         position: relative;
         @include fixed-center();
@@ -48,11 +49,12 @@
             }
         }
         .form-other {
+            padding-top: 32PX;
+            $padding-vertical: 16PX;
+            $padding-horizontal: 18PX;
             .summary {
                 border: 1px solid $border-color__input;
                 border-radius: 8PX;
-                $padding-vertical: 16PX;
-                $padding-horizontal: 18PX;
                 .summary-item {
                     display: flex;
                     flex-direction: row;
@@ -92,9 +94,39 @@
                     }
                 }
             }
+            .pay-type {
+                margin-top: 40PX;
+                padding: $padding-vertical $padding-horizontal;
+                .ant-radio-group {
+                    .ant-space-item {
+                        padding: 2PX;
+                        &:first-child { margin-top: 0; }
+                    }
+                    span {
+                        font-size: $size-md-pc;
+                        color: $color-text-regular;
+                        user-select: none;
+                    }
+                }
+            }
+            .agreement {
+                margin-top: 40PX;
+                .ant-alert-message {
+                    font-size: $size-tner-pc;
+                }
+            }
+            .is-agree {
+                margin-top: 8PX;
+                padding: $padding-vertical $padding-horizontal;
+                span {
+                    font-size: $size-md-pc;
+                    color: $color-text-regular;
+                    user-select: none;
+                }
+            }
             .btn-group {
-                margin-top: 48PX;
-                padding: 0 18PX;
+                margin-top: 8PX;
+                padding: 0 $padding-horizontal;
                 .ant-btn-primary.ant-btn-dangerous {
                     height: 52PX;
                     background-color: #cf2828;
@@ -109,6 +141,11 @@
                     &:hover {
                         background-color: rgba(207, 40, 40, .9);
                     }
+                }
+                .ant-btn-primary.ant-btn-dangerous:disabled {
+                    order-color: #d9d9d9;
+                    color: rgba(0, 0, 0, 0.25);
+                    background: rgba(0, 0, 0, 0.04);
                 }
             }
         }

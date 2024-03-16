@@ -1,17 +1,23 @@
 'use client'
 import React, {useState} from 'react';
 import Link from 'next/link';
-import {Form, Input, Button, Radio} from 'antd';
+import {Form, Input, Button, Radio, Space, Alert, Checkbox} from 'antd';
 import { LockOutlined } from '@ant-design/icons'
 import './page.scss';
 
 export default function order() {
-    const [freight, setFreight] = useState(1);
+    const [freight, setFreight] = useState(1);                      // 物流方式
+    const [paytype, setPaytype] = useState(1);                      // 支付方式
+    const [isDisableSubmit, setIsDisableSubmit] = useState(false);  // 是否禁用提交按钮
 
+    const isAgreeOnChange = (e) => {
+        setIsDisableSubmit(!(e.target.checked));
+    };
 
     const onFinish = values => {
         console.log('Received values of form: ', values);
     };
+
     return (
         <main className="main">
             <hgroup className="title-group">
@@ -159,8 +165,17 @@ export default function order() {
                             <span className="summary-item__value">$2,690.00</span>
                         </div>
                     </div>
+                    <div className="pay-type">
+                        <Radio.Group onChange={e => setPaytype(e.target.value)} value={paytype}>
+                            <Space direction="vertical">
+                                <Radio value={1}>Coinbase Commerce Payment Gateway</Radio>
+                            </Space>
+                        </Radio.Group>
+                    </div>
+                    <Alert className="agreement" message="Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy." type="warning" />
+                    <Checkbox className="is-agree" onChange={isAgreeOnChange} defaultChecked={true}>Terms and conditions</Checkbox>
                     <Form.Item className="btn-group">
-                        <Button type="primary" htmlType="submit" danger size="large" block icon={<i className="icon icon-lock" />}>Place order</Button>
+                        <Button type="primary" htmlType="submit" disabled={isDisableSubmit} danger size="large" block icon={<i className="icon icon-lock" />}>Place order</Button>
                     </Form.Item>
                 </div>
             </Form>
