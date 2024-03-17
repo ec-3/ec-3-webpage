@@ -20,17 +20,17 @@ const Product = function ({className = 'product'}) {
                 <div className="img-group">
                     <div className="img-wrapper">
                         <div className="img-box fixed-height">
-                            <Image src="/images/mall/product/product-1.png" width={100} height={100} alt="product-1"/>
+                            <Image src="/images/mall/product/product-1.png" width={300} height={273} quality={100} alt="product-1"/>
                         </div>
                     </div>
                     <div className="img-wrapper">
                         <div className="img-box">
-                            <Image src="/images/mall/product/product-2.png" width={300} height={200} alt="product-2"/>
+                            <Image src="/images/mall/product/product-2.png" width={656} height={479} quality={100} alt="product-2"/>
                         </div>
                     </div>
                     <div className="img-wrapper">
                         <div className="img-box fixed-height">
-                            <Image src="/images/mall/product/product-3.png" width={100} height={100} alt="product-3"/>
+                            <Image src="/images/mall/product/product-3.png" width={300} height={273} quality={100} alt="product-3"/>
                         </div>
                     </div>
                 </div>
