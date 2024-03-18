@@ -152,7 +152,7 @@ export default function order() {
                     <div className="summary">
                         <div className="summary-item">
                             <span className="summary-item__label">Subtotal</span>
-                            <span className="summary-item__value">$2,690.00</span>
+                            <span className="summary-item__value">$299.00</span>
                         </div>
                         <div className="freight">
                             <div className="freight-title">Shipping</div>
@@ -162,7 +162,7 @@ export default function order() {
                         </div>
                         <div className="summary-item weight">
                             <span className="summary-item__label">Total</span>
-                            <span className="summary-item__value">$2,690.00</span>
+                            <span className="summary-item__value">$299.00</span>
                         </div>
                     </div>
                     <div className="pay-type">
