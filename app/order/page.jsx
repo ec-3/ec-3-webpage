@@ -1,17 +1,29 @@
 'use client'
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import Link from 'next/link';
-import {Form, Input, Button, Radio, Space, Alert, Checkbox} from 'antd';
+import {Form, Input, Button, Radio, Space, Alert, Checkbox, InputNumber} from 'antd';
 import { LockOutlined } from '@ant-design/icons'
 import './page.scss';
 
+// 单价
+const UNIT_PRICE = 299;
+
 export default function order() {
+    const [count, setCount] = useState(1);                          // 购买数量
     const [freight, setFreight] = useState(1);                      // 物流方式
     const [paytype, setPaytype] = useState(1);                      // 支付方式
     const [isDisableSubmit, setIsDisableSubmit] = useState(false);  // 是否禁用提交按钮
 
-    const isAgreeOnChange = (e) => {
+    const amount = useMemo(() => {
+        return (UNIT_PRICE * count).toLocaleString("en-us");
+    }, [count]);
+
+    const isAgreeOnChange = e => {
         setIsDisableSubmit(!(e.target.checked));
+    };
+
+    const onCountChange = value => {
+        setCount(value);
     };
 
     const onFinish = values => {
@@ -149,10 +161,17 @@ export default function order() {
                     </Form.Item>
                 </div>
                 <div className="form-other">
+                    <div className="count">
+                        <label className="count-label">Count</label>
+                        <InputNumber min={1} defaultValue={count} step={1}
+                                     formatter={value => Math.ceil(value)}
+                                     parser={value => Math.ceil(value)}
+                                     onChange={onCountChange} changeOnWheel size="large"  />
+                    </div>
                     <div className="summary">
                         <div className="summary-item">
                             <span className="summary-item__label">Subtotal</span>
-                            <span className="summary-item__value">$299.00</span>
+                            <span className="summary-item__value">$ {amount}</span>
                         </div>
                         <div className="freight">
                             <div className="freight-title">Shipping</div>
@@ -162,7 +181,7 @@ export default function order() {
                         </div>
                         <div className="summary-item weight">
                             <span className="summary-item__label">Total</span>
-                            <span className="summary-item__value">$299.00</span>
+                            <span className="summary-item__value">$ {amount}</span>
                         </div>
                     </div>
                     <div className="pay-type">

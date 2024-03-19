@@ -52,7 +52,20 @@
             padding-top: 32PX;
             $padding-vertical: 16PX;
             $padding-horizontal: 18PX;
+            .count {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: $padding-vertical $padding-horizontal;
+                .count-label {
+                    line-height: 1;
+                    font-size: $size-md-pc;
+                    color: $color-text-regular;
+                    font-family: SourceSansPro-Semibold;
+                }
+            }
             .summary {
+                margin-top: 32PX;
                 border: 1px solid $border-color__input;
                 border-radius: 8PX;
                 .summary-item {
@@ -63,7 +76,7 @@
                     @include border-bottom-1px($border-color__input);
                     .summary-item__label, .summary-item__value {
                         line-height: 1;
-                        font-size: $size-mder-pc;
+                        font-size: $size-md-pc;
                         color: $color-text-regular;
                         font-family: SourceSansPro-Semibold;
                     }
@@ -80,7 +93,7 @@
                     .freight-title {
                         padding: $padding-vertical $padding-horizontal $padding-vertical/2 $padding-horizontal;
                         line-height: 1;
-                        font-size: $size-mder-pc;
+                        font-size: $size-md-pc;
                         color: $color-text-regular;
                         font-family: SourceSansPro-Semibold;
                     }
@@ -95,7 +108,7 @@
                 }
             }
             .pay-type {
-                margin-top: 40PX;
+                margin-top: 32PX;
                 padding: $padding-vertical $padding-horizontal;
                 .ant-radio-group {
                     .ant-space-item {
@@ -110,7 +123,7 @@
                 }
             }
             .agreement {
-                margin-top: 40PX;
+                margin-top: 32PX;
                 .ant-alert-message {
                     font-size: $size-tner-pc;
                 }
@@ -155,6 +168,6 @@
 
 .ant-form-item .ant-form-item-label > label {
     font-size: $size-md-pc !important;
-    color: $color-text-primary !important;
+    color: $color-text-regular !important;
     font-family: SourceSansPro-Semibold;
 }

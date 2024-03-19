@@ -37,7 +37,7 @@ input:-ms-input-placeholder { color: $color-text-placeholder; }
 
 /** PC端 **/
 .ant-btn, .ant-input, .ant-dropdown .ant-dropdown-menu, .ant-carousel, [class^="ant-modal"], .ant-form, .ant-col,
-[class^="ant-radio"], .ant-alert, [class^="ant-checkbox"] {
+[class^="ant-radio"], .ant-alert, [class^="ant-checkbox"], .ant-input-number input {
     font-family: SourceSansPro-Regular, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif !important;
 }
 /** 手机端 **/

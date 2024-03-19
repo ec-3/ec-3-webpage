@@ -56,3 +56,15 @@
     color: $color-text-primary !important;
     box-shadow: $theme-dark-color-relative -1PX 2PX 15PX 0PX;
 }
+
+.adm-result {
+    .adm-result-title {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: SourceSansPro-Semibold;
+    }
+    .adm-result-description {
+        font-size: 20px;
+    }
+}
+
