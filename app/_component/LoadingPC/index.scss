@@ -1,0 +1,36 @@
+.loading-ec3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(7, 17, 27, 0);
+    z-index: 9999;
+    .ant-spin-nested-loading {
+        background-color: rgba(7, 17, 27, .9);
+        border-radius: 8PX;
+    }
+    .ant-spin-dot {
+        margin-top: -29PX !important;
+        .ant-spin-dot-item {
+            background-color: #fff;
+        }
+    }
+    .ant-spin-text {
+        padding-top: 13PX;
+        font-size: 18PX !important;
+        color: #fff;
+        text-shadow: none !important;
+        font-family: SourceSansPro-Regular;
+    }
+    .ant-spin-container {
+        .content {
+            padding: 58PX;
+            border-radius: 8PX;
+        }
+    }
+
+}

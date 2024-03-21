@@ -1,8 +1,9 @@
 'use client'
 import React, {useState, useMemo} from 'react';
 import Link from 'next/link';
-import {Form, Input, Button, Radio, Space, Alert, Checkbox, InputNumber} from 'antd';
-import { LockOutlined } from '@ant-design/icons'
+import {Form, Input, Button, Radio, Space, Alert, Checkbox, InputNumber, Modal} from 'antd';
+import LoadingPC from '@/_component/LoadingPC';
+import OrderApi from '@/_api/OrderApi.js';
 import './page.scss';
 
 // 单价
@@ -27,7 +28,40 @@ export default function order() {
     };
 
     const onFinish = values => {
-        console.log('Received values of form: ', values);
+        console.log(values)
+
+        LoadingPC.start();
+        const params = {
+            FirstName: values.firstName,
+            LastNam: values.lastName,
+            Company: values.company,
+            Country: values.country,
+            Province: values.provice,
+            City: values.city,
+            Street: values.street,
+            Address: values.address,
+            ZipCode: values.zipCode,
+            Phone: values.phone,
+            Email: values.email,
+            Details: {"default": count},
+            Amount: amount
+        };
+        OrderApi.createOrder(params).then(d => {
+            LoadingPC.stop();
+            location.replace(d);
+        }).catch(e => {
+            LoadingPC.stop();
+            Modal.warn({
+                wrapClassName: 'error-handle',
+                title: 'An error occurred',
+                content: `Order placement failed: ${e} .`,
+                okType: 'danger',
+                okText: 'I know',
+                centered: true,
+                maskClosable: true
+            });
+        })
+
     };
 
     return (
@@ -129,7 +163,7 @@ export default function order() {
                     </Form.Item>
                     <Form.Item
                         label="Postcode / ZIP"
-                        name="postcode"
+                        name="zipCode"
                         rules={[
                             {required: true, whitespace: true, message: 'Postcode / ZIP is required!'},
                             {min: 2, whitespace: true, message: 'Postcode / ZIP must be at least 2 characters!'},
@@ -198,8 +232,6 @@ export default function order() {
                     </Form.Item>
                 </div>
             </Form>
-
-
         </main>
     );
 }

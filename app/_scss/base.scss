@@ -59,3 +59,20 @@ input:-ms-input-placeholder { color: $color-text-placeholder; }
 .coming-soon__mask.mobile {
     background-color: rgba(0, 0, 0, 0) !important;
 }
+
+/** PC端错误对话框 ***/
+.error-handle {
+    .ant-modal { margin-top: -80PX; }
+    .anticon { margin-top: 6PX !important; }
+    .ant-modal-confirm-title { font-size: 22PX !important; }
+    .ant-modal-confirm-content { font-size: 18PX !important; }
+    .ant-modal-confirm-btns {
+        margin-bottom: 3PX;
+        .ant-btn {
+            padding: 4PX 18PX;
+            height: 40PX;
+            font-size: 18PX;
+        }
+    }
+
+}
