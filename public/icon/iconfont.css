@@ -1,9 +1,9 @@
 @font-face {
   font-family: "icon"; /* Project id 4455133 */
-  src: url('iconfont.woff2?t=1710525463714') format('woff2'),
-       url('iconfont.woff?t=1710525463714') format('woff'),
-       url('iconfont.ttf?t=1710525463714') format('truetype'),
-       url('iconfont.svg?t=1710525463714#icon') format('svg');
+  src: url('iconfont.woff2?t=1711289651553') format('woff2'),
+       url('iconfont.woff?t=1711289651553') format('woff'),
+       url('iconfont.ttf?t=1711289651553') format('truetype'),
+       url('iconfont.svg?t=1711289651553#icon') format('svg');
 }
 
 .icon {
@@ -12,6 +12,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-return-curved:before {
+  content: "\eb11";
+}
+
+.icon-success:before {
+  content: "\e60b";
 }
 
 .icon-lock:before {

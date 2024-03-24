@@ -9,7 +9,7 @@ import './page.scss';
 // 单价
 const UNIT_PRICE = 299;
 
-export default function order() {
+export default function Order() {
     const [count, setCount] = useState(1);                          // 购买数量
     const [freight, setFreight] = useState(1);                      // 物流方式
     const [paytype, setPaytype] = useState(1);                      // 支付方式
@@ -32,8 +32,7 @@ export default function order() {
 
         LoadingPC.start();
         const params = {
-            FirstName: values.firstName,
-            LastNam: values.lastName,
+            Name: values.firstName + values.lastName,
             Company: values.company,
             Country: values.country,
             Province: values.provice,
@@ -44,7 +43,9 @@ export default function order() {
             Phone: values.phone,
             Email: values.email,
             Details: {"default": count},
-            Amount: amount
+            Amount: amount,
+            SuccURL: 'https://www.ec-cube.io/order/success',
+            CancelURL: 'https://www.ec-cube.io/mall',
         };
         OrderApi.createOrder(params).then(d => {
             LoadingPC.stop();
