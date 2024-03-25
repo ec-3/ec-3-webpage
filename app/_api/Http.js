@@ -26,7 +26,7 @@ export default class Http {
             timeout: 90 * 1000
         };
         return new Promise((resolve, reject) => {
-            axios.post(url, JSON.stringify(data), config).then((response) => {
+            axios.post(url, data, config).then((response) => {
                 if (response.status === 200) {
                     resolve(response.data)
                 } else {
@@ -34,6 +34,10 @@ export default class Http {
                 }
             }).catch(err => {
                 if (err.response) {
+                    if (err.response.data) {
+                        reject(err.response.data);
+                        return;
+                    }
                     reject(err.response.status + ',' + err.response.statusText)
                     return
                 }
