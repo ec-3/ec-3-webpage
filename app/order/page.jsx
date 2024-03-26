@@ -39,7 +39,7 @@ export default function Order() {
             Name: values.firstName + values.lastName,
             Company: values.company,
             Country: values.country,
-            Province: values.provice,
+            Province: values.province,
             City: values.city,
             Street: values.street,
             Address: values.address,
@@ -124,10 +124,10 @@ export default function Order() {
                         <Input size="large" allowClear placeholder="Please input country / region"/>
                     </Form.Item>
                     <Form.Item
-                        label="Provice"
-                        name="provice"
+                        label="Province"
+                        name="province"
                         rules={[
-                            {required: true, whitespace: true, message: 'Provice is required!'},
+                            {required: true, whitespace: true, message: 'Province is required!'},
                             {min: 2, whitespace: true, message: 'Street must be at least 2 characters!'},
                             {max: 40, whitespace: true, message: 'Street cannot exceed 40 characters!'},
                         ]}
