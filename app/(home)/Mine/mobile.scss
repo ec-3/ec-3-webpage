@@ -31,7 +31,7 @@
             display: flex;
             flex-direction: column;
             .card-wrapper {
-                margin-top: -80px;
+                margin-top: 28px;
                 .card {
                     display: flex;
                     flex-direction: row;
@@ -90,7 +90,6 @@
                         display: inline-block;
                         padding: 7.2px 18px;
                         margin-top: 24px;
-                        margin-bottom: 118px;
                         color: $color-text-regular;
                         background-color: #ddd;
                         span {
