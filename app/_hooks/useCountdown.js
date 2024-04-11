@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 
-const START_TIME = new Date('2024-05-01 00:00:00').getTime();
+const START_TIME = new Date('2024-04-01 00:00:00').getTime();
 const duration = parseInt((START_TIME - Date.now()) / 1000);
 
 const useCountdown = () => {

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {Popconfirm} from 'antd';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -15,7 +16,16 @@ const Product = function ({className = 'product'}) {
                         empowering you to be a catalyst for energy transformation.</strong></h2>
                 </hgroup>
                 <div className="btn-group">
-                    <Link className="btn btn-white" href="/order" prefetch shallow>PRE ORDER</Link>
+                    <Popconfirm
+                        rootClassName="coming-soon pc"
+                        title="Coming Soon"
+                        description="The sales function has not yet started, please stay tuned."
+                        okText="Cancel"
+                        okType="default"
+                    >
+                        <a className="btn btn-white">PRE ORDER</a>
+                    </Popconfirm>
+                    {/*<Link className="btn btn-white" href="/order" prefetch shallow>PRE ORDER</Link>*/}
                 </div>
                 <div className="img-group">
                     <div className="img-wrapper">

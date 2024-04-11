@@ -33,6 +33,17 @@ export default function Order() {
 
     const onFinish = values => {
         console.log(values)
+        Modal.warn({
+            wrapClassName: 'error-handle',
+            width: 600,
+            title: 'Coming Soon',
+            content: `The sales function has not yet started, please stay tuned.`,
+            okType: 'danger',
+            okText: 'I know',
+            centered: true,
+            maskClosable: true
+        });
+        return false;
 
         LoadingPC.start();
         const params = {
