@@ -1,4 +1,5 @@
 @mixin install-guide() {
+
     .install-guide {
         padding: 80PX 0;
         .fixed-center { @include fixed-center(); }
