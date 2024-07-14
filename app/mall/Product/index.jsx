@@ -11,9 +11,7 @@ const Product = function ({className = 'product'}) {
             <div className="fixed-center">
                 <hgroup className="title-group">
                     <p className="remark">THE BLEND OF SIMPLICITY AND INNOVATION</p>
-                    <h2 className="main-title">Welcome to EC cube <strong>– your reliable and friendly low-carbon
-                        mining, connecting the most flexible distributed energy storage units – batteries, aimed at
-                        empowering you to be a catalyst for energy transformation.</strong></h2>
+                    <h2 className="main-title">Welcome to EC plug <strong>– Ec plug empowers users to efficiently manage their energy consumption, monitor electricity safety, seamlessly integrating into decentralized networks and rewarding sustainable practices for a brighter, greener future.</strong></h2>
                 </hgroup>
                 <div className="btn-group">
                     <Popconfirm
@@ -30,17 +28,17 @@ const Product = function ({className = 'product'}) {
                 <div className="img-group">
                     <div className="img-wrapper">
                         <div className="img-box fixed-height">
-                            <Image src="/images/mall/product/product-1.png" width={300} height={273} quality={100} alt="product-1"/>
+                            <Image src="/images/mall/product/product-1.jpg" width={300} height={273} quality={100} alt="product-1"/>
                         </div>
                     </div>
                     <div className="img-wrapper">
                         <div className="img-box">
-                            <Image src="/images/mall/product/product-2.png" width={656} height={479} quality={100} alt="product-2"/>
+                            <Image src="/images/mall/product/product-2.jpg" width={656} height={479} quality={100} alt="product-2"/>
                         </div>
                     </div>
                     <div className="img-wrapper">
                         <div className="img-box fixed-height">
-                            <Image src="/images/mall/product/product-3.png" width={300} height={273} quality={100} alt="product-3"/>
+                            <Image src="/images/mall/product/product-3.jpg" width={300} height={273} quality={100} alt="product-3"/>
                         </div>
                     </div>
                 </div>

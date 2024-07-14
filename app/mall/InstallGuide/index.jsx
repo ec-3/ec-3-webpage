@@ -19,10 +19,9 @@ const InstallGuide = function ({className = 'install-guide'}) {
                     <div className="card">
                         <div className="card-title">
                             <i className="icon icon-api"></i>
-                            <h4 className="text">Hassle-free installation</h4>
+                            <h4 className="text">Electricity Safety</h4>
                         </div>
-                        <div className="card-desc">The EC cube interface standard is compatible with various distributed
-                            energy storage device connectors, allowing plug-and-play functionality.
+                        <div className="card-desc">The EC plug can monitor whether electrical equipment has overvoltage, overload, etc., and improve household electricity safety.
                         </div>
                     </div>
                     <div className="card">
@@ -30,9 +29,7 @@ const InstallGuide = function ({className = 'install-guide'}) {
                             <i className="icon icon-bluetoothon"></i>
                             <h4 className="text">Smart Connectivity</h4>
                         </div>
-                        <div className="card-desc">Download the app, log into your wallet, and connect to the installed
-                            Ec cube via Bluetooth to receive real-time token rewards.
-                        </div>
+                        <div className="card-desc">Download the app, log into your wallet, and connect to the installed Ec plug via Bluetooth to receive real-time token rewards.</div>
                     </div>
                 </div>
                 <div className="btn-group">

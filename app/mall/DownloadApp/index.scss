@@ -12,18 +12,19 @@
             margin-bottom: 2px;
             height: 300PX;
             &.img-row__left {
+                padding-left: 72PX;
                 justify-content: flex-start;
                 align-items: center;
             }
             &.img-row__right {
+                padding-right: 72px;
                 justify-content: flex-end;
                 align-items: center;
             }
-            img {
-                width: 320PX;
-                height: auto;
-            }
-            &.scale img { width: 268PX; }
+            //img {
+            //    width: 120PX;
+            //}
+            //&.scale img { width: 268PX; }
         }
         .image-text {
             display: flex;
