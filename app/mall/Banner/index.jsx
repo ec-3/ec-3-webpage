@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import {Popconfirm} from 'antd';
 
-
 const Banner = function ({className = 'banner'}) {
     return (
         <section className="banner">

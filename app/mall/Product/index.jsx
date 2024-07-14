@@ -5,7 +5,6 @@ import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-
 const Product = function ({className = 'product'}) {
     return (
         <section className={className}>
